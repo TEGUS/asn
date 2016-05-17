@@ -1,0 +1,11 @@
+asn_login:
+    path:     /login
+    defaults: { _controller: AvmAsnBundle:Default:index }
+    
+asn_register:
+    path:     /register
+    defaults: { _controller: AvmAsnBundle:Default:register }
+
+asn_admin_homepage:
+    path:     /admin/login
+    defaults: { _controller: AvmAsnBundle:Admin:index }
