@@ -49,17 +49,17 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
         // line 21
         $this->displayBlock('body', $context, $blocks);
-        // line 23
+        // line 24
         echo "
         ";
-        // line 24
+        // line 25
         $this->displayBlock('footer', $context, $blocks);
-        // line 26
+        // line 28
         echo "        
         ";
-        // line 27
+        // line 29
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 32
+        // line 34
         echo "    </body>
 </html>
 ";
@@ -102,29 +102,31 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
     public function block_body($context, array $blocks = array())
     {
         echo " 
+            
         ";
     }
 
-    // line 24
+    // line 25
     public function block_footer($context, array $blocks = array())
     {
-        // line 25
-        echo "        ";
+        // line 26
+        echo "            
+        ";
     }
 
-    // line 27
+    // line 29
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 28
+        // line 30
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery-2.2.3.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 29
+        // line 31
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 30
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.transit.min.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -142,7 +144,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 
     public function getDebugInfo()
     {
-        return array (  128 => 30,  124 => 29,  119 => 28,  116 => 27,  112 => 25,  109 => 24,  102 => 21,  97 => 18,  94 => 17,  88 => 11,  83 => 9,  78 => 8,  75 => 7,  69 => 6,  63 => 32,  61 => 27,  58 => 26,  56 => 24,  53 => 23,  51 => 21,  48 => 20,  46 => 17,  38 => 13,  36 => 7,  32 => 6,  25 => 1,);
+        return array (  130 => 32,  126 => 31,  121 => 30,  118 => 29,  113 => 26,  110 => 25,  102 => 21,  97 => 18,  94 => 17,  88 => 11,  83 => 9,  78 => 8,  75 => 7,  69 => 6,  63 => 34,  61 => 29,  58 => 28,  56 => 25,  53 => 24,  51 => 21,  48 => 20,  46 => 17,  38 => 13,  36 => 7,  32 => 6,  25 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -166,9 +168,11 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*         {% endblock %}*/
 /*         */
 /*         {% block body %} */
+/*             */
 /*         {% endblock %}*/
 /* */
 /*         {% block footer %}*/
+/*             */
 /*         {% endblock %}*/
 /*         */
 /*         {% block javascripts %}*/
