@@ -1,0 +1,70 @@
+{% extends "::user_base.html.twig" %}
+
+{% block title %} {{ parent() }} {% endblock %}
+
+{% block body %} 
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="list-inline pull-right">
+                <li><a href="#" title="Français">Français</a></li>
+                <li><a href="#" title="Anglais">Anglais</a></li>
+            </ul>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-12 text-muted">
+                <h1 class="text-purple">
+                    <i class="fa fa-comments fa-2x"></i>
+                    <br>
+                    <small>AVM Social Network</small>
+                </h1>
+                <br>
+                <p class="h5">
+                    Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous trouvez et quoi que vous faites.
+                </p>
+            </div>
+        </div>
+
+        {% block loginRegister %}
+        {% endblock %}
+
+        <div class="row text-center bg-purple">
+            <div class="col-lg-4">
+                <h4><i class="fa fa-location-arrow fa-2x"></i></h4>
+                <ul class="list-unstyled">
+                    <li>Cameroun</li>
+                    <li>Tchad</li>
+                    <li>Kenya</li>
+                    <li>Nigéria</li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h4><i class="fa fa-flag fa-2x"></i></h4>
+                <ul class="list-unstyled">
+                    <li>Français</li>
+                    <li>Anglais</li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h4><b>A propos</b></h4>
+                <ul class="list-unstyled">
+                    <li>AVM Social Network</li>
+                    <li>AVM Public Market</li>
+                    <li>AVM Paiement Network</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %} 
+    <footer>
+        <br>
+        <div class="container">
+            <div class="row border-top">
+                <div class="col-lg-12">
+                    <h5 class="text-center">Copyright &copy; 2016</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
