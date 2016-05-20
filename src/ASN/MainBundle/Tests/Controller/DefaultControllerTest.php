@@ -1,6 +1,6 @@
 <?php
 
-namespace Avm\AsnBundle\Tests\Controller;
+namespace ASN\MainBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

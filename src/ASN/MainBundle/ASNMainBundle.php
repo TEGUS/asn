@@ -1,9 +1,9 @@
 <?php
 
-namespace Avm\AsnBundle;
+namespace ASN\MainBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AvmAsnBundle extends Bundle
+class ASNMainBundle extends Bundle
 {
 }

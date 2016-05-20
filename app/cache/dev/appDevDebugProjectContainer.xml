@@ -29,7 +29,7 @@
       <parameter key="ApplicationSonataUserBundle">Application\Sonata\UserBundle\ApplicationSonataUserBundle</parameter>
       <parameter key="FOSRestBundle">FOS\RestBundle\FOSRestBundle</parameter>
       <parameter key="JMSSerializerBundle">JMS\SerializerBundle\JMSSerializerBundle</parameter>
-      <parameter key="AvmAsnBundle">Avm\AsnBundle\AvmAsnBundle</parameter>
+      <parameter key="ASNMainBundle">ASN\MainBundle\ASNMainBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
@@ -2856,7 +2856,7 @@
       </call>
       <call method="addResource">
         <argument>xlf</argument>
-        <argument>/opt/lampp/htdocs/asn/src/Avm/AsnBundle/Resources/translations/messages.fr.xlf</argument>
+        <argument>/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/translations/messages.fr.xlf</argument>
         <argument>fr</argument>
         <argument>messages</argument>
       </call>
@@ -3902,7 +3902,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>573ee42146ee8</argument>
+            <argument>573ef02097531</argument>
           </service>
         </argument>
         <argument type="service">
@@ -3916,7 +3916,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>573ee42146ee8</argument>
+            <argument>573ef02097531</argument>
           </service>
         </argument>
       </argument>
@@ -4303,7 +4303,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>573ee42146ee8</argument>
+            <argument>573ef02097531</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -4407,7 +4407,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>573ee42146ee8</argument>
+            <argument>573ef02097531</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -7211,8 +7211,8 @@
         <argument>SonataUser</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/asn/src/Avm/AsnBundle/Resources/views</argument>
-        <argument>AvmAsn</argument>
+        <argument>/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/views</argument>
+        <argument>ASNMain</argument>
       </call>
       <call method="addPath">
         <argument>/opt/lampp/htdocs/asn/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
@@ -7419,7 +7419,7 @@
                       <argument key="Application\Sonata\UserBundle">/opt/lampp/htdocs/asn/src/Application/Sonata/UserBundle/Resources/config/serializer</argument>
                       <argument key="FOS\RestBundle">/opt/lampp/htdocs/asn/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
                       <argument key="JMS\SerializerBundle">/opt/lampp/htdocs/asn/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
-                      <argument key="Avm\AsnBundle">/opt/lampp/htdocs/asn/src/Avm/AsnBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\MainBundle">/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">/opt/lampp/htdocs/asn/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">/opt/lampp/htdocs/asn/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">/opt/lampp/htdocs/asn/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>
@@ -7456,7 +7456,7 @@
                       <argument key="Application\Sonata\UserBundle">/opt/lampp/htdocs/asn/src/Application/Sonata/UserBundle/Resources/config/serializer</argument>
                       <argument key="FOS\RestBundle">/opt/lampp/htdocs/asn/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
                       <argument key="JMS\SerializerBundle">/opt/lampp/htdocs/asn/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
-                      <argument key="Avm\AsnBundle">/opt/lampp/htdocs/asn/src/Avm/AsnBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\MainBundle">/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">/opt/lampp/htdocs/asn/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">/opt/lampp/htdocs/asn/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">/opt/lampp/htdocs/asn/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>
@@ -7493,7 +7493,7 @@
                       <argument key="Application\Sonata\UserBundle">/opt/lampp/htdocs/asn/src/Application/Sonata/UserBundle/Resources/config/serializer</argument>
                       <argument key="FOS\RestBundle">/opt/lampp/htdocs/asn/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
                       <argument key="JMS\SerializerBundle">/opt/lampp/htdocs/asn/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
-                      <argument key="Avm\AsnBundle">/opt/lampp/htdocs/asn/src/Avm/AsnBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\MainBundle">/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">/opt/lampp/htdocs/asn/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">/opt/lampp/htdocs/asn/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">/opt/lampp/htdocs/asn/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>
