@@ -1,0 +1,104 @@
+{% extends "ASNMainBundle:user:base.html.twig" %}
+
+{% block loginRegister %}
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <div class="row">
+
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h4 class="text-center"><b>Connexion</b></h4>
+                    <!-- formulaire connexion -->
+                    {% if error %}
+                        <div class="col-lg-12 alert alert-danger alert-dismissible" id="alert">
+                            <strong>{{ error }}</strong>
+                        </div>
+                    {% endif %}
+                    <form id="loginForm" method="post" {{ form_enctype(form) }}>
+                        <div class="input-group form-group form-group-lg">
+                            <label for="login" class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </label>
+                            {{ form_widget(form.email, { 'attr': {'class': 'form-control email', 'placeholder':'example@avm.com'} }) }}
+                        </div>
+                        <div class="input-group form-group form-group-lg">
+                            <label for="motDePasse" class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </label>
+                            {{ form_widget(form.password, { 'attr': {'class': 'form-control pwd', 'placeholder':'Mot de passe'} }) }}
+                        </div>
+                        <div class="form-group form-group-lg">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Se souvenir de moi
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-lg">
+                            <button type="submit" class="btn btn-purple btn-block">
+                                Se connecter
+                            </button>
+                        </div>
+                    </form>
+                    <h4 class="text-center">OU</h4>
+                    <p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="#" class="btn btn-primary col-lg-12">
+                                <i class="fa fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#" class="btn btn-danger col-lg-12">
+                                <i class="fa fa-google fa-1x"></i>
+                                Google
+                            </a>
+                        </div>
+                    </div>
+                    </p>
+                    <p>
+                        Pas de compte? <a href="{{ path('asn_register') }}" title="Créer ici">S'inscrire ici</a>
+                    </p>
+                </div>
+
+            </div>							
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "#f3e5f5");
+            });
+            $("input").blur(function () {
+                $(this).css("background-color", "#fff");
+            });
+            $("select").click(function () {
+                $(this).css("background-color", "#f3e5f5");
+            });
+            $("select").mouseleave(function () {
+                $(this).css("background-color", "#fff");
+            });
+
+            /*$("#loginForm").submit(function () {
+             $.ajax({
+             type: 'POST',
+             url: url,
+             data: {
+             email: $(".email").val(),
+             pwd: $(".pwd").val()
+             },
+             beforeSend: function () {
+             
+             },
+             success: function (data) {
+             
+             }
+             });
+             });*/
+        });
+    </script>
+{% endblock %}

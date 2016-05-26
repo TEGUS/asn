@@ -590,19 +590,44 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             if (0 === strpos($pathinfo, '/asn')) {
-                // asn_login
-                if ($pathinfo === '/asn/login') {
-                    return array (  '_controller' => 'Avm\\AsnBundle\\Controller\\DefaultController::indexAction',  '_route' => 'asn_login',);
+                // asn_home
+                if ($pathinfo === '/asn/acceuil') {
+                    return array (  '_controller' => 'ASN\\MainBundle\\Controller\\MainController::indexAction',  '_route' => 'asn_home',);
+                }
+
+                if (0 === strpos($pathinfo, '/asn/log')) {
+                    // asn_login
+                    if ($pathinfo === '/asn/login') {
+                        if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                            $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                            goto not_asn_login;
+                        }
+
+                        return array (  '_controller' => 'ASN\\MainBundle\\Controller\\MainController::loginAction',  '_route' => 'asn_login',);
+                    }
+                    not_asn_login:
+
+                    // asn_logout
+                    if ($pathinfo === '/asn/logout') {
+                        return array (  '_controller' => 'ASN\\MainBundle\\Controller\\MainController::logoutAction',  '_route' => 'asn_logout',);
+                    }
+
                 }
 
                 // asn_register
                 if ($pathinfo === '/asn/register') {
-                    return array (  '_controller' => 'Avm\\AsnBundle\\Controller\\DefaultController::registerAction',  '_route' => 'asn_register',);
-                }
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_asn_register;
+                    }
 
-                // asn_admin_homepage
-                if ($pathinfo === '/asn/admin/login') {
-                    return array (  '_controller' => 'Avm\\AsnBundle\\Controller\\AdminController::indexAction',  '_route' => 'asn_admin_homepage',);
+                    return array (  '_controller' => 'ASN\\MainBundle\\Controller\\MainController::registerAction',  '_route' => 'asn_register',);
+                }
+                not_asn_register:
+
+                // find_user_by_email
+                if (0 === strpos($pathinfo, '/asn/user/byemail') && preg_match('#^/asn/user/byemail/(?P<email>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'find_user_by_email')), array (  '_controller' => 'ASN\\MainBundle\\Controller\\MainController::user_by_emailAction',));
                 }
 
             }

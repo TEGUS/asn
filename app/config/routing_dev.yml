@@ -14,5 +14,5 @@ _main:
     resource: routing.yml
 
 _avm_asn:
-    resource: "@AvmAsnBundle/Resources/config/routing.yml"
+    resource: "@ASNMainBundle/Resources/config/routing.yml"
     prefix:   /asn

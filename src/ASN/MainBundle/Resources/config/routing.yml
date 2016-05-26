@@ -1,0 +1,23 @@
+asn_home:
+    path:     /acceuil
+    defaults: { _controller: ASNMainBundle:Main:index }
+    
+asn_login:
+    path:     /login
+    defaults: { _controller: ASNMainBundle:Main:login }
+    requirements:
+        _method: GET|POST
+
+asn_logout:
+    path:     /logout
+    defaults: { _controller: ASNMainBundle:Main:logout }
+    
+asn_register:
+    path:     /register
+    defaults: { _controller: ASNMainBundle:Main:register }
+    requirements:
+        _method: GET|POST
+
+find_user_by_email:
+    path:     /user/byemail/{email}
+    defaults: { _controller: ASNMainBundle:Main:user_by_email}
