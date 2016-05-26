@@ -36,6 +36,10 @@ body {
     color: #fff;
 }
 
+.bg-orange {
+    background-color: #ed7f10;
+}
+
 /* Padding */
 
 .padding {
@@ -46,6 +50,10 @@ body {
 .btn.btn-primary {
     background-color: #3a8eba;
     border-bottom: 4px solid #286090;
+}
+
+.btn.btn-danger {
+    border-bottom: 4px solid #ac2925;
 }
 
 .custom-badge {
@@ -74,6 +82,14 @@ body {
 
 .affix + div {
     /*padding-top: 100px;*/
+}
+
+.bad {
+    color: red;
+}
+
+.good {
+    color: yellowgreen;
 }
 
 
@@ -187,6 +203,10 @@ body {
 /*------------------------------------------*/
 /*  =    FOOTER                             */
 /*------------------------------------------*/
+
+footer {
+    margin-top: 20px;
+}
 
 footer .row + .row .col-lg-12 {
     border-top: 1px inset #fff;

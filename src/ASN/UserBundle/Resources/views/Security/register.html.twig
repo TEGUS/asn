@@ -1,0 +1,217 @@
+{% extends "ASNUserBundle::layout.html.twig" %}
+
+{% block loginRegister %}
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="row">
+                <h4 class="text-center"><b>Inscription</b></h4>
+                <form id="registerForm" method="post" class="form-horizontal"  {{ form_enctype(form) }}>
+                    <div class="form-group">
+                        <label for="firstname" class="col-lg-4 control-label">{{ form_label(form.firstname, "Prénom") }}</label>
+                        <div class="col-lg-8">
+                            {{ form_widget(form.firstname, { 'attr': {'class': 'form-control firstname', 'placeholder':'Prénom'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname" class="col-lg-4 control-label">{{ form_label(form.lastname, "Nom") }}</label>
+                        <div class="col-lg-8">
+                            {{ form_widget(form.lastname, { 'attr': {'class': 'form-control lastname', 'placeholder':'Nom'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date_of_birth" class="col-lg-4 control-label">{{ form_label(form.date_of_birth, "Date de naissance") }}</label>
+                        <div class="col-lg-8">
+                            <div class="col-lg-4">
+                                {{ form_widget(form.date_of_birth.month, {'attr':{'class':'form-control month'}}) }}
+                            </div>
+                            <div class="col-lg-4">
+                                {{ form_widget(form.date_of_birth.day, {'attr':{'class':'form-control day'}}) }}
+                            </div>
+                            <div class="col-lg-4">
+                                {{ form_widget(form.date_of_birth.year, {'attr':{'class':'form-control year'}}) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender" class="col-lg-4 control-label">{{ form_label(form.gender, "Genre") }}</label>
+                        <div class="col-lg-8">
+                            {{ form_widget(form.gender , {'attr':{'class':'form-control gender'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country" class="col-lg-4 control-label">{{ form_label(form.country, "Nationalité") }}</label>
+                        <div class="col-lg-8">
+                            {{ form_widget(form.country , {'attr':{'class':'form-control country'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="col-lg-4 control-label">{{ form_label(form.phone, "Téléphone") }}</label>
+                        <div class="col-lg-8">
+                            {{ form_widget(form.phone, { 'attr': {'class': 'form-control phone', 'placeholder':'Numéro de téléphone'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-lg-4 control-label">{{ form_label(form.email, "Email") }}</label>
+                        <div class="col-lg-8">
+                            <div class="col-lg-11">
+                                {{ form_widget(form.email, { 'attr': {'class': 'form-control email', 'placeholder':'example@avm.cm'} }) }}
+                            </div>
+                            <div class="col-lg-1 infoemail">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="col-lg-4 control-label">{{ form_label(form.password, "Mot de passe") }}</label>
+                        <div class="col-lg-8">
+                            <div class="col-lg-11">
+                                {{ form_widget(form.password, { 'attr': {'class': 'form-control mdp', 'placeholder':'Mot de passe'} }) }}
+                            </div>
+                            <div class="col-lg-1 infomdp">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmeMotDePasse" class="col-lg-4 control-label">
+                            Repéter le mot de passe
+                        </label>
+                        <div class="col-lg-8">
+                            <div class="col-lg-11">
+                                <input type="password" placeholder="Repéter le mot de passe" class="form-control rmdp">
+                            </div>
+                            <div class="col-lg-1 informdp">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-offset-4 col-lg-8">
+                            <button type="submit" class="btn btn-purple btn-sm submit">
+                                S'inscrire
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="col-lg-offset-4">
+                    Vous avez déjà un compte? 
+                    <a href="{{ path('asn_login') }}" title="Connexion">
+                        Connectez-vous ici
+                    </a>
+                </p>
+            </div>							
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "#f3e5f5");
+            });
+            $("input").blur(function () {
+                $(this).css("background-color", "#fff");
+            });
+            $("select").click(function () {
+                $(this).css("background-color", "#f3e5f5");
+            });
+            $("select").mouseleave(function () {
+                $(this).css("background-color", "#fff");
+            });
+
+            $(".submit").hide();
+            $(".rmdp").keyup(function () {
+                if ($(".mdp").val().length >= 8 && $(".rmdp").val().length !== 0) {
+                    if ($(".rmdp").val() !== $(".mdp").val()) {
+                        $(".submit").hide();
+                        $(".badrmdp").remove();
+                        $(".informdp").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad badrmdp"></i>');
+                        $(".goodrmdp").remove();
+                    } else {
+                        $(".submit").show();
+                        $(".goodrmdp").remove();
+                        $(".informdp").parent().append('<i class="fa fa-thumbs-o-up fa-2x good goodrmdp"></i>');
+                        $(".badrmdp").remove();
+                    }
+                } else {
+                    $(".submit").hide();
+                    $(".goodrmdp").remove();
+                    $(".badrmdp").remove();
+                }
+            });
+
+            $(".mdp").keyup(function () {
+                if ($(".mdp").val().length >= 8 && $(".rmdp").val().length !== 0) {
+                    if ($(".rmdp").val() !== $(".mdp").val()) {
+                        $(".submit").hide();
+                        $(".badrmdp").remove();
+                        $(".informdp").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad badrmdp"></i>');
+                        $(".goodrmdp").remove();
+                    } else {
+                        $(".submit").show();
+                        $(".goodrmdp").remove();
+                        ;
+                        $(".informdp").parent().append('<i class="fa fa-thumbs-o-up fa-2x good goodrmdp"></i>');
+                        $(".badrmdp").remove();
+                    }
+                } else {
+                    $(".submit").hide();
+                    $(".goodrmdp").remove();
+                    $(".badrmdp").remove();
+                }
+
+                if ($(".mdp").val().length >= 8) {
+                    $(".badmdp").remove();
+                    $(".goodmdp").remove();
+                    $(".infomdp").parent().append('<i class="fa fa-thumbs-o-up fa-2x good goodmdp"></i>');
+                } else if ($(".mdp").val().length > 0) {
+                    $(".badmdp").remove();
+                    $(".goodmdp").remove();
+                    $(".infomdp").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad badmdp"></i>');
+                } else {
+                    $(".goodmdp").remove();
+                    $(".badmdp").remove();
+                }
+            });
+
+            $(".email").change(function () {
+                var eml = $(".email").val();
+                $.ajax({
+                    type: 'get',
+                    url: 'http://localhost/asn/web/app_dev.php/user/byemail/' + eml,
+                    beforeSend: function () {
+                        $(".bademail").remove();
+                        $(".goodemail").remove();
+                        $(".loading").remove();
+                        $(".infoemail").parent().append('<img src="{{ asset('res/img/loading.gif') }}" class="loading">');
+                    },
+                    success: function (data) {
+                        $(".bademail").remove();
+                        $(".goodemail").remove();
+                        $(".loading").remove();
+                        console.log(data.response);
+                        if (data.response) {
+                            $(".submit").hide();
+                            $(".infoemail").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad bademail"></i>');
+                        } else {
+                            $(".submit").show();
+                            $(".infoemail").parent().append('<i class="fa fa-thumbs-o-up fa-2x good goodemail"></i>');
+                        }
+                    }
+                });
+            });
+
+            $(".phone").keyup(function () {
+
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,94 @@
+/*
+	Created by Darius Clinton Tsafack
+ */
+
+/*
+	GLOBAL STYLES
+ */
+
+body {
+	font-family: sans-serif;
+}
+
+/*Border*/
+
+.border-right {
+	border-right: 2px inset #000;
+}
+
+.border-right-white {
+	border-right: 2px inset #fff;
+}
+
+.border-bottom {
+	border-bottom: 1px inset #000;
+}
+
+.border-top {
+	border-top: 2px inset #fff;
+}
+
+/*Text*/
+.text-lg {
+	font-size: 3em;
+}
+
+.text-purple {
+	color: #6a1b9a;
+}
+/*Background*/
+
+.bg-grey {
+	background-color: #f3e5f5;
+}
+
+.bg-purple {
+	background-color: #6a1b9a;
+	color: #fff;
+}
+
+.bg-purple a {
+	color: #fff;
+}
+
+/*Padding*/
+.padding {
+	padding: 30px;
+}
+
+.padding-sm {
+	padding: 10px;
+}
+
+.padding-lg {
+	padding: 50px;
+}
+
+/*Margin*/
+.margin {
+	margin: 20px;
+}
+
+/*Elements*/
+
+.btn.btn-purple {
+	border-bottom: 4px solid #4a148c ;
+	background-color: #6a1b9a;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/*
+	HEADER STYLES
+ */
+nav .container-fluid {
+	box-shadow: 0px 0px 2px #000;
+}
+
+.bad {
+    color: red;
+}
+
+.good {
+    color: yellowgreen;
+}

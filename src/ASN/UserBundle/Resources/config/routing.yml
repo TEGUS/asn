@@ -1,0 +1,20 @@
+asn_login:
+    path:     /login
+    defaults: { _controller: ASNUserBundle:Security:login }
+    requirements:
+        _method: GET|POST
+
+asn_logout:
+    path:     /logout
+    defaults: { _controller: ASNUserBundle:Security:logout }
+    
+asn_register:
+    path:     /register
+    defaults: { _controller: ASNUserBundle:Security:register }
+    requirements:
+        _method: GET|POST
+
+find_user_by_email:
+    path:     /user/byemail/{email}
+    defaults: { _controller: ASNUserBundle:Security:user_by_email}
+

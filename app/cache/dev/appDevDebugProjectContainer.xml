@@ -30,6 +30,7 @@
       <parameter key="FOSRestBundle">FOS\RestBundle\FOSRestBundle</parameter>
       <parameter key="JMSSerializerBundle">JMS\SerializerBundle\JMSSerializerBundle</parameter>
       <parameter key="ASNMainBundle">ASN\MainBundle\ASNMainBundle</parameter>
+      <parameter key="ASNUserBundle">ASN\UserBundle\ASNUserBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
@@ -310,6 +311,9 @@
     <parameter key="security.access.always_authenticate_before_granting">false</parameter>
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection">
+      <parameter key="ROLE_USER" type="collection">
+        <parameter>ROLE_USER</parameter>
+      </parameter>
       <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_USER</parameter>
         <parameter>ROLE_SONATA_ADMIN</parameter>
@@ -2860,6 +2864,12 @@
         <argument>fr</argument>
         <argument>messages</argument>
       </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/translations/messages.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>messages</argument>
+      </call>
     </service>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
@@ -3902,7 +3912,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5746cf0635627</argument>
+            <argument>5746e18929c77</argument>
           </service>
         </argument>
         <argument type="service">
@@ -3916,7 +3926,21 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5746cf0635627</argument>
+            <argument>5746e18929c77</argument>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
+            <argument type="service" id="fos_user.user_manager"/>
+            <argument type="service" id="security.user_checker"/>
+            <argument>secured_page</argument>
+            <argument type="service" id="security.encoder_factory"/>
+            <argument>true</argument>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+            <argument>5746e18929c77</argument>
           </service>
         </argument>
       </argument>
@@ -4005,6 +4029,9 @@
     </service>
     <service id="security.role_hierarchy" class="Symfony\Component\Security\Core\Role\RoleHierarchy" public="false">
       <argument type="collection">
+        <argument key="ROLE_USER" type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
         <argument key="ROLE_ADMIN" type="collection">
           <argument>ROLE_USER</argument>
           <argument>ROLE_SONATA_ADMIN</argument>
@@ -4040,6 +4067,11 @@
                 <argument>.*</argument>
               </service>
             </argument>
+            <argument key="security.firewall.map.context.secured_page" type="service">
+              <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+                <argument>/(.*)</argument>
+              </service>
+            </argument>
           </argument>
         </service>
       </argument>
@@ -4069,7 +4101,7 @@
       <call method="add">
         <argument type="service">
           <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-            <argument>^/asn/</argument>
+            <argument>^/asn/login$</argument>
           </service>
         </argument>
         <argument type="collection">
@@ -4080,11 +4112,37 @@
       <call method="add">
         <argument type="service">
           <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-            <argument>^/asn/admin/</argument>
+            <argument>^/asn/logout$</argument>
+          </service>
+        </argument>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+          <argument>ROLE_ADMIN</argument>
+          <argument>ROLE_SONATA_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service">
+          <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+            <argument>^/asn/register$</argument>
           </service>
         </argument>
         <argument type="collection">
           <argument>IS_AUTHENTICATED_ANONYMOUSLY</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service">
+          <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+            <argument>^/asn/acceuil/</argument>
+          </service>
+        </argument>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+          <argument>ROLE_ADMIN</argument>
+          <argument>ROLE_SONATA_ADMIN</argument>
         </argument>
         <argument>null</argument>
       </call>
@@ -4207,6 +4265,13 @@
         <argument>_csrf_token</argument>
         <argument>null</argument>
       </call>
+      <call method="registerListener">
+        <argument>secured_page</argument>
+        <argument>/logout</argument>
+        <argument>logout</argument>
+        <argument>_csrf_token</argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="templating.helper.security" class="Symfony\Bundle\SecurityBundle\Templating\Helper\SecurityHelper">
       <tag name="templating.helper" alias="security"/>
@@ -4303,7 +4368,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>5746cf0635627</argument>
+            <argument>5746e18929c77</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -4407,7 +4472,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>5746cf0635627</argument>
+            <argument>5746e18929c77</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -4419,6 +4484,110 @@
           <argument type="service" id="security.authentication.trust_resolver"/>
           <argument type="service" id="security.http_utils"/>
           <argument>main</argument>
+          <argument type="service">
+            <service class="Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint" public="false">
+              <argument type="service" id="http_kernel"/>
+              <argument type="service" id="security.http_utils"/>
+              <argument>/login</argument>
+              <argument>false</argument>
+            </service>
+          </argument>
+          <argument>null</argument>
+          <argument>null</argument>
+          <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+        </service>
+      </argument>
+    </service>
+    <service id="security.firewall.map.context.secured_page" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
+      <argument type="collection">
+        <argument type="service" id="security.channel_listener"/>
+        <argument type="service" id="security.context_listener.0"/>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\LogoutListener" public="false">
+            <argument type="service" id="security.context"/>
+            <argument type="service" id="security.http_utils"/>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
+                <argument type="service" id="security.http_utils"/>
+                <argument>/login</argument>
+              </service>
+            </argument>
+            <argument type="collection">
+              <argument key="csrf_parameter">_csrf_token</argument>
+              <argument key="intention">logout</argument>
+              <argument key="logout_path">/logout</argument>
+            </argument>
+            <call method="addHandler">
+              <argument type="service" id="security.logout.handler.session"/>
+            </call>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener" public="false">
+            <tag name="security.remember_me_aware" id="secured_page" provider="fos_user.user_manager"/>
+            <argument type="service" id="security.context"/>
+            <argument type="service" id="security.authentication.manager"/>
+            <argument type="service" id="security.authentication.session_strategy"/>
+            <argument type="service" id="security.http_utils"/>
+            <argument>secured_page</argument>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler" public="false">
+                <argument type="service" id="security.http_utils"/>
+                <argument type="collection">
+                  <argument key="login_path">/login</argument>
+                  <argument key="default_target_path">/</argument>
+                  <argument key="always_use_default_target_path">false</argument>
+                  <argument key="target_path_parameter">_target_path</argument>
+                  <argument key="use_referer">false</argument>
+                </argument>
+                <call method="setProviderKey">
+                  <argument>secured_page</argument>
+                </call>
+              </service>
+            </argument>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler" public="false">
+                <argument type="service" id="http_kernel"/>
+                <argument type="service" id="security.http_utils"/>
+                <argument type="collection">
+                  <argument key="login_path">/login</argument>
+                  <argument key="failure_path">/login</argument>
+                  <argument key="failure_forward">false</argument>
+                  <argument key="failure_path_parameter">_failure_path</argument>
+                </argument>
+                <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+              </service>
+            </argument>
+            <argument type="collection">
+              <argument key="use_forward">false</argument>
+              <argument key="check_path">/login</argument>
+              <argument key="require_previous_session">true</argument>
+              <argument key="username_parameter">_username</argument>
+              <argument key="password_parameter">_password</argument>
+              <argument key="csrf_parameter">_csrf_token</argument>
+              <argument key="intention">authenticate</argument>
+              <argument key="post_only">true</argument>
+            </argument>
+            <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+            <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+            <argument>null</argument>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
+            <argument type="service" id="security.context"/>
+            <argument>5746e18929c77</argument>
+            <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+          </service>
+        </argument>
+        <argument type="service" id="security.access_listener"/>
+      </argument>
+      <argument type="service">
+        <service class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
+          <argument type="service" id="security.context"/>
+          <argument type="service" id="security.authentication.trust_resolver"/>
+          <argument type="service" id="security.http_utils"/>
+          <argument>secured_page</argument>
           <argument type="service">
             <service class="Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint" public="false">
               <argument type="service" id="http_kernel"/>
@@ -4967,7 +5136,6 @@
                       <argument type="collection">
                         <argument key="/opt/lampp/htdocs/asn/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine">FOS\UserBundle\Entity</argument>
                         <argument key="/opt/lampp/htdocs/asn/vendor/sonata-project/user-bundle/Resources/config/doctrine">Sonata\UserBundle\Entity</argument>
-                        <argument key="/opt/lampp/htdocs/asn/src/Application/Sonata/UserBundle/Resources/config/doctrine">Application\Sonata\UserBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -4982,7 +5150,6 @@
                       <argument type="collection">
                         <argument key="/opt/lampp/htdocs/asn/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine">FOS\UserBundle\Entity</argument>
                         <argument key="/opt/lampp/htdocs/asn/vendor/sonata-project/user-bundle/Resources/config/doctrine">Sonata\UserBundle\Entity</argument>
-                        <argument key="/opt/lampp/htdocs/asn/src/Application/Sonata/UserBundle/Resources/config/doctrine">Application\Sonata\UserBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -4993,15 +5160,11 @@
                 </call>
                 <call method="addDriver">
                   <argument type="service">
-                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver" public="false">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument key="/opt/lampp/htdocs/asn/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine">FOS\UserBundle\Entity</argument>
-                        <argument key="/opt/lampp/htdocs/asn/vendor/sonata-project/user-bundle/Resources/config/doctrine">Sonata\UserBundle\Entity</argument>
-                        <argument key="/opt/lampp/htdocs/asn/src/Application/Sonata/UserBundle/Resources/config/doctrine">Application\Sonata\UserBundle\Entity</argument>
+                        <argument>/opt/lampp/htdocs/asn/src/Application/Sonata/UserBundle/Entity</argument>
                       </argument>
-                      <call method="setGlobalBasename">
-                        <argument>mapping</argument>
-                      </call>
                     </service>
                   </argument>
                   <argument>Application\Sonata\UserBundle\Entity</argument>
@@ -6014,6 +6177,9 @@
       <argument type="service" id="security.context"/>
       <argument type="service" id="sonata.admin.pool"/>
       <argument type="collection">
+        <argument key="ROLE_USER" type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
         <argument key="ROLE_ADMIN" type="collection">
           <argument>ROLE_USER</argument>
           <argument>ROLE_SONATA_ADMIN</argument>
@@ -7215,6 +7381,10 @@
         <argument>ASNMain</argument>
       </call>
       <call method="addPath">
+        <argument>/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/views</argument>
+        <argument>ASNUser</argument>
+      </call>
+      <call method="addPath">
         <argument>/opt/lampp/htdocs/asn/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
@@ -7420,6 +7590,7 @@
                       <argument key="FOS\RestBundle">/opt/lampp/htdocs/asn/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
                       <argument key="JMS\SerializerBundle">/opt/lampp/htdocs/asn/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
                       <argument key="ASN\MainBundle">/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\UserBundle">/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">/opt/lampp/htdocs/asn/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">/opt/lampp/htdocs/asn/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">/opt/lampp/htdocs/asn/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>
@@ -7457,6 +7628,7 @@
                       <argument key="FOS\RestBundle">/opt/lampp/htdocs/asn/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
                       <argument key="JMS\SerializerBundle">/opt/lampp/htdocs/asn/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
                       <argument key="ASN\MainBundle">/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\UserBundle">/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">/opt/lampp/htdocs/asn/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">/opt/lampp/htdocs/asn/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">/opt/lampp/htdocs/asn/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>
@@ -7494,6 +7666,7 @@
                       <argument key="FOS\RestBundle">/opt/lampp/htdocs/asn/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer</argument>
                       <argument key="JMS\SerializerBundle">/opt/lampp/htdocs/asn/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer</argument>
                       <argument key="ASN\MainBundle">/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\UserBundle">/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">/opt/lampp/htdocs/asn/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">/opt/lampp/htdocs/asn/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">/opt/lampp/htdocs/asn/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer</argument>

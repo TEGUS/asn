@@ -64,13 +64,13 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
         // line 144
         $this->displayBlock('footer', $context, $blocks);
-        // line 194
+        // line 195
         echo "
 
         ";
-        // line 196
+        // line 197
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 202
+        // line 203
         echo "    </body>
 </html>
 ";
@@ -152,7 +152,10 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                             </li>
                             <li class=\"dropdown\">
                                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">
-                                    Aurelien Tegus
+                                    ";
+        // line 61
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "firstname", array()), "html", null, true);
+        echo "
                                     <span class=\"caret\"></span>
                                 </a>
                                 <ul class=\"dropdown-menu\" role=\"menu\">
@@ -161,7 +164,10 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                                     <li class=\"divider\"></li>
                                     <li><a href=\"#\">Langue</a></li>
                                     <li class=\"divider\"></li>
-                                    <li><a href=\"#\">Déconnexion</a></li>
+                                    <li><a href=\"";
+        // line 70
+        echo $this->env->getExtension('routing')->getPath("asn_logout");
+        echo "\">Déconnexion</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -325,20 +331,21 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                             </ul>
                         </div>
                         <div class=\"col-lg-4\">
+                            <br>
                             <h4>Suivez nous</h4>
-                            <div class=\"panel\">
+                            <div class=\"panel bg-orange\">
                                 <ul class=\"list-unstyled list-inline\">
                                     <li>
-                                        <a href=\"#\" class=\"text-primary\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
+                                        <a href=\"#\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\" class=\"text-primary\"><i class=\"fa fa-twitter-square fa-4x\"></i></a>
+                                        <a href=\"#\"><i class=\"fa fa-twitter-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\" class=\"text-primary\"><i class=\"fa fa-linkedin-square fa-4x\"></i></a>
+                                        <a href=\"#\"><i class=\"fa fa-linkedin-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\" class=\"text-primary\"><i class=\"fa fa-vimeo-square fa-4x\"></i></a>
+                                        <a href=\"#\"><i class=\"fa fa-vimeo-square fa-4x\"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -356,23 +363,23 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
     }
 
-    // line 196
+    // line 197
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 197
+        // line 198
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery-2.2.3.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 198
+        // line 199
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 199
+        // line 200
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.transit.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 200
+        // line 201
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/js/app.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -390,7 +397,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 
     public function getDebugInfo()
     {
-        return array (  376 => 200,  372 => 199,  368 => 198,  363 => 197,  360 => 196,  308 => 145,  305 => 144,  300 => 136,  297 => 135,  292 => 132,  289 => 131,  284 => 128,  281 => 127,  276 => 138,  274 => 135,  271 => 134,  269 => 131,  266 => 130,  264 => 127,  261 => 126,  258 => 125,  253 => 118,  250 => 117,  245 => 112,  242 => 111,  235 => 120,  233 => 117,  228 => 114,  226 => 111,  221 => 108,  218 => 107,  213 => 140,  211 => 125,  208 => 124,  206 => 107,  200 => 105,  195 => 100,  136 => 42,  121 => 29,  108 => 18,  105 => 17,  99 => 11,  94 => 9,  89 => 8,  86 => 7,  80 => 6,  74 => 202,  72 => 196,  68 => 194,  66 => 144,  62 => 142,  60 => 105,  55 => 102,  53 => 17,  45 => 13,  43 => 7,  39 => 6,  32 => 1,);
+        return array (  383 => 201,  379 => 200,  375 => 199,  370 => 198,  367 => 197,  314 => 145,  311 => 144,  306 => 136,  303 => 135,  298 => 132,  295 => 131,  290 => 128,  287 => 127,  282 => 138,  280 => 135,  277 => 134,  275 => 131,  272 => 130,  270 => 127,  267 => 126,  264 => 125,  259 => 118,  256 => 117,  251 => 112,  248 => 111,  241 => 120,  239 => 117,  234 => 114,  232 => 111,  227 => 108,  224 => 107,  219 => 140,  217 => 125,  214 => 124,  212 => 107,  206 => 105,  201 => 100,  169 => 70,  157 => 61,  136 => 42,  121 => 29,  108 => 18,  105 => 17,  99 => 11,  94 => 9,  89 => 8,  86 => 7,  80 => 6,  74 => 203,  72 => 197,  68 => 195,  66 => 144,  62 => 142,  60 => 105,  55 => 102,  53 => 17,  45 => 13,  43 => 7,  39 => 6,  32 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -453,7 +460,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                             </li>*/
 /*                             <li class="dropdown">*/
 /*                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">*/
-/*                                     Aurelien Tegus*/
+/*                                     {{ app.user.firstname }}*/
 /*                                     <span class="caret"></span>*/
 /*                                 </a>*/
 /*                                 <ul class="dropdown-menu" role="menu">*/
@@ -462,7 +469,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                                     <li class="divider"></li>*/
 /*                                     <li><a href="#">Langue</a></li>*/
 /*                                     <li class="divider"></li>*/
-/*                                     <li><a href="#">Déconnexion</a></li>*/
+/*                                     <li><a href="{{ path('asn_logout') }}">Déconnexion</a></li>*/
 /*                                 </ul>*/
 /*                             </li>*/
 /*                         </ul>*/
@@ -557,20 +564,21 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                             </ul>*/
 /*                         </div>*/
 /*                         <div class="col-lg-4">*/
+/*                             <br>*/
 /*                             <h4>Suivez nous</h4>*/
-/*                             <div class="panel">*/
+/*                             <div class="panel bg-orange">*/
 /*                                 <ul class="list-unstyled list-inline">*/
 /*                                     <li>*/
-/*                                         <a href="#" class="text-primary"><i class="fa fa-facebook-square fa-4x"></i></a>*/
+/*                                         <a href="#"><i class="fa fa-facebook-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#" class="text-primary"><i class="fa fa-twitter-square fa-4x"></i></a>*/
+/*                                         <a href="#"><i class="fa fa-twitter-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#" class="text-primary"><i class="fa fa-linkedin-square fa-4x"></i></a>*/
+/*                                         <a href="#"><i class="fa fa-linkedin-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#" class="text-primary"><i class="fa fa-vimeo-square fa-4x"></i></a>*/
+/*                                         <a href="#"><i class="fa fa-vimeo-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                 </ul>*/
 /*                             </div>*/
