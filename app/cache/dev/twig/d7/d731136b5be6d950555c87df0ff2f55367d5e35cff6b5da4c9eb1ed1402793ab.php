@@ -40,7 +40,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("images/logo_asn.png"), "html", null, true);
         echo "\" />
     </head>
-    <body class=\"bg-grey\" style=\"padding-top: 0;\">
+    <body class=\"bg-grey\" style=\"padding-top: 10px;\">
 
         ";
         // line 17
@@ -117,7 +117,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
                             <small class=\"text-orange\">AVM Social Network</small>
                         </h1>
                         <br>
-                        <p class=\"text-orange\">
+                        <p>
                             Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous trouvez et quoi que vous faites.
                         </p>
                     </div>
@@ -242,7 +242,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*         {% endblock %}*/
 /*         <link rel="icon" type="image/x-icon" href="{{ asset('images/logo_asn.png') }}" />*/
 /*     </head>*/
-/*     <body class="bg-grey" style="padding-top: 0;">*/
+/*     <body class="bg-grey" style="padding-top: 10px;">*/
 /* */
 /*         {% block header %}*/
 /*         {% endblock %}*/
@@ -263,7 +263,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*                             <small class="text-orange">AVM Social Network</small>*/
 /*                         </h1>*/
 /*                         <br>*/
-/*                         <p class="text-orange">*/
+/*                         <p>*/
 /*                             Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous trouvez et quoi que vous faites.*/
 /*                         </p>*/
 /*                     </div>*/
