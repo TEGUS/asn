@@ -105,8 +105,8 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
             <div class=\"container-fluid\">
                 <div class=\"row\">
                     <ul class=\"list-inline pull-right\">
-                        <li><a href=\"#\" title=\"Français\">Français</a></li>
-                        <li><a href=\"#\" title=\"Anglais\">Anglais</a></li>
+                        <li><a href=\"#\" title=\"Français\"><em>Français</em></a></li>
+                        <li><a href=\"#\" title=\"Anglais\"><em>Anglais</em></a></li>
                     </ul>
                 </div>
                 <div class=\"row text-center\">
@@ -251,8 +251,8 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*             <div class="container-fluid">*/
 /*                 <div class="row">*/
 /*                     <ul class="list-inline pull-right">*/
-/*                         <li><a href="#" title="Français">Français</a></li>*/
-/*                         <li><a href="#" title="Anglais">Anglais</a></li>*/
+/*                         <li><a href="#" title="Français"><em>Français</em></a></li>*/
+/*                         <li><a href="#" title="Anglais"><em>Anglais</em></a></li>*/
 /*                     </ul>*/
 /*                 </div>*/
 /*                 <div class="row text-center">*/

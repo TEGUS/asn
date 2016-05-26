@@ -93,7 +93,7 @@ class __TwigTemplate_62763e570f83b85b21de19dff8a0fd8745b9a86b1bd857e8130b136439d
                             </a>
                         </div>
                         <div class=\"col-lg-6\">
-                            <a href=\"#\" class=\"btn btn-danger col-lg-12 active\">
+                            <a href=\"#\" class=\"btn btn-danger col-lg-12\">
                                 <i class=\"fa fa-google fa-1x\"></i>
                                 Google
                             </a>
@@ -223,7 +223,7 @@ class __TwigTemplate_62763e570f83b85b21de19dff8a0fd8745b9a86b1bd857e8130b136439d
 /*                             </a>*/
 /*                         </div>*/
 /*                         <div class="col-lg-6">*/
-/*                             <a href="#" class="btn btn-danger col-lg-12 active">*/
+/*                             <a href="#" class="btn btn-danger col-lg-12">*/
 /*                                 <i class="fa fa-google fa-1x"></i>*/
 /*                                 Google*/
 /*                             </a>*/

@@ -76,14 +76,11 @@ body {
 /* Affix */
 
 .affix {
-    top: 0;
-    width: 100%;
+    top: 95px;
+    width: 263px;
 }
 
-.affix + div {
-    /*padding-top: 100px;*/
-}
-
+/* Alert login */
 .bad {
     color: red;
 }
@@ -192,7 +189,6 @@ body {
     height: 400px;
     overflow: auto;
     color: #444;
-    /*padding-right: 40px;*/
 }
 
 .popover-title {
