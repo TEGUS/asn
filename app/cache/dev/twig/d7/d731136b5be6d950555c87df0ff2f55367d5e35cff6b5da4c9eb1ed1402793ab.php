@@ -50,17 +50,17 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
         ";
         // line 20
         $this->displayBlock('body', $context, $blocks);
-        // line 47
-        echo "
-        ";
         // line 48
-        $this->displayBlock('footer', $context, $blocks);
-        // line 99
         echo "
         ";
+        // line 49
+        $this->displayBlock('footer', $context, $blocks);
         // line 100
+        echo "
+        ";
+        // line 101
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 105
+        // line 106
         echo "    </body>
 </html>
 ";
@@ -110,7 +110,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
                     </ul>
                 </div>
                 <div class=\"row text-center\">
-                    <div class=\"col-lg-12 text-muted\">
+                    <div class=\"col-lg-12\">
                         <h1 class=\"text-primary\">
                             <i class=\"fa fa-comments fa-2x\"></i>
                             <br>
@@ -118,31 +118,32 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
                         </h1>
                         <br>
                         <p>
-                            Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous trouvez et quoi que vous faites.
+                            Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous 
+                            trouvez et quoi que vous faites.
                         </p>
                     </div>
                 </div>
 
                 ";
-        // line 42
+        // line 43
         $this->displayBlock('loginRegister', $context, $blocks);
-        // line 44
+        // line 45
         echo "
             </div>
         ";
     }
 
-    // line 42
+    // line 43
     public function block_loginRegister($context, array $blocks = array())
     {
-        // line 43
+        // line 44
         echo "                ";
     }
 
-    // line 48
+    // line 49
     public function block_footer($context, array $blocks = array())
     {
-        // line 49
+        // line 50
         echo "            <footer class=\"text-center text-muted\">
                 <div class=\"container-fluid bg-primary\" style=\"margin-top: 100px\">
                     <div class=\"row\">
@@ -165,19 +166,19 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
                         <div class=\"col-lg-4\">
                             <br>
                             <h4>Suivez nous</h4>
-                            <div class=\"panel bg-orange\">
+                            <div class=\"panel\">
                                 <ul class=\"list-unstyled list-inline\">
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #1a237e\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-twitter-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #2196f3;\"><i class=\"fa fa-twitter-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-linkedin-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #1565c0\"><i class=\"fa fa-linkedin-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-vimeo-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #e53935\"><i class=\"fa fa-google-plus-square fa-4x\"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -195,19 +196,19 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
         ";
     }
 
-    // line 100
+    // line 101
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 101
+        // line 102
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery-2.2.3.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 102
+        // line 103
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.transit.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 103
+        // line 104
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -225,7 +226,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 
     public function getDebugInfo()
     {
-        return array (  211 => 103,  207 => 102,  202 => 101,  199 => 100,  146 => 49,  143 => 48,  139 => 43,  136 => 42,  130 => 44,  128 => 42,  102 => 20,  98 => 18,  95 => 17,  89 => 11,  84 => 9,  79 => 8,  76 => 7,  70 => 6,  64 => 105,  62 => 100,  59 => 99,  57 => 48,  54 => 47,  52 => 20,  49 => 19,  47 => 17,  39 => 13,  37 => 7,  33 => 6,  26 => 1,);
+        return array (  212 => 104,  208 => 103,  203 => 102,  200 => 101,  147 => 50,  144 => 49,  140 => 44,  137 => 43,  131 => 45,  129 => 43,  102 => 20,  98 => 18,  95 => 17,  89 => 11,  84 => 9,  79 => 8,  76 => 7,  70 => 6,  64 => 106,  62 => 101,  59 => 100,  57 => 49,  54 => 48,  52 => 20,  49 => 19,  47 => 17,  39 => 13,  37 => 7,  33 => 6,  26 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -256,7 +257,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*                     </ul>*/
 /*                 </div>*/
 /*                 <div class="row text-center">*/
-/*                     <div class="col-lg-12 text-muted">*/
+/*                     <div class="col-lg-12">*/
 /*                         <h1 class="text-primary">*/
 /*                             <i class="fa fa-comments fa-2x"></i>*/
 /*                             <br>*/
@@ -264,7 +265,8 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*                         </h1>*/
 /*                         <br>*/
 /*                         <p>*/
-/*                             Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous trouvez et quoi que vous faites.*/
+/*                             Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous */
+/*                             trouvez et quoi que vous faites.*/
 /*                         </p>*/
 /*                     </div>*/
 /*                 </div>*/
@@ -298,19 +300,19 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*                         <div class="col-lg-4">*/
 /*                             <br>*/
 /*                             <h4>Suivez nous</h4>*/
-/*                             <div class="panel bg-orange">*/
+/*                             <div class="panel">*/
 /*                                 <ul class="list-unstyled list-inline">*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-facebook-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #1a237e"><i class="fa fa-facebook-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-twitter-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #2196f3;"><i class="fa fa-twitter-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-linkedin-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #1565c0"><i class="fa fa-linkedin-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-vimeo-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #e53935"><i class="fa fa-google-plus-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                 </ul>*/
 /*                             </div>*/

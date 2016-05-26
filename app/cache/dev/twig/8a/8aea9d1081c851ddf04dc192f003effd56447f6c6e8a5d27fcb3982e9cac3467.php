@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Collector:memory.html.twig */
+/* @WebProfiler/Collector/memory.html.twig */
 class __TwigTemplate_4dfcd448f0d9c9e0a27406a5ccdf0cdc5f656486258588093676cf3418af4dd5 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_4dfcd448f0d9c9e0a27406a5ccdf0cdc5f656486258588093676cf3418a
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("@WebProfiler/Profiler/layout.html.twig", "WebProfilerBundle:Collector:memory.html.twig", 1);
+        $this->parent = $this->loadTemplate("@WebProfiler/Profiler/layout.html.twig", "@WebProfiler/Collector/memory.html.twig", 1);
         $this->blocks = array(
             'toolbar' => array($this, 'block_toolbar'),
         );
@@ -57,12 +57,12 @@ class __TwigTemplate_4dfcd448f0d9c9e0a27406a5ccdf0cdc5f656486258588093676cf3418a
         $context["text"] = ('' === $tmp = ob_get_clean()) ? '' : new Twig_Markup($tmp, $this->env->getCharset());
         // line 16
         echo "    ";
-        $this->loadTemplate("@WebProfiler/Profiler/toolbar_item.html.twig", "WebProfilerBundle:Collector:memory.html.twig", 16)->display(array_merge($context, array("link" => false)));
+        $this->loadTemplate("@WebProfiler/Profiler/toolbar_item.html.twig", "@WebProfiler/Collector/memory.html.twig", 16)->display(array_merge($context, array("link" => false)));
     }
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Collector:memory.html.twig";
+        return "@WebProfiler/Collector/memory.html.twig";
     }
 
     public function isTraitable()

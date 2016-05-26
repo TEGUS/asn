@@ -337,19 +337,19 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                         <div class=\"col-lg-4\">
                             <br>
                             <h4>Suivez nous</h4>
-                            <div class=\"panel bg-orange\">
+                            <div class=\"panel\">
                                 <ul class=\"list-unstyled list-inline\">
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #1a237e\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-twitter-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #2196f3;\"><i class=\"fa fa-twitter-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-linkedin-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #1565c0\"><i class=\"fa fa-linkedin-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-vimeo-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #e53935\"><i class=\"fa fa-google-plus-square fa-4x\"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -575,19 +575,19 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                         <div class="col-lg-4">*/
 /*                             <br>*/
 /*                             <h4>Suivez nous</h4>*/
-/*                             <div class="panel bg-orange">*/
+/*                             <div class="panel">*/
 /*                                 <ul class="list-unstyled list-inline">*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-facebook-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #1a237e"><i class="fa fa-facebook-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-twitter-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #2196f3;"><i class="fa fa-twitter-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-linkedin-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #1565c0"><i class="fa fa-linkedin-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-vimeo-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #e53935"><i class="fa fa-google-plus-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                 </ul>*/
 /*                             </div>*/
