@@ -101,10 +101,13 @@ class __TwigTemplate_62763e570f83b85b21de19dff8a0fd8745b9a86b1bd857e8130b136439d
                     </div>
                     </p>
                     <p>
-                        Pas de compte? <a href=\"";
-        // line 60
+                        Pas de compte? 
+                        <a href=\"";
+        // line 61
         echo $this->env->getExtension('routing')->getPath("asn_register");
-        echo "\" title=\"Créer ici\">S'inscrire ici</a>
+        echo "\" title=\"Créer ici\">
+                            S'inscrire ici
+                        </a>
                     </p>
                 </div>
 
@@ -114,10 +117,10 @@ class __TwigTemplate_62763e570f83b85b21de19dff8a0fd8745b9a86b1bd857e8130b136439d
 ";
     }
 
-    // line 69
+    // line 72
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 70
+        // line 73
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -169,7 +172,7 @@ class __TwigTemplate_62763e570f83b85b21de19dff8a0fd8745b9a86b1bd857e8130b136439d
 
     public function getDebugInfo()
     {
-        return array (  121 => 70,  118 => 69,  106 => 60,  70 => 27,  61 => 21,  52 => 16,  46 => 13,  43 => 12,  41 => 11,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  124 => 73,  121 => 72,  107 => 61,  70 => 27,  61 => 21,  52 => 16,  46 => 13,  43 => 12,  41 => 11,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends "ASNUserBundle::layout.html.twig" %}*/
@@ -231,7 +234,10 @@ class __TwigTemplate_62763e570f83b85b21de19dff8a0fd8745b9a86b1bd857e8130b136439d
 /*                     </div>*/
 /*                     </p>*/
 /*                     <p>*/
-/*                         Pas de compte? <a href="{{ path('asn_register') }}" title="Créer ici">S'inscrire ici</a>*/
+/*                         Pas de compte? */
+/*                         <a href="{{ path('asn_register') }}" title="Créer ici">*/
+/*                             S'inscrire ici*/
+/*                         </a>*/
 /*                     </p>*/
 /*                 </div>*/
 /* */

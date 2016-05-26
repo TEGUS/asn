@@ -33,18 +33,27 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
         <div class=\"col-lg-6 col-lg-offset-3\">
             <div class=\"row\">
                 <h4 class=\"text-center\"><b>Inscription</b></h4>
+                <p class=\"col-lg-offset-4\">
+                    Vous avez déjà un compte? 
+                    <a href=\"";
+        // line 10
+        echo $this->env->getExtension('routing')->getPath("asn_login");
+        echo "\" title=\"Connexion\">
+                        Connectez-vous ici
+                    </a>
+                </p>
                 <form id=\"registerForm\" method=\"post\" class=\"form-horizontal\"  ";
-        // line 8
+        // line 14
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
         echo ">
                     <div class=\"form-group\">
                         <label for=\"firstname\" class=\"col-lg-4 control-label\">";
-        // line 10
+        // line 16
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "firstname", array()), 'label', array("label" => "Prénom"));
         echo "</label>
                         <div class=\"col-lg-8\">
                             ";
-        // line 12
+        // line 18
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "firstname", array()), 'widget', array("attr" => array("class" => "form-control firstname", "placeholder" => "Prénom")));
         echo "
                         </div>
@@ -52,12 +61,12 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 
                     <div class=\"form-group\">
                         <label for=\"lastname\" class=\"col-lg-4 control-label\">";
-        // line 17
+        // line 23
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lastname", array()), 'label', array("label" => "Nom"));
         echo "</label>
                         <div class=\"col-lg-8\">
                             ";
-        // line 19
+        // line 25
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lastname", array()), 'widget', array("attr" => array("class" => "form-control lastname", "placeholder" => "Nom")));
         echo "
                         </div>
@@ -65,39 +74,41 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 
                     <div class=\"form-group\">
                         <label for=\"date_of_birth\" class=\"col-lg-4 control-label\">";
-        // line 24
+        // line 30
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "date_of_birth", array()), 'label', array("label" => "Date de naissance"));
         echo "</label>
                         <div class=\"col-lg-8\">
-                            <div class=\"col-lg-4\">
-                                ";
-        // line 27
+                            <div class=\"row\">
+                                <div class=\"col-lg-4\">
+                                    ";
+        // line 34
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "date_of_birth", array()), "month", array()), 'widget', array("attr" => array("class" => "form-control month")));
         echo "
-                            </div>
-                            <div class=\"col-lg-4\">
-                                ";
-        // line 30
+                                </div>
+                                <div class=\"col-lg-4\">
+                                    ";
+        // line 37
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "date_of_birth", array()), "day", array()), 'widget', array("attr" => array("class" => "form-control day")));
         echo "
-                            </div>
-                            <div class=\"col-lg-4\">
-                                ";
-        // line 33
+                                </div>
+                                <div class=\"col-lg-4\">
+                                    ";
+        // line 40
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "date_of_birth", array()), "year", array()), 'widget', array("attr" => array("class" => "form-control year")));
         echo "
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class=\"form-group\">
                         <label for=\"gender\" class=\"col-lg-4 control-label\">";
-        // line 39
+        // line 47
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender", array()), 'label', array("label" => "Genre"));
         echo "</label>
                         <div class=\"col-lg-8\">
                             ";
-        // line 41
+        // line 49
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender", array()), 'widget', array("attr" => array("class" => "form-control gender")));
         echo "
                         </div>
@@ -105,12 +116,12 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 
                     <div class=\"form-group\">
                         <label for=\"country\" class=\"col-lg-4 control-label\">";
-        // line 46
+        // line 54
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "country", array()), 'label', array("label" => "Nationalité"));
         echo "</label>
                         <div class=\"col-lg-8\">
                             ";
-        // line 48
+        // line 56
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "country", array()), 'widget', array("attr" => array("class" => "form-control country")));
         echo "
                         </div>
@@ -118,12 +129,12 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 
                     <div class=\"form-group\">
                         <label for=\"phone\" class=\"col-lg-4 control-label\">";
-        // line 53
+        // line 61
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phone", array()), 'label', array("label" => "Téléphone"));
         echo "</label>
                         <div class=\"col-lg-8\">
                             ";
-        // line 55
+        // line 63
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phone", array()), 'widget', array("attr" => array("class" => "form-control phone", "placeholder" => "Numéro de téléphone")));
         echo "
                         </div>
@@ -131,13 +142,13 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 
                     <div class=\"form-group\">
                         <label for=\"email\" class=\"col-lg-4 control-label\">";
-        // line 60
+        // line 68
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'label', array("label" => "Email"));
         echo "</label>
                         <div class=\"col-lg-8\">
                             <div class=\"col-lg-11\">
                                 ";
-        // line 63
+        // line 71
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'widget', array("attr" => array("class" => "form-control email", "placeholder" => "example@avm.cm")));
         echo "
                             </div>
@@ -148,13 +159,13 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 
                     <div class=\"form-group\">
                         <label for=\"password\" class=\"col-lg-4 control-label\">";
-        // line 71
+        // line 79
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'label', array("label" => "Mot de passe"));
         echo "</label>
                         <div class=\"col-lg-8\">
                             <div class=\"col-lg-11\">
                                 ";
-        // line 74
+        // line 82
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'widget', array("attr" => array("class" => "form-control mdp", "placeholder" => "Mot de passe")));
         echo "
                             </div>
@@ -187,7 +198,7 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
                 <p class=\"col-lg-offset-4\">
                     Vous avez déjà un compte? 
                     <a href=\"";
-        // line 104
+        // line 112
         echo $this->env->getExtension('routing')->getPath("asn_login");
         echo "\" title=\"Connexion\">
                         Connectez-vous ici
@@ -199,10 +210,10 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 ";
     }
 
-    // line 113
+    // line 121
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 114
+        // line 122
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -286,7 +297,7 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
                         \$(\".goodemail\").remove();
                         \$(\".loading\").remove();
                         \$(\".infoemail\").parent().append('<img src=\"";
-        // line 194
+        // line 202
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/loading.gif"), "html", null, true);
         echo "\" class=\"loading\">');
                     },
@@ -326,7 +337,7 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 
     public function getDebugInfo()
     {
-        return array (  290 => 194,  206 => 114,  203 => 113,  191 => 104,  158 => 74,  152 => 71,  141 => 63,  135 => 60,  127 => 55,  122 => 53,  114 => 48,  109 => 46,  101 => 41,  96 => 39,  87 => 33,  81 => 30,  75 => 27,  69 => 24,  61 => 19,  56 => 17,  48 => 12,  43 => 10,  38 => 8,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  301 => 202,  217 => 122,  214 => 121,  202 => 112,  169 => 82,  163 => 79,  152 => 71,  146 => 68,  138 => 63,  133 => 61,  125 => 56,  120 => 54,  112 => 49,  107 => 47,  97 => 40,  91 => 37,  85 => 34,  78 => 30,  70 => 25,  65 => 23,  57 => 18,  52 => 16,  47 => 14,  40 => 10,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends "ASNUserBundle::layout.html.twig" %}*/
@@ -336,6 +347,12 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 /*         <div class="col-lg-6 col-lg-offset-3">*/
 /*             <div class="row">*/
 /*                 <h4 class="text-center"><b>Inscription</b></h4>*/
+/*                 <p class="col-lg-offset-4">*/
+/*                     Vous avez déjà un compte? */
+/*                     <a href="{{ path('asn_login') }}" title="Connexion">*/
+/*                         Connectez-vous ici*/
+/*                     </a>*/
+/*                 </p>*/
 /*                 <form id="registerForm" method="post" class="form-horizontal"  {{ form_enctype(form) }}>*/
 /*                     <div class="form-group">*/
 /*                         <label for="firstname" class="col-lg-4 control-label">{{ form_label(form.firstname, "Prénom") }}</label>*/
@@ -354,14 +371,16 @@ class __TwigTemplate_dbf6844904eeefa8cb089bf05106955770fd8d3fa897d0d92fca6a4e368
 /*                     <div class="form-group">*/
 /*                         <label for="date_of_birth" class="col-lg-4 control-label">{{ form_label(form.date_of_birth, "Date de naissance") }}</label>*/
 /*                         <div class="col-lg-8">*/
-/*                             <div class="col-lg-4">*/
-/*                                 {{ form_widget(form.date_of_birth.month, {'attr':{'class':'form-control month'}}) }}*/
-/*                             </div>*/
-/*                             <div class="col-lg-4">*/
-/*                                 {{ form_widget(form.date_of_birth.day, {'attr':{'class':'form-control day'}}) }}*/
-/*                             </div>*/
-/*                             <div class="col-lg-4">*/
-/*                                 {{ form_widget(form.date_of_birth.year, {'attr':{'class':'form-control year'}}) }}*/
+/*                             <div class="row">*/
+/*                                 <div class="col-lg-4">*/
+/*                                     {{ form_widget(form.date_of_birth.month, {'attr':{'class':'form-control month'}}) }}*/
+/*                                 </div>*/
+/*                                 <div class="col-lg-4">*/
+/*                                     {{ form_widget(form.date_of_birth.day, {'attr':{'class':'form-control day'}}) }}*/
+/*                                 </div>*/
+/*                                 <div class="col-lg-4">*/
+/*                                     {{ form_widget(form.date_of_birth.year, {'attr':{'class':'form-control year'}}) }}*/
+/*                                 </div>*/
 /*                             </div>*/
 /*                         </div>*/
 /*                     </div>*/

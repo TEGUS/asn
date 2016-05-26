@@ -5,6 +5,12 @@
         <div class="col-lg-6 col-lg-offset-3">
             <div class="row">
                 <h4 class="text-center"><b>Inscription</b></h4>
+                <p class="col-lg-offset-4">
+                    Vous avez déjà un compte? 
+                    <a href="{{ path('asn_login') }}" title="Connexion">
+                        Connectez-vous ici
+                    </a>
+                </p>
                 <form id="registerForm" method="post" class="form-horizontal"  {{ form_enctype(form) }}>
                     <div class="form-group">
                         <label for="firstname" class="col-lg-4 control-label">{{ form_label(form.firstname, "Prénom") }}</label>
@@ -23,14 +29,16 @@
                     <div class="form-group">
                         <label for="date_of_birth" class="col-lg-4 control-label">{{ form_label(form.date_of_birth, "Date de naissance") }}</label>
                         <div class="col-lg-8">
-                            <div class="col-lg-4">
-                                {{ form_widget(form.date_of_birth.month, {'attr':{'class':'form-control month'}}) }}
-                            </div>
-                            <div class="col-lg-4">
-                                {{ form_widget(form.date_of_birth.day, {'attr':{'class':'form-control day'}}) }}
-                            </div>
-                            <div class="col-lg-4">
-                                {{ form_widget(form.date_of_birth.year, {'attr':{'class':'form-control year'}}) }}
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    {{ form_widget(form.date_of_birth.month, {'attr':{'class':'form-control month'}}) }}
+                                </div>
+                                <div class="col-lg-4">
+                                    {{ form_widget(form.date_of_birth.day, {'attr':{'class':'form-control day'}}) }}
+                                </div>
+                                <div class="col-lg-4">
+                                    {{ form_widget(form.date_of_birth.year, {'attr':{'class':'form-control year'}}) }}
+                                </div>
                             </div>
                         </div>
                     </div>

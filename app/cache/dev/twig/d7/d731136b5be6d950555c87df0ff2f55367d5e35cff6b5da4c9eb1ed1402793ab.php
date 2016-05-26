@@ -144,7 +144,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
     {
         // line 49
         echo "            <footer class=\"text-center text-muted\">
-                <div class=\"container-fluid bg-primary\">
+                <div class=\"container-fluid bg-primary\" style=\"margin-top: 100px\">
                     <div class=\"row\">
                         <div class=\"col-lg-4\">
                             <h1><i class=\"fa fa-location-arrow\"></i></h1>
@@ -277,7 +277,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /* */
 /*         {% block footer %}*/
 /*             <footer class="text-center text-muted">*/
-/*                 <div class="container-fluid bg-primary">*/
+/*                 <div class="container-fluid bg-primary" style="margin-top: 100px">*/
 /*                     <div class="row">*/
 /*                         <div class="col-lg-4">*/
 /*                             <h1><i class="fa fa-location-arrow"></i></h1>*/
