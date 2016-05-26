@@ -124,11 +124,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/a')) {
             // asn_main_homepage
-            if (rtrim($pathinfo, '/') === '/asn') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'asn_main_homepage');
-                }
-
+            if ($pathinfo === '/asn/accueil') {
                 return array (  '_controller' => 'ASN\\MainBundle\\Controller\\MainController::indexAction',  '_route' => 'asn_main_homepage',);
             }
 

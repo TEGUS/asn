@@ -1,0 +1,197 @@
+/* @author : Darius Clinton Tsafack */
+/* @date : Mai 2016 */
+
+/*------------------------------------------*/
+/*  =    BASE                             */
+/*------------------------------------------*/
+
+body {
+    font-family: sans-serif;
+    padding-top: 110px;
+    position: relative;
+}
+
+/* Bordures */
+
+.border-right {
+    border-right: 1px inset #000;
+}
+
+.border-bottom {
+    border-bottom: 1px inset #000;
+}
+
+.border-top {
+    border-top: 1px inset #eee;
+}
+
+/* Background */
+
+.bg-grey {
+    background-color: #eee;
+}
+
+.bg-primary {
+    background-color: #3a8eba;
+    color: #fff;
+}
+
+/* Padding */
+
+.padding {
+    padding: 10px;
+}
+
+/* Customs */
+.btn.btn-primary {
+    background-color: #3a8eba;
+    border-bottom: 4px solid #286090;
+}
+
+.custom-badge {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 0.6em;
+    background-color: #f44;
+    color: #fff;
+    border-radius: 80px;
+    padding: 2px;
+}
+
+/* Texte */
+
+.text-orange {
+    color: #ed7f10;
+}
+
+/* Affix */
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + div {
+    /*padding-top: 100px;*/
+}
+
+
+/*------------------------------------------*/
+/*  =    HEADER                             */
+/*------------------------------------------*/
+
+.navbar {
+    box-shadow: 0px 0px 5px #999;
+}
+
+#header-bar .navbar-nav > li > a, 
+#header-bar .navbar-brand {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#header-bar #img-user {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+#header-bar #img-user a {
+    margin-top: -15px;
+    margin-left: -11px;
+}
+
+#header-bar {
+    height: 50px !important;
+}
+
+#sub-header-bar .navbar-nav > li > a {
+    text-transform: uppercase;
+}
+
+#sub-header-bar .navbar-nav > li > a {
+    height: 40px;
+}
+
+#sub-header-bar .navbar-nav > li.active a {
+    background-color: #ed7f10;
+    color: #fff;
+}
+
+#header-bar a[title="ASN"]:hover {
+    color: #ffc;
+} 
+
+#logo {
+    height: 40px;
+    width: 50px;
+    margin-top: -14px;
+}
+
+/*------------------------------------------*/
+/*  =    SECTION                            */
+/*------------------------------------------*/
+
+.panel {
+    border: none;
+    border-radius: 0;
+}
+
+#main .block-pub .panel {
+    border-top: 4px solid #ed7f10;
+}
+
+.panel.panel-primary .panel-heading {
+    background-color: #ed7f10;
+    border: 0;
+}
+
+.carousel a:hover {
+    color: #ed7f10;
+}
+
+
+/*------------------------------------------*/
+/*  =    ASIDE                              */
+/*------------------------------------------*/
+
+#aside .panel .list-group-item div.row,
+#aside .panel .list-group-item div.row {
+    margin-bottom: -10px;
+}
+
+#aside .panel .list-group .row > a {
+    color: #555;
+}
+
+/*------------------------------------------*/
+/*  =    POPOVER                            */
+/*------------------------------------------*/
+
+.popover-content {
+    width: 280px;
+    height: 400px;
+    overflow: auto;
+    color: #444;
+    /*padding-right: 40px;*/
+}
+
+.popover-title {
+    /*color: #000;*/
+}
+
+
+/*------------------------------------------*/
+/*  =    FOOTER                             */
+/*------------------------------------------*/
+
+footer .row + .row .col-lg-12 {
+    border-top: 1px inset #fff;
+}
+
+footer a {
+    color: #fff;
+}

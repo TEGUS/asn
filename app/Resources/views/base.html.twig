@@ -7,29 +7,197 @@
         {% block stylesheets %}
             <link href="{{ asset('res/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen" type="text/css">
             <link href="{{ asset('res/lib/font-awesome-4.4.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
-            
-            <link href="{{ asset('res/css/style-login.css') }}" rel="stylesheet" type="text/css" />
+
+            <link href="{{ asset('res/css/style.css') }}" rel="stylesheet" type="text/css" />
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('res/img/logo_asn.png') }}" />
     </head>
     <body class="bg-grey">
-        
+
         {% block header %}
-            helo
-        {% endblock %}
-        
-        {% block body %} 
-            
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid bg-primary" id="header-bar">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="{{ asset('res/img/logo_asn.png') }}" id="logo">
+                        </a>
+                        <a class="navbar-brand" href="#" title="ASN">AVM Social Network</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="input-group form-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                <input type="text" class="form-control" placeholder="Recherche..." size="40">
+                            </div>
+                            {# <button type="submit" class="btn btn-warning btn-sm active">Rechercher</button>#}
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-suitcase fa-2x"></i>
+                                    <span class="custom-badge">123</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope fa-2x"></i>
+                                    <span class="custom-badge">17</span>
+                                </a>
+                            </li>
+                            <li class="bg-grey img-circle text-center" id="img-user">
+                                <a href="#"><span><i class="fa fa-user fa-3x"></i></span></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Aurelien Tegus
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="#">Paramètres</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Langue</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Déconnexion</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+                <div class="container" id="sub-header-bar">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Accueil</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Mes groupes</a></li>
+                            <li><a href="#">Meeting</a></li>
+                            <li><a href="#">Organisation personnelle</a></li>
+                            <li><a href="#">AVM</a></li>
+                            <li><a href="#">Mes contacts</a></li>
+                        </ul>
+                    </div>
+                </div> {# /.container #}
+            </nav>
         {% endblock %}
 
+
+        <div class="container" id="main-container">
+            {% block body %} 
+                <div class="row">
+                    {% block section %}
+                        <div class="col-lg-9 col-md-9 col-sm-9" id="main">
+                            <div class="row">
+                                <div class="col-lg-4 block-pub text-muted">
+                                    {% block pub %}
+
+                                    {% endblock %}
+                                </div> <!-- /block-pub -->
+
+                                <div class="col-lg-8 block-actualite">
+                                    {% block actualite %}
+
+                                    {% endblock %}
+                                </div> <!-- /block-actualite -->
+                            </div>
+                        </div> <!-- /main -->
+                    {% endblock %}
+
+                    {% block aside %}
+                        <div class="col-lg-3 col-md-3 col-sm-3" id="aside">
+                            {% block group %}
+
+                            {% endblock %}
+
+                            {% block organisation_peso %}
+
+                            {% endblock %}
+
+                            {% block forum %}
+
+                            {% endblock %}
+                        </div> <!-- /aside -->
+                    {% endblock %}
+                </div> <!-- /row -->
+            {% endblock %}
+        </div> <!-- /container -->
+
         {% block footer %}
-            
+            <footer class="text-center text-muted">
+                <div class="container-fluid bg-primary">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h1><i class="fa fa-location-arrow"></i></h1>
+                            <ul class="list-unstyled">
+                                <li>Cameroun</li>
+                                <li>Kenya</li>
+                                <li>Cote d'ivoire</li>
+                                <li>Tchad</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h1><i class="fa fa-flag"></i></h1>
+                            <ul class="list-unstyled">
+                                <li>Français</li>
+                                <li>Anglais</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4>Suivez nous</h4>
+                            <div class="panel">
+                                <ul class="list-unstyled list-inline">
+                                    <li>
+                                        <a href="#" class="text-primary"><i class="fa fa-facebook-square fa-4x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-primary"><i class="fa fa-twitter-square fa-4x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-primary"><i class="fa fa-linkedin-square fa-4x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-primary"><i class="fa fa-vimeo-square fa-4x"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>
+                                Copyright &copy; 2016.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer><!-- /footer -->
         {% endblock %}
-        
+
+
         {% block javascripts %}
             <script src="{{ asset('res/lib/jquery-js/jquery-2.2.3.min.js') }}"></script>
             <script src="{{ asset('res/lib/bootstrap/js/bootstrap.min.js') }}"></script>
             <script src="{{ asset('res/lib/jquery-js/jquery.transit.min.js') }}"></script>
+            <script src="{{ asset('res/js/app.js') }}"></script>
         {% endblock %}
     </body>
 </html>
