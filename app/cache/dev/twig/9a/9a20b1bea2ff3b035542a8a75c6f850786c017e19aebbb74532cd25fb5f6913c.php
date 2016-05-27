@@ -141,13 +141,13 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                         <ul class=\"nav navbar-nav navbar-right\">
                             <li>
                                 <a href=\"#\">
-                                    <i class=\"fa fa-suitcase fa-2x\"></i>
+                                    <i class=\"fa fa-suitcase fa-lg\"></i>
                                     <span class=\"custom-badge\">123</span>
                                 </a>
                             </li>
                             <li>
                                 <a href=\"#\">
-                                    <i class=\"fa fa-envelope fa-2x\"></i>
+                                    <i class=\"fa fa-envelope fa-lg\"></i>
                                     <span class=\"custom-badge\">17</span>
                                 </a>
                             </li>
@@ -228,7 +228,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
     public function block_section($context, array $blocks = array())
     {
         // line 109
-        echo "                        <div class=\"col-lg-9 col-md-9 col-sm-9\" id=\"main\">
+        echo "                        <div class=\"col-lg-10 col-md-10 col-sm-10\" id=\"main\">
                             <div class=\"row\">
                                 <div class=\"col-lg-4 block-pub text-muted\">
                                     ";
@@ -268,7 +268,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
     public function block_aside($context, array $blocks = array())
     {
         // line 127
-        echo "                        <div class=\"col-lg-3 col-md-3 col-sm-3\" id=\"aside\">
+        echo "                        <div class=\"col-lg-2 col-md-2 col-sm-2\" id=\"aside\">
                             ";
         // line 128
         $this->displayBlock('group', $context, $blocks);
@@ -454,13 +454,13 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                         <ul class="nav navbar-nav navbar-right">*/
 /*                             <li>*/
 /*                                 <a href="#">*/
-/*                                     <i class="fa fa-suitcase fa-2x"></i>*/
+/*                                     <i class="fa fa-suitcase fa-lg"></i>*/
 /*                                     <span class="custom-badge">123</span>*/
 /*                                 </a>*/
 /*                             </li>*/
 /*                             <li>*/
 /*                                 <a href="#">*/
-/*                                     <i class="fa fa-envelope fa-2x"></i>*/
+/*                                     <i class="fa fa-envelope fa-lg"></i>*/
 /*                                     <span class="custom-badge">17</span>*/
 /*                                 </a>*/
 /*                             </li>*/
@@ -516,7 +516,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*             {% block body %} */
 /*                 <div class="row">*/
 /*                     {% block section %}*/
-/*                         <div class="col-lg-9 col-md-9 col-sm-9" id="main">*/
+/*                         <div class="col-lg-10 col-md-10 col-sm-10" id="main">*/
 /*                             <div class="row">*/
 /*                                 <div class="col-lg-4 block-pub text-muted">*/
 /*                                     {% block pub %}*/
@@ -534,7 +534,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                     {% endblock %}*/
 /* */
 /*                     {% block aside %}*/
-/*                         <div class="col-lg-3 col-md-3 col-sm-3" id="aside">*/
+/*                         <div class="col-lg-2 col-md-2 col-sm-2" id="aside">*/
 /*                             {% block group %}*/
 /* */
 /*                             {% endblock %}*/

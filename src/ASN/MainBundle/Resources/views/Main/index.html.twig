@@ -109,51 +109,68 @@
                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                
+
                             </div>
                             <br>
                             <div class="panel">
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li class="active"><a href="#photos" role="tab" data-toggle="tab">Photos</a></li>
+                                    <li class="active"><a href="#posts" role="tab" data-toggle="tab">Posts</a></li>
+                                    <li><a href="#albums" role="tab" data-toggle="tab">Albums</a></li>
                                     <li><a href="#videos" role="tab" data-toggle="tab">Videos</a></li>
-                                    <li><a href="#posts" role="tab" data-toggle="tab">Posts</a></li>
                                 </ul>
                                 <div class="tab-content padding">
-                                    <div class="tab-pane fade in active" id="photos">
+                                    <div class="tab-pane fade in active" id="posts">
+                                        Posts
+                                    </div>
+                                    <div class="tab-pane fade" id="albums">
                                         <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="panel text-center text-info">
-                                                    <a class="" href="#">
-                                                        <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive">
-                                                    </a>
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <h6 class="text-muted">300 k j'aime</h6>
-                                                            <a href="#"><i class="fa fa-thumbs-o-up"></i></a>
-                                                        </div>
-                                                        <div class="col-lg-6 text-center">
-                                                            <h6 class="text-muted">90 commentaires</h6>
-                                                            <a href="#"><i class="fa fa-comments-o"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="col-lg-3">
+                                                <a href="#" class="panel text-center">
+                                                    <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive img-rounded">
+                                                    <h6 class="text-orange"><b>Album</b></h6>
+                                                </a>
                                             </div>
-                                            <div class="col-lg-6">
-                                                <div class="panel text-center text-warning">
-                                                    <a href="#" class="">
-                                                        <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive">
-                                                    </a>
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <h6 class="text-muted">3 j'aime</h6>
-                                                            <a href="#"><i class="fa fa-thumbs-o-up"></i></a>
-                                                        </div>
-                                                        <div class="col-lg-6 text-center">
-                                                            <h6 class="text-muted">90 commentaires</h6>
-                                                            <a href="#"><i class="fa fa-comments-o"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="col-lg-3">
+                                                <a href="#" class="panel text-center">
+                                                    <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive img-rounded">
+                                                    <h6 class="text-orange"><b>Album</b></h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <a href="#" class="panel text-center">
+                                                    <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive img-rounded">
+                                                    <h6 class="text-orange"><b>Album</b></h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <a href="#" class="panel text-center">
+                                                    <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive img-rounded">
+                                                    <h6 class="text-orange"><b>Album</b></h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <a href="#" class="panel text-center">
+                                                    <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive img-rounded">
+                                                    <h6 class="text-orange"><b>Album</b></h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <a href="#" class="panel text-center">
+                                                    <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive img-rounded">
+                                                    <h6 class="text-orange"><b>Album</b></h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <a href="#" class="panel text-center">
+                                                    <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive img-rounded">
+                                                    <h6 class="text-orange"><b>Album</b></h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <a href="#" class="panel text-center">
+                                                    <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive img-rounded">
+                                                    <h6 class="text-orange"><b>Album</b></h6>
+                                                </a>
                                             </div>
                                             <div class="row text-center">
                                                 <ul class="pagination pagination-sm">
@@ -161,10 +178,6 @@
                                                     <li><a href="#">1</a></li>
                                                     <li><a href="#">2</a></li>
                                                     <li><a href="#">3</a></li>
-                                                    <li><a href="#">4</a></li>
-                                                    <li><a href="#">5</a></li>
-                                                    <li><a href="#">6</a></li>
-                                                    <li><a href="#">7</a></li>
                                                     <li><a href="#">&raquo;</a></li>
                                                 </ul>
                                             </div>
@@ -172,9 +185,6 @@
                                     </div>
                                     <div class="tab-pane fade" id="videos">
                                         Videos
-                                    </div>
-                                    <div class="tab-pane fade" id="posts">
-                                        Posts
                                     </div>
                                 </div>
                             </div>
@@ -238,99 +248,156 @@
                 {% block group %}
                     <div class="panel panel-primary block-groupe">
                         <div class="panel-heading">
-                            Mes groupes
-                            <span class="badge pull-right">4</span>
+                            Mon menu
                         </div>
                         <ul class="list-group">
+                            <li class="list-group-item disabled">
+                                Mes groupes <span class="pull-right" style="font-weight: normal">23</span>
+                            </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-3 text-primary">
-                                        <a href="#" data-toggle="popover">
-                                            <i class="fa fa-comments-o fa-2x"></i>
-                                            <span class="custom-badge">99+</span>
-                                        </a>
-                                    </div>
-                                    <a href="#" class='col-lg-9'>
-                                        Network gratos 
+                                    <a href="#" data-toggle="popover" class="col-lg-2">
+                                        <i class="fa fa-comments-o fa-lg"></i>
+                                        <span class="custom-badge">5</span>
+                                    </a>
+                                    <a href="#" class='col-lg-10'>
+                                        Buy&Sallam de Maroua
                                         <span class="pull-right">&raquo;</span>
                                     </a>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-3 text-primary">
-                                        <a href="#">
-                                            <i class="fa fa-comments-o fa-2x"></i>
-                                            <span class="custom-badge">01</span>
-                                        </a>
-                                    </div>
-                                    <a href="#" class='col-lg-9'>
-                                        Network gratos 
+                                    <a href="#" data-toggle="popover" class="col-lg-2">
+                                        <i class="fa fa-comments-o fa-lg"></i>
+                                        <span class="custom-badge">99+</span>
+                                    </a>
+                                    <a href="#" class='col-lg-10'>
+                                        Les Boutiquiers du Gra...
                                         <span class="pull-right">&raquo;</span>
                                     </a>
                                 </div>
                             </li>
-                        </ul>
-                        <div class="panel-footer">
-                            <a href="#">
-                                Tous les groupes
-                                <span class="">&raquo;</span>
+                            <a href="#" class="list-group-item"> 
+                                Plus de groupes <i class="fa fa-plus-circle pull-right"></i>
                             </a>
-                        </div>
+                            <li class="list-group-item disabled"> 
+                                Organisation personnelle <span class="pull-right" style="font-weight: normal">34</span>
+                            </li>
+                            <a href="#" class="list-group-item">
+                                <div class="row">
+                                    <div class='pull-left col-lg-2 text-primary'>
+                                        <i class="fa fa-calendar fa-lg"></i>
+                                    </div> 
+                                    <div class='col-lg-10'>
+                                        Meeting du soir 
+                                        <span class="pull-right">&raquo;</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="row">
+                                    <div class='pull-left col-lg-2 text-primary'>
+                                        <i class="fa fa-calendar fa-lg"></i>
+                                    </div> 
+                                    <div class='col-lg-10'>
+                                        Achat des marchandises 
+                                        <span class="pull-right">&raquo;</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="row">
+                                    <div class='pull-left col-lg-2 text-primary'>
+                                        <i class="fa fa-calendar fa-lg"></i>
+                                    </div> 
+                                    <div class='col-lg-10'>
+                                        Rencontre avec les fou... 
+                                        <span class="pull-right">&raquo;</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="row">
+                                    <div class='pull-left col-lg-2 text-primary'>
+                                        <i class="fa fa-calendar fa-lg"></i>
+                                    </div> 
+                                    <div class='col-lg-10'>
+                                        Paiement des employés 
+                                        <span class="pull-right">&raquo;</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                Plus d'agenda <i class="fa fa-plus-circle pull-right"></i> 
+                            </a>
+                            <li class="list-group-item disabled">
+                                Forums <span class="pull-right" style="font-weight: normal">44</span>
+                            </li>
+                            <a href="#" class="list-group-item">
+                                <div class="row">
+                                    <div class='pull-left col-lg-2 text-primary'>
+                                        <i class="fa fa-comments-o fa-lg"></i>
+                                        <span class="custom-badge">32</span>
+                                    </div> 
+                                    <div class='col-lg-10'>
+                                        Hausse du prix du carb... 
+                                        <span class="pull-right">&raquo;</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="row">
+                                    <div class='pull-left col-lg-2 text-primary'>
+                                        <i class="fa fa-comments-o fa-lg"></i>
+                                        <span class="custom-badge">32</span>
+                                    </div> 
+                                    <div class='col-lg-10'>
+                                        Baisse du prix du carb... 
+                                        <span class="pull-right">&raquo;</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="row">
+                                    <div class='pull-left col-lg-2 text-primary'>
+                                        <i class="fa fa-comments-o fa-lg"></i>
+                                        <span class="custom-badge">32</span>
+                                    </div> 
+                                    <div class='col-lg-10'>
+                                        Augmentation du SMIG 
+                                        <span class="pull-right">&raquo;</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <div class="row">
+                                    <div class='pull-left col-lg-2 text-primary'>
+                                        <i class="fa fa-comments-o fa-lg"></i>
+                                        <span class="custom-badge">32</span>
+                                    </div> 
+                                    <div class='col-lg-10'>
+                                        Les PME et PMI au Cam... 
+                                        <span class="pull-right">&raquo;</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                Plus de forums <i class="fa fa-plus-circle pull-right"></i>
+                            </a>
+                        </ul>
+
                     </div> <!-- /block-group -->
                 {% endblock %}
 
-                {% block organisation_peso %}
+                {#{% block organisation_peso %}
                     <div class="panel panel-primary block-organisation-perso">
                         <div class="panel-heading">
                             Organisation personnelle
                             <span class="badge pull-right">99+</span>
                         </div>
                         <div class="list-group">
-                            <a href="#" class="list-group-item">
-                                <div class="row">
-                                    <div class='pull-left col-lg-3 text-primary'>
-                                        <i class="fa fa-calendar fa-2x"></i>
-                                    </div> 
-                                    <p class='col-lg-9'>
-                                        Network gratos 
-                                        <span class="pull-right">&raquo;</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="row">
-                                    <div class='pull-left col-lg-3 text-primary'>
-                                        <i class="fa fa-calendar fa-2x"></i>
-                                    </div> 
-                                    <p class='col-lg-9'>
-                                        Network gratos 
-                                        <span class="pull-right">&raquo;</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="row">
-                                    <div class='pull-left col-lg-3 text-primary'>
-                                        <i class="fa fa-calendar fa-2x"></i>
-                                    </div> 
-                                    <p class='col-lg-9'>
-                                        Network gratos 
-                                        <span class="pull-right">&raquo;</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="row">
-                                    <div class='pull-left col-lg-3 text-primary'>
-                                        <i class="fa fa-calendar fa-2x"></i>
-                                    </div> 
-                                    <p class='col-lg-9'>
-                                        Network gratos 
-                                        <span class="pull-right">&raquo;</span>
-                                    </p>
-                                </div>
-                            </a>
+
                         </div>
                         <div class="panel-footer">
                             <a href="#">
@@ -339,63 +406,16 @@
                             </a>
                         </div>
                     </div> <!-- /block-organisation-perso -->
-                {% endblock %}
+                {% endblock %}#}
 
-                {% block forum %}
+                {#{% block forum %}
                     <div class="panel panel-primary block-forum">
                         <div class="panel-heading">
                             Forums
                             <span class="badge pull-right">4</span>
                         </div>
                         <div class="list-group">
-                            <a href="#" class="list-group-item">
-                                <div class="row">
-                                    <div class='pull-left col-lg-3 text-primary'>
-                                        <i class="fa fa-comments-o fa-2x"></i>
-                                        <span class="custom-badge">32</span>
-                                    </div> 
-                                    <p class='col-lg-9'>
-                                        Network gratos 
-                                        <span class="pull-right">&raquo;</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="row">
-                                    <div class='pull-left col-lg-3 text-primary'>
-                                        <i class="fa fa-comments-o fa-2x"></i>
-                                        <span class="custom-badge">32</span>
-                                    </div> 
-                                    <p class='col-lg-9'>
-                                        Network gratos 
-                                        <span class="pull-right">&raquo;</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="row">
-                                    <div class='pull-left col-lg-3 text-primary'>
-                                        <i class="fa fa-comments-o fa-2x"></i>
-                                        <span class="custom-badge">32</span>
-                                    </div> 
-                                    <p class='col-lg-9'>
-                                        Network gratos 
-                                        <span class="pull-right">&raquo;</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <div class="row">
-                                    <div class='pull-left col-lg-3 text-primary'>
-                                        <i class="fa fa-comments-o fa-2x"></i>
-                                        <span class="custom-badge">32</span>
-                                    </div> 
-                                    <p class='col-lg-9'>
-                                        Network gratos 
-                                        <span class="pull-right">&raquo;</span>
-                                    </p>
-                                </div>
-                            </a>
+                            
                         </div>
                         <div class="panel-footer">
                             <a href="#">
@@ -404,7 +424,7 @@
                             </a>
                         </div>
                     </div> <!-- /block-forum -->
-                {% endblock %}
+                {% endblock %}#}
             </div> <!-- /aside -->
         {% endblock %}
     </div> <!-- /row -->

@@ -1,31 +1,14 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/asn/src/Avm/AsnBundle/Resources/views/user/register.html.twig</file>
-            <file>file:/C:/wamp/www/asn/app/AppKernel.php</file>
-            <file>file:/C:/wamp/www/asn/src/Application/Sonata/UserBundle/Form/UserType.php</file>
-            <file>file:/C:/wamp/www/asn/src/Application/Sonata/UserBundle/Entity/User.php</file>
-            <file>file:/C:/wamp/www/asn/app/config/config.yml</file>
-            <file>file:/C:/wamp/www/asn/src/Avm/AsnBundle/Resources/views/user/login.html.twig</file>
-            <file>file:/C:/wamp/www/asn/app/config/security.yml</file>
-            <file>file:/C:/wamp/www/asn/src/Avm/AsnBundle/Controller/DefaultController.php</file>
-        </group>
-    </open-files>
-</project-private>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
+            <file>file:/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/views/layout.html.twig</file>
             <file>file:/opt/lampp/htdocs/asn/app/Resources/views/base.html.twig</file>
             <file>file:/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/views/Main/index.html.twig</file>
+            <file>file:/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/views/Security/register.html.twig</file>
             <file>file:/opt/lampp/htdocs/asn/web/res/js/app.js</file>
             <file>file:/opt/lampp/htdocs/asn/web/res/css/style.css</file>
         </group>
     </open-files>
 </project-private>
->>>>>>> 18e3b4a1437b5c7930b3c2f0cbb252ed6539ed9c
