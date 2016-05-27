@@ -4,7 +4,7 @@ $(function() {
     var templatePopover = ' <div class="popover" role="tooltip">\n\
                                 <div class="arrow"></div>\n\
                                 <h3 class="popover-title bg-orange"></h3>\n\
-                                <div style="height: 450px; width:280px ; overflow: auto;" class="mCustomScrollbar popover-content" data-mcs-theme="dark" data-mcs-axis="y"></div>\n\
+                                <div style="height: 350px; width:280px ; overflow: auto;" class="mCustomScrollbar popover-content" data-mcs-theme="dark" data-mcs-axis="y"></div>\n\
                             </div>';
     
     var content         = ' <p class="text-orange"><b>Buy&Saller</b></p>\n\

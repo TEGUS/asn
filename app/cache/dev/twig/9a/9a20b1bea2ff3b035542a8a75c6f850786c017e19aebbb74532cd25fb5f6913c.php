@@ -51,26 +51,26 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
         // line 18
         $this->displayBlock('header', $context, $blocks);
-        // line 103
+        // line 107
         echo "
 
         <div class=\"container\" id=\"main-container\">
             ";
-        // line 106
+        // line 110
         $this->displayBlock('body', $context, $blocks);
-        // line 143
+        // line 147
         echo "        </div> <!-- /container -->
 
         ";
-        // line 145
+        // line 149
         $this->displayBlock('footer', $context, $blocks);
-        // line 196
+        // line 200
         echo "
 
         ";
-        // line 198
+        // line 202
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 205
+        // line 209
         echo "    </body>
 </html>
 ";
@@ -141,23 +141,29 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                         <ul class=\"nav navbar-nav navbar-right\">
                             <li>
                                 <a href=\"#\">
-                                    <i class=\"fa fa-suitcase fa-2x\"></i>
+                                    <i class=\"fa fa-suitcase fa-lg\"></i>
                                     <span class=\"custom-badge\">123</span>
                                 </a>
                             </li>
                             <li>
                                 <a href=\"#\">
-                                    <i class=\"fa fa-envelope fa-2x\"></i>
+                                    <i class=\"fa fa-envelope fa-lg\"></i>
                                     <span class=\"custom-badge\">17</span>
                                 </a>
                             </li>
-                            <li class=\"bg-grey img-circle text-center\" id=\"img-user\">
-                                <a href=\"#\"><span><i class=\"fa fa-user fa-3x\"></i></span></a>
-                            </li>
                             <li class=\"dropdown\">
                                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">
+                                    <img src=\"";
+        // line 59
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
+        echo "\" id=\"img-user\" class=\"img-circle\">
+                                    
                                     ";
         // line 62
+        echo "                                    
+                                    ";
+        // line 66
+        echo "                                    ";
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "firstname", array()), "html", null, true);
         echo "
                                     <span class=\"caret\"></span>
@@ -169,7 +175,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                                     <li><a href=\"#\">Langue</a></li>
                                     <li class=\"divider\"></li>
                                     <li><a href=\"";
-        // line 71
+        // line 75
         echo $this->env->getExtension('routing')->getPath("asn_logout");
         echo "\">Déconnexion</a></li>
                                 </ul>
@@ -201,102 +207,94 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                         </ul>
                     </div>
                 </div> ";
-        // line 101
+        // line 105
         echo "            </nav>
         ";
     }
 
-    // line 106
+    // line 110
     public function block_body($context, array $blocks = array())
     {
         echo " 
                 <div class=\"row\">
                     ";
-        // line 108
+        // line 112
         $this->displayBlock('section', $context, $blocks);
-        // line 125
+        // line 129
         echo "
                     ";
-        // line 126
+        // line 130
         $this->displayBlock('aside', $context, $blocks);
-        // line 141
+        // line 145
         echo "                </div> <!-- /row -->
             ";
     }
 
-    // line 108
+    // line 112
     public function block_section($context, array $blocks = array())
     {
-        // line 109
+        // line 113
         echo "                        <div class=\"col-lg-9 col-md-9 col-sm-9\" id=\"main\">
                             <div class=\"row\">
                                 <div class=\"col-lg-4 block-pub text-muted\">
                                     ";
-        // line 112
+        // line 116
         $this->displayBlock('pub', $context, $blocks);
-        // line 115
+        // line 119
         echo "                                </div> <!-- /block-pub -->
 
                                 <div class=\"col-lg-8 block-actualite\">
                                     ";
-        // line 118
+        // line 122
         $this->displayBlock('actualite', $context, $blocks);
-        // line 121
+        // line 125
         echo "                                </div> <!-- /block-actualite -->
                             </div>
                         </div> <!-- /main -->
                     ";
     }
 
-    // line 112
+    // line 116
     public function block_pub($context, array $blocks = array())
     {
-        // line 113
+        // line 117
         echo "
                                     ";
     }
 
-    // line 118
+    // line 122
     public function block_actualite($context, array $blocks = array())
     {
-        // line 119
+        // line 123
         echo "
                                     ";
     }
 
-    // line 126
+    // line 130
     public function block_aside($context, array $blocks = array())
     {
-        // line 127
+        // line 131
         echo "                        <div class=\"col-lg-3 col-md-3 col-sm-3\" id=\"aside\">
                             ";
-        // line 128
-        $this->displayBlock('group', $context, $blocks);
-        // line 131
-        echo "
-                            ";
         // line 132
-        $this->displayBlock('organisation_peso', $context, $blocks);
+        $this->displayBlock('group', $context, $blocks);
         // line 135
         echo "
                             ";
         // line 136
-        $this->displayBlock('forum', $context, $blocks);
+        $this->displayBlock('organisation_peso', $context, $blocks);
         // line 139
+        echo "
+                            ";
+        // line 140
+        $this->displayBlock('forum', $context, $blocks);
+        // line 143
         echo "                        </div> <!-- /aside -->
                     ";
     }
 
-    // line 128
-    public function block_group($context, array $blocks = array())
-    {
-        // line 129
-        echo "
-                            ";
-    }
-
     // line 132
-    public function block_organisation_peso($context, array $blocks = array())
+    public function block_group($context, array $blocks = array())
     {
         // line 133
         echo "
@@ -304,17 +302,25 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
     }
 
     // line 136
-    public function block_forum($context, array $blocks = array())
+    public function block_organisation_peso($context, array $blocks = array())
     {
         // line 137
         echo "
                             ";
     }
 
-    // line 145
+    // line 140
+    public function block_forum($context, array $blocks = array())
+    {
+        // line 141
+        echo "
+                            ";
+    }
+
+    // line 149
     public function block_footer($context, array $blocks = array())
     {
-        // line 146
+        // line 150
         echo "            <footer class=\"text-center text-muted\">
                 <div class=\"container-fluid bg-primary\">
                     <div class=\"row\">
@@ -337,19 +343,19 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                         <div class=\"col-lg-4\">
                             <br>
                             <h4>Suivez nous</h4>
-                            <div class=\"panel bg-orange\">
+                            <div class=\"panel\">
                                 <ul class=\"list-unstyled list-inline\">
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #1a237e\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-twitter-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #2196f3;\"><i class=\"fa fa-twitter-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-linkedin-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #1565c0\"><i class=\"fa fa-linkedin-square fa-4x\"></i></a>
                                     </li>
                                     <li>
-                                        <a href=\"#\"><i class=\"fa fa-vimeo-square fa-4x\"></i></a>
+                                        <a href=\"#\" style=\"color: #e53935\"><i class=\"fa fa-google-plus-square fa-4x\"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -367,27 +373,27 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
     }
 
-    // line 198
+    // line 202
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 199
+        // line 203
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery-2.2.3.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 200
+        // line 204
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 201
+        // line 205
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.transit.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 202
+        // line 206
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.mCustomScrollbar.concat.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 203
+        // line 207
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/js/app.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -405,7 +411,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 
     public function getDebugInfo()
     {
-        return array (  391 => 203,  387 => 202,  383 => 201,  379 => 200,  374 => 199,  371 => 198,  318 => 146,  315 => 145,  310 => 137,  307 => 136,  302 => 133,  299 => 132,  294 => 129,  291 => 128,  286 => 139,  284 => 136,  281 => 135,  279 => 132,  276 => 131,  274 => 128,  271 => 127,  268 => 126,  263 => 119,  260 => 118,  255 => 113,  252 => 112,  245 => 121,  243 => 118,  238 => 115,  236 => 112,  231 => 109,  228 => 108,  223 => 141,  221 => 126,  218 => 125,  216 => 108,  210 => 106,  205 => 101,  173 => 71,  161 => 62,  140 => 43,  125 => 30,  112 => 19,  109 => 18,  103 => 12,  98 => 10,  94 => 9,  89 => 8,  86 => 7,  80 => 6,  74 => 205,  72 => 198,  68 => 196,  66 => 145,  62 => 143,  60 => 106,  55 => 103,  53 => 18,  45 => 14,  43 => 7,  39 => 6,  32 => 1,);
+        return array (  397 => 207,  393 => 206,  389 => 205,  385 => 204,  380 => 203,  377 => 202,  324 => 150,  321 => 149,  316 => 141,  313 => 140,  308 => 137,  305 => 136,  300 => 133,  297 => 132,  292 => 143,  290 => 140,  287 => 139,  285 => 136,  282 => 135,  280 => 132,  277 => 131,  274 => 130,  269 => 123,  266 => 122,  261 => 117,  258 => 116,  251 => 125,  249 => 122,  244 => 119,  242 => 116,  237 => 113,  234 => 112,  229 => 145,  227 => 130,  224 => 129,  222 => 112,  216 => 110,  211 => 105,  179 => 75,  166 => 66,  163 => 62,  158 => 59,  140 => 43,  125 => 30,  112 => 19,  109 => 18,  103 => 12,  98 => 10,  94 => 9,  89 => 8,  86 => 7,  80 => 6,  74 => 209,  72 => 202,  68 => 200,  66 => 149,  62 => 147,  60 => 110,  55 => 107,  53 => 18,  45 => 14,  43 => 7,  39 => 6,  32 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -454,21 +460,25 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                         <ul class="nav navbar-nav navbar-right">*/
 /*                             <li>*/
 /*                                 <a href="#">*/
-/*                                     <i class="fa fa-suitcase fa-2x"></i>*/
+/*                                     <i class="fa fa-suitcase fa-lg"></i>*/
 /*                                     <span class="custom-badge">123</span>*/
 /*                                 </a>*/
 /*                             </li>*/
 /*                             <li>*/
 /*                                 <a href="#">*/
-/*                                     <i class="fa fa-envelope fa-2x"></i>*/
+/*                                     <i class="fa fa-envelope fa-lg"></i>*/
 /*                                     <span class="custom-badge">17</span>*/
 /*                                 </a>*/
 /*                             </li>*/
-/*                             <li class="bg-grey img-circle text-center" id="img-user">*/
-/*                                 <a href="#"><span><i class="fa fa-user fa-3x"></i></span></a>*/
-/*                             </li>*/
 /*                             <li class="dropdown">*/
 /*                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">*/
+/*                                     <img src="{{ asset('res/img/voiture.jpg') }}" id="img-user" class="img-circle">*/
+/*                                     */
+/*                                     {#Lorsque l'utilisateur n'a pas de photo de profil, decommenter la partie suivante#}*/
+/*                                     */
+/*                                     {#<span id="img-user" class="img-circle bg-grey text-center">*/
+/*                                         <i class="fa fa-user fa-2x"></i>*/
+/*                                     </span>#}*/
 /*                                     {{ app.user.firstname }}*/
 /*                                     <span class="caret"></span>*/
 /*                                 </a>*/
@@ -575,19 +585,19 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                         <div class="col-lg-4">*/
 /*                             <br>*/
 /*                             <h4>Suivez nous</h4>*/
-/*                             <div class="panel bg-orange">*/
+/*                             <div class="panel">*/
 /*                                 <ul class="list-unstyled list-inline">*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-facebook-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #1a237e"><i class="fa fa-facebook-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-twitter-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #2196f3;"><i class="fa fa-twitter-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-linkedin-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #1565c0"><i class="fa fa-linkedin-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                         <a href="#"><i class="fa fa-vimeo-square fa-4x"></i></a>*/
+/*                                         <a href="#" style="color: #e53935"><i class="fa fa-google-plus-square fa-4x"></i></a>*/
 /*                                     </li>*/
 /*                                 </ul>*/
 /*                             </div>*/

@@ -37,12 +37,12 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
         ";
         // line 5
         $this->displayBlock('section', $context, $blocks);
-        // line 245
+        // line 344
         echo "
         ";
-        // line 246
+        // line 345
         $this->displayBlock('aside', $context, $blocks);
-        // line 430
+        // line 529
         echo "    </div> <!-- /row -->
 ";
     }
@@ -64,7 +64,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                         ";
         // line 98
         $this->displayBlock('actualite', $context, $blocks);
-        // line 241
+        // line 340
         echo "                    </div> <!-- /block-actualite -->
                 </div>
             </div> <!-- /main -->
@@ -202,20 +202,119 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                             <br>
                             <div class=\"panel\">
                                 <ul class=\"nav nav-tabs\" role=\"tablist\">
-                                    <li class=\"active\"><a href=\"#posts\" role=\"tab\" data-toggle=\"tab\">Posts</a></li>
-                                    <li><a href=\"#albums\" role=\"tab\" data-toggle=\"tab\">Albums</a></li>
-                                    <li><a href=\"#videos\" role=\"tab\" data-toggle=\"tab\">Videos</a></li>
+                                    <li class=\"active\">
+                                        <a href=\"#posts\" role=\"tab\" data-toggle=\"tab\">
+                                            <i class=\"fa fa-paper-plane text-orange\"></i> Posts
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=\"#albums\" role=\"tab\" data-toggle=\"tab\">
+                                            <i class=\"fa fa-picture-o text-orange\"></i> Albums
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=\"#videos\" role=\"tab\" data-toggle=\"tab\">
+                                            <i class=\"fa fa-youtube-play text-orange\"></i> Videos
+                                        </a>
+                                    </li>
                                 </ul>
                                 <div class=\"tab-content padding\">
                                     <div class=\"tab-pane fade in active\" id=\"posts\">
-                                        Posts
+                                        <div class=\"panel\">
+                                            <h4 class=\"text-orange border-bottom\">
+                                                Aurelien TEGUS
+                                                <small>Le 27/05/2016</small>
+                                            </h4>
+                                            <p class=\"border-bottom\">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </p>
+                                            <div class=\"row\">
+                                                <div class=\"col-lg-6 text-center\">
+                                                    <span class=\"text-muted\">12 j'aime</span>
+                                                    <br>
+                                                    <a href=\"#\"><i class=\"fa fa-thumbs-o-up fa-lg\"></i></a>
+                                                </div>
+                                                <div class=\"col-lg-6 text-center\">
+                                                    <span class=\"text-muted\">120 commentaires</span>
+                                                    <br>
+                                                    <a href=\"#\"><i class=\"fa fa-comments-o fa-lg\"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=\"panel\">
+                                            <h4 class=\"text-orange border-bottom\">
+                                                Aurelien TEGUS
+                                                <small>Le 27/05/2016</small>
+                                            </h4>
+                                            <p class=\"border-bottom\">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </p>
+                                            <div class=\"row\">
+                                                <div class=\"col-lg-6 text-center\">
+                                                    <span class=\"text-muted\">12 j'aime</span>
+                                                    <br>
+                                                    <a href=\"#\"><i class=\"fa fa-thumbs-o-up fa-lg\"></i></a>
+                                                </div>
+                                                <div class=\"col-lg-6 text-center\">
+                                                    <span class=\"text-muted\">120 commentaires</span>
+                                                    <br>
+                                                    <a href=\"#\"><i class=\"fa fa-comments-o fa-lg\"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=\"panel\">
+                                            <h4 class=\"text-orange border-bottom\">
+                                                Aurelien TEGUS
+                                                <small>Le 27/05/2016</small>
+                                            </h4>
+                                            <p class=\"border-bottom\">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </p>
+                                            <div class=\"row\">
+                                                <div class=\"col-lg-6 text-center\">
+                                                    <span class=\"text-muted\">12 j'aime</span>
+                                                    <br>
+                                                    <a href=\"#\"><i class=\"fa fa-thumbs-o-up fa-lg\"></i></a>
+                                                </div>
+                                                <div class=\"col-lg-6 text-center\">
+                                                    <span class=\"text-muted\">120 commentaires</span>
+                                                    <br>
+                                                    <a href=\"#\"><i class=\"fa fa-comments-o fa-lg\"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class=\"row text-center\">
+                                            <ul class=\"pagination pagination-sm\">
+                                                <li><a href=\"#\">&laquo;</a></li>
+                                                <li><a href=\"#\">1</a></li>
+                                                <li><a href=\"#\">2</a></li>
+                                                <li><a href=\"#\">3</a></li>
+                                                <li><a href=\"#\">&raquo;</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class=\"tab-pane fade\" id=\"albums\">
                                         <div class=\"row\">
                                             <div class=\"col-lg-3\">
                                                 <a href=\"#\" class=\"panel text-center\">
                                                     <img src=\"";
-        // line 129
+        // line 228
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -224,7 +323,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                                             <div class=\"col-lg-3\">
                                                 <a href=\"#\" class=\"panel text-center\">
                                                     <img src=\"";
-        // line 135
+        // line 234
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -233,7 +332,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                                             <div class=\"col-lg-3\">
                                                 <a href=\"#\" class=\"panel text-center\">
                                                     <img src=\"";
-        // line 141
+        // line 240
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -242,7 +341,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                                             <div class=\"col-lg-3\">
                                                 <a href=\"#\" class=\"panel text-center\">
                                                     <img src=\"";
-        // line 147
+        // line 246
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/house.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -251,7 +350,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                                             <div class=\"col-lg-3\">
                                                 <a href=\"#\" class=\"panel text-center\">
                                                     <img src=\"";
-        // line 153
+        // line 252
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -260,7 +359,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                                             <div class=\"col-lg-3\">
                                                 <a href=\"#\" class=\"panel text-center\">
                                                     <img src=\"";
-        // line 159
+        // line 258
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -269,7 +368,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                                             <div class=\"col-lg-3\">
                                                 <a href=\"#\" class=\"panel text-center\">
                                                     <img src=\"";
-        // line 165
+        // line 264
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -278,7 +377,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                                             <div class=\"col-lg-3\">
                                                 <a href=\"#\" class=\"panel text-center\">
                                                     <img src=\"";
-        // line 171
+        // line 270
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/house.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -302,15 +401,15 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                             </div>
 
                             <div class=\"panel\">
-                                <div class=\"panel-heading text-center\">
-                                    <h3 class=\"border-bottom text-primary text-uppercase\">Forum</h3>
+                                <div class=\"panel-heading border-bottom\">
+                                    <h3 class=\"text-primary text-uppercase\">Forum</h3>
                                     <p><b>Thème : </b> <em>La voiture la plus vendue au monde</em></p>
                                 </div>
                                 <div class=\"panel-body\">
                                     <img src=\"";
-        // line 198
+        // line 297
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive img-rounded\">
+        echo "\" class=\"img-responsive\">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -329,15 +428,15 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                                 </div>
                             </div>
                             <div class=\"panel\">
-                                <div class=\"panel-heading text-center\">
-                                    <h3 class=\"border-bottom text-primary text-uppercase\">Forum</h3>
+                                <div class=\"panel-heading border-bottom\">
+                                    <h3 class=\"text-primary text-uppercase\">Forum</h3>
                                     <p><b>Thème : </b><em>Le webmarketing</em></p>
                                 </div>
                                 <div class=\"panel-body\">
                                     <img src=\"";
-        // line 222
+        // line 321
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/house.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive img-rounded\">
+        echo "\" class=\"img-responsive\">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -358,29 +457,29 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
                         ";
     }
 
-    // line 246
+    // line 345
     public function block_aside($context, array $blocks = array())
     {
-        // line 247
+        // line 346
         echo "            <div class=\"col-lg-3 col-md-3 col-sm-3\" id=\"aside\">
                 ";
-        // line 248
+        // line 347
         $this->displayBlock('group', $context, $blocks);
-        // line 392
+        // line 491
         echo "
                 ";
-        // line 410
+        // line 509
         echo "
                 ";
-        // line 428
+        // line 527
         echo "            </div> <!-- /aside -->
         ";
     }
 
-    // line 248
+    // line 347
     public function block_group($context, array $blocks = array())
     {
-        // line 249
+        // line 348
         echo "                    <div class=\"panel panel-primary block-groupe\">
                         <div class=\"panel-heading\">
                             Mon menu
@@ -538,7 +637,7 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
 
     public function getDebugInfo()
     {
-        return array (  384 => 249,  381 => 248,  376 => 428,  373 => 410,  370 => 392,  368 => 248,  365 => 247,  362 => 246,  339 => 222,  312 => 198,  282 => 171,  273 => 165,  264 => 159,  255 => 153,  246 => 147,  237 => 141,  228 => 135,  219 => 129,  187 => 99,  184 => 98,  162 => 77,  153 => 71,  144 => 65,  112 => 36,  103 => 30,  94 => 24,  78 => 10,  75 => 9,  68 => 241,  66 => 98,  61 => 95,  59 => 9,  54 => 6,  51 => 5,  46 => 430,  44 => 246,  41 => 245,  39 => 5,  36 => 4,  33 => 3,  11 => 1,);
+        return array (  483 => 348,  480 => 347,  475 => 527,  472 => 509,  469 => 491,  467 => 347,  464 => 346,  461 => 345,  438 => 321,  411 => 297,  381 => 270,  372 => 264,  363 => 258,  354 => 252,  345 => 246,  336 => 240,  327 => 234,  318 => 228,  187 => 99,  184 => 98,  162 => 77,  153 => 71,  144 => 65,  112 => 36,  103 => 30,  94 => 24,  78 => 10,  75 => 9,  68 => 340,  66 => 98,  61 => 95,  59 => 9,  54 => 6,  51 => 5,  46 => 529,  44 => 345,  41 => 344,  39 => 5,  36 => 4,  33 => 3,  11 => 1,);
     }
 }
 /* {% extends "::base.html.twig" %}*/
@@ -657,13 +756,112 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
 /*                             <br>*/
 /*                             <div class="panel">*/
 /*                                 <ul class="nav nav-tabs" role="tablist">*/
-/*                                     <li class="active"><a href="#posts" role="tab" data-toggle="tab">Posts</a></li>*/
-/*                                     <li><a href="#albums" role="tab" data-toggle="tab">Albums</a></li>*/
-/*                                     <li><a href="#videos" role="tab" data-toggle="tab">Videos</a></li>*/
+/*                                     <li class="active">*/
+/*                                         <a href="#posts" role="tab" data-toggle="tab">*/
+/*                                             <i class="fa fa-paper-plane text-orange"></i> Posts*/
+/*                                         </a>*/
+/*                                     </li>*/
+/*                                     <li>*/
+/*                                         <a href="#albums" role="tab" data-toggle="tab">*/
+/*                                             <i class="fa fa-picture-o text-orange"></i> Albums*/
+/*                                         </a>*/
+/*                                     </li>*/
+/*                                     <li>*/
+/*                                         <a href="#videos" role="tab" data-toggle="tab">*/
+/*                                             <i class="fa fa-youtube-play text-orange"></i> Videos*/
+/*                                         </a>*/
+/*                                     </li>*/
 /*                                 </ul>*/
 /*                                 <div class="tab-content padding">*/
 /*                                     <div class="tab-pane fade in active" id="posts">*/
-/*                                         Posts*/
+/*                                         <div class="panel">*/
+/*                                             <h4 class="text-orange border-bottom">*/
+/*                                                 Aurelien TEGUS*/
+/*                                                 <small>Le 27/05/2016</small>*/
+/*                                             </h4>*/
+/*                                             <p class="border-bottom">*/
+/*                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod*/
+/*                                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,*/
+/*                                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo*/
+/*                                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse*/
+/*                                                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non*/
+/*                                                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*/
+/*                                             </p>*/
+/*                                             <div class="row">*/
+/*                                                 <div class="col-lg-6 text-center">*/
+/*                                                     <span class="text-muted">12 j'aime</span>*/
+/*                                                     <br>*/
+/*                                                     <a href="#"><i class="fa fa-thumbs-o-up fa-lg"></i></a>*/
+/*                                                 </div>*/
+/*                                                 <div class="col-lg-6 text-center">*/
+/*                                                     <span class="text-muted">120 commentaires</span>*/
+/*                                                     <br>*/
+/*                                                     <a href="#"><i class="fa fa-comments-o fa-lg"></i></a>*/
+/*                                                 </div>*/
+/*                                             </div>*/
+/*                                         </div>*/
+/*                                         <div class="panel">*/
+/*                                             <h4 class="text-orange border-bottom">*/
+/*                                                 Aurelien TEGUS*/
+/*                                                 <small>Le 27/05/2016</small>*/
+/*                                             </h4>*/
+/*                                             <p class="border-bottom">*/
+/*                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod*/
+/*                                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,*/
+/*                                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo*/
+/*                                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse*/
+/*                                                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non*/
+/*                                                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*/
+/*                                             </p>*/
+/*                                             <div class="row">*/
+/*                                                 <div class="col-lg-6 text-center">*/
+/*                                                     <span class="text-muted">12 j'aime</span>*/
+/*                                                     <br>*/
+/*                                                     <a href="#"><i class="fa fa-thumbs-o-up fa-lg"></i></a>*/
+/*                                                 </div>*/
+/*                                                 <div class="col-lg-6 text-center">*/
+/*                                                     <span class="text-muted">120 commentaires</span>*/
+/*                                                     <br>*/
+/*                                                     <a href="#"><i class="fa fa-comments-o fa-lg"></i></a>*/
+/*                                                 </div>*/
+/*                                             </div>*/
+/*                                         </div>*/
+/*                                         <div class="panel">*/
+/*                                             <h4 class="text-orange border-bottom">*/
+/*                                                 Aurelien TEGUS*/
+/*                                                 <small>Le 27/05/2016</small>*/
+/*                                             </h4>*/
+/*                                             <p class="border-bottom">*/
+/*                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod*/
+/*                                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,*/
+/*                                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo*/
+/*                                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse*/
+/*                                                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non*/
+/*                                                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*/
+/*                                             </p>*/
+/*                                             <div class="row">*/
+/*                                                 <div class="col-lg-6 text-center">*/
+/*                                                     <span class="text-muted">12 j'aime</span>*/
+/*                                                     <br>*/
+/*                                                     <a href="#"><i class="fa fa-thumbs-o-up fa-lg"></i></a>*/
+/*                                                 </div>*/
+/*                                                 <div class="col-lg-6 text-center">*/
+/*                                                     <span class="text-muted">120 commentaires</span>*/
+/*                                                     <br>*/
+/*                                                     <a href="#"><i class="fa fa-comments-o fa-lg"></i></a>*/
+/*                                                 </div>*/
+/*                                             </div>*/
+/*                                         </div>*/
+/*                                         */
+/*                                         <div class="row text-center">*/
+/*                                             <ul class="pagination pagination-sm">*/
+/*                                                 <li><a href="#">&laquo;</a></li>*/
+/*                                                 <li><a href="#">1</a></li>*/
+/*                                                 <li><a href="#">2</a></li>*/
+/*                                                 <li><a href="#">3</a></li>*/
+/*                                                 <li><a href="#">&raquo;</a></li>*/
+/*                                             </ul>*/
+/*                                         </div>*/
 /*                                     </div>*/
 /*                                     <div class="tab-pane fade" id="albums">*/
 /*                                         <div class="row">*/
@@ -733,12 +931,12 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
 /*                             </div>*/
 /* */
 /*                             <div class="panel">*/
-/*                                 <div class="panel-heading text-center">*/
-/*                                     <h3 class="border-bottom text-primary text-uppercase">Forum</h3>*/
+/*                                 <div class="panel-heading border-bottom">*/
+/*                                     <h3 class="text-primary text-uppercase">Forum</h3>*/
 /*                                     <p><b>Thème : </b> <em>La voiture la plus vendue au monde</em></p>*/
 /*                                 </div>*/
 /*                                 <div class="panel-body">*/
-/*                                     <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive img-rounded">*/
+/*                                     <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive">*/
 /*                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod*/
 /*                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,*/
 /*                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo*/
@@ -757,12 +955,12 @@ class __TwigTemplate_d96d38b9ace2ab409fa7a9c1f8f4c9150fb469811f486eba4e238fea868
 /*                                 </div>*/
 /*                             </div>*/
 /*                             <div class="panel">*/
-/*                                 <div class="panel-heading text-center">*/
-/*                                     <h3 class="border-bottom text-primary text-uppercase">Forum</h3>*/
+/*                                 <div class="panel-heading border-bottom">*/
+/*                                     <h3 class="text-primary text-uppercase">Forum</h3>*/
 /*                                     <p><b>Thème : </b><em>Le webmarketing</em></p>*/
 /*                                 </div>*/
 /*                                 <div class="panel-body">*/
-/*                                     <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive img-rounded">*/
+/*                                     <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive">*/
 /*                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod*/
 /*                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,*/
 /*                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo*/
