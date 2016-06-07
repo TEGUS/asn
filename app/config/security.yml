@@ -46,8 +46,13 @@ security:
                 use_forward:  false
                 check_path:   /login_check
                 failure_path: null
+                require_previous_session: false
             logout:           true
             anonymous:        true
+            remember_me:
+                key:   '%secret%'
+                lifetime: 31536000
+                path:     /
             
         secured_page:
             pattern:          /(.*)
@@ -58,10 +63,15 @@ security:
                 check_path:   /login
                 failure_path: /login
                 default_target_path: /
+                require_previous_session: false
             logout:           
                 path:         /logout
                 target:       /login
             anonymous:        true
+            remember_me:
+                key:   '%secret%'
+                lifetime: 31536000
+                path:     /
 
     # with these settings you can restrict or allow access for different parts
     # of your application based on roles, ip, host or methods

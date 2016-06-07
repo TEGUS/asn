@@ -51,8 +51,7 @@ class User extends BaseUser {
      *
      * @ORM\Column(name="country", type="string", length=255, nullable=true)
      */
-    protected $country;
-
+    private $country;
     /**
      * Set country
      *
@@ -63,7 +62,6 @@ class User extends BaseUser {
     public function setCountry($country) {
         $this->country = $country;
     }
-
     /**
      * Get country
      *
@@ -71,5 +69,55 @@ class User extends BaseUser {
      */
     public function getCountry() {
         return $this->country;
+    }
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailRecuperation", type="string", length=255, nullable=true)
+     */
+    private $emailRecuperation;
+
+    /**
+     * Set emailRecuperation
+     *
+     * @param string $emailRecuperation
+     *
+     * @return User
+     */
+    public function setEmailRecuperation($emailRecuperation) {
+        $this->emailRecuperation = $emailRecuperation;
+    }
+    /**
+     * Get emailRecuperation
+     *
+     * @return string
+     */
+    public function getEmailRecuperation() {
+        return $this->emailRecuperation;
+    }
+    
+    private $hidefield;
+    public function setHidefield($hidefield) {
+        $this->hidefield = $hidefield;
+    }
+    public function getHidefield() {
+        return $this->hidefield;
+    }
+    
+    private $hidefieldCountry;
+    public function setHidefieldCountry($hidefieldCountry) {
+        $this->hidefieldCountry = $hidefieldCountry;
+    }
+    public function getHidefieldCountry() {
+        return $this->hidefieldCountry;
+    }
+    
+    private $indicatifCountry;
+    public function setIndicatifCountry($indicatifCountry) {
+        $this->indicatifCountry = $indicatifCountry;
+    }
+    public function getIndicatifCountry() {
+        return $this->indicatifCountry;
     }
 }

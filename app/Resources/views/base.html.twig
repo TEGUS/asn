@@ -7,6 +7,7 @@
         {% block stylesheets %}
             <link href="{{ asset('res/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen" type="text/css">
             <link href="{{ asset('res/lib/font-awesome-4.4.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
+            <link href="{{ asset('res/css/jquery-ui.css') }}" rel="stylesheet" media="screen" type="text/css">
 
             <link href="{{ asset('res/css/style.css') }}" rel="stylesheet" type="text/css" />
         {% endblock %}
@@ -87,11 +88,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Accueil</a></li>
+                            <li class="active"><a href="{{ path('asn_home') }}">Accueil</a></li>
                             <li><a href="#">Forum</a></li>
                             <li><a href="#">Mes groupes</a></li>
                             <li><a href="#">Meeting</a></li>
-                            <li><a href="#">Organisation personnelle</a></li>
+                            <li><a href="{{ path('asn_calendar') }}">Organisation personnelle</a></li>
                             <li><a href="#">AVM</a></li>
                             <li><a href="#">Mes contacts</a></li>
                         </ul>
@@ -196,8 +197,11 @@
 
         {% block javascripts %}
             <script src="{{ asset('res/lib/jquery-js/jquery-2.2.3.min.js') }}"></script>
-            <script src="{{ asset('res/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('res/lib/jquery-js/jquery-ui.min.js') }}"></script>
+            <script src="{{ asset('res/lib/jquery-js/jquery.validate.min.js') }}"></script>
             <script src="{{ asset('res/lib/jquery-js/jquery.transit.min.js') }}"></script>
+            <script src="{{ asset('res/lib/jquery-js/additional-methods.min.js') }}"></script>
+            <script src="{{ asset('res/lib/bootstrap/js/bootstrap.min.js') }}"></script>
             <script src="{{ asset('res/js/app.js') }}"></script>
         {% endblock %}
     </body>

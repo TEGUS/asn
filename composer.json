@@ -32,7 +32,8 @@
         "sonata-project/easy-extends-bundle": "~2.1",
         "friendsofsymfony/rest-bundle": "^1.7",
         "jms/serializer": "^1.1",
-        "jms/serializer-bundle": "^1.1"
+        "jms/serializer-bundle": "^1.1",
+        "adesigns/calendar-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

@@ -158,7 +158,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/b4213c21f138c96c29ba2f57349d6fca5b2878a9",
+            "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/73c46507fc4244525a402b66fb0339d230717023",
             "reference": "b4213c21f138c96c29ba2f57349d6fca5b2878a9",
             "shasum": ""
         },
@@ -3621,7 +3621,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/6672ca37fe19a8e2a8ae52a93a7163e1b00ef7d5",
+            "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/4e7499d25dc5d0862da09fa8e336164948a29a25",
             "reference": "6672ca37fe19a8e2a8ae52a93a7163e1b00ef7d5",
             "shasum": ""
         },
@@ -4015,6 +4015,172 @@
             "json",
             "serialization",
             "xml"
+        ]
+    },
+    {
+        "name": "carlescliment/calendar-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/carlescliment/calendar-bundle.git",
+            "reference": "38f5c3b8607ebefb7c0378cc3a753bf08221d7bd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/carlescliment/calendar-bundle/zipball/38f5c3b8607ebefb7c0378cc3a753bf08221d7bd",
+            "reference": "38f5c3b8607ebefb7c0378cc3a753bf08221d7bd",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2",
+            "sensio/framework-extra-bundle": "*"
+        },
+        "require-dev": {
+            "doctrine/doctrine-bundle": "v1.5.0",
+            "doctrine/orm": "*",
+            "phpunit/phpunit": "*",
+            "symfony/symfony": "~2.5"
+        },
+        "time": "2016-05-23 10:22:17",
+        "type": "symfony-bundle",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "BladeTester\\CalendarBundle": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Carles Climent Granell",
+                "email": "carlescliment@gmail.com"
+            }
+        ],
+        "description": "A bundle for handling events in calendar",
+        "homepage": "https://github.com/carlescliment/calendar-bundle",
+        "keywords": [
+            "calendar",
+            "events"
+        ]
+    },
+    {
+        "name": "friendsofsymfony/jsrouting-bundle",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
+            "reference": "2f52d924692647db02bbcb27c159fef03bf000c9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/2f52d924692647db02bbcb27c159fef03bf000c9",
+            "reference": "2f52d924692647db02bbcb27c159fef03bf000c9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2",
+            "symfony/console": "~2.0|3.*",
+            "symfony/framework-bundle": "~2.0|3.*",
+            "symfony/serializer": "~2.0|3.*",
+            "willdurand/jsonp-callback-validator": "~1.0"
+        },
+        "require-dev": {
+            "symfony/expression-language": "~2.4|3.*"
+        },
+        "time": "2015-10-28 15:08:39",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FOS\\JsRoutingBundle\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "FriendsOfSymfony Community",
+                "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
+            },
+            {
+                "name": "William DURAND",
+                "email": "william.durand1@gmail.com"
+            }
+        ],
+        "description": "A pretty nice way to expose your Symfony2 routing to client applications.",
+        "homepage": "http://friendsofsymfony.github.com",
+        "keywords": [
+            "Js Routing",
+            "javascript",
+            "routing"
+        ]
+    },
+    {
+        "name": "adesigns/calendar-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "ADesigns/CalendarBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/adesigns/calendar-bundle.git",
+            "reference": "3e1ffde0e313980c10f978d89523b0c667f5d255"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/adesigns/calendar-bundle/zipball/3e1ffde0e313980c10f978d89523b0c667f5d255",
+            "reference": "3e1ffde0e313980c10f978d89523b0c667f5d255",
+            "shasum": ""
+        },
+        "require": {
+            "doctrine/collections": ">=1.0",
+            "friendsofsymfony/jsrouting-bundle": "~1.1",
+            "symfony/framework-bundle": "~2.1|~3.0",
+            "symfony/twig-bundle": "~2.1|~3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*",
+            "symfony/browser-kit": "~2.3|~3.0",
+            "symfony/debug": "~2.3|~3.0",
+            "symfony/finder": "~2.3|~3.0",
+            "symfony/phpunit-bridge": "^2.7|~3.0"
+        },
+        "time": "2016-02-15 02:59:16",
+        "type": "symfony-bundle",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "ADesigns\\CalendarBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mike Yudin",
+                "email": "mikeyudin@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "This bundle allows you to integrate the jQuery FullCalendar plugin into your Symfony2 application.",
+        "homepage": "http://github.com/adesigns/calendar-bundle",
+        "keywords": [
+            "calendar",
+            "fullcalendar",
+            "jquery calendar"
         ]
     }
 ]

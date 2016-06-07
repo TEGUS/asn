@@ -38,7 +38,9 @@ return array(
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib'),
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib'),
     'CG\\' => array($vendorDir . '/jms/cg/src'),
+    'BladeTester\\CalendarBundle' => array($vendorDir . '/carlescliment/calendar-bundle/src'),
     'Behat\\Transliterator' => array($vendorDir . '/behat/transliterator/src'),
     'Assetic' => array($vendorDir . '/kriswallsmith/assetic/src'),
+    'ADesigns\\CalendarBundle' => array($vendorDir . '/adesigns/calendar-bundle'),
     '' => array($baseDir . '/src'),
 );

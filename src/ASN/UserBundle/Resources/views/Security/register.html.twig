@@ -2,98 +2,131 @@
 
 {% block loginRegister %}
     <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
+        <div class="col-lg-4 text-center">
+            <br>
+            <br>
+            <br>
+            <h1><i class="fa fa-group fa-5x text-primary"></i></h1>
+            <p class="text-muted text-primary market">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div class="col-lg-6">
             <div class="row">
                 <h4 class="text-center"><b>Inscription</b></h4>
                 <form id="registerForm" method="post" class="form-horizontal"  {{ form_enctype(form) }}>
                     <div class="form-group">
-                        <label for="firstname" class="col-lg-4 control-label">{{ form_label(form.firstname, "Prénom") }}</label>
-                        <div class="col-lg-8">
+                        <label for="firstname" class="col-lg-4 control-label">{{ form_label(form.firstname, "Prénom ") }}</label>
+                        <div class="col-lg-7">
                             {{ form_widget(form.firstname, { 'attr': {'class': 'form-control firstname', 'placeholder':'Prénom'} }) }}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="lastname" class="col-lg-4 control-label">{{ form_label(form.lastname, "Nom") }}</label>
-                        <div class="col-lg-8">
+                        <label for="lastname" class="col-lg-4 control-label">{{ form_label(form.lastname, "Nom ") }}<span class="bad"> *</span></label>
+                        <div class="col-lg-7">
                             {{ form_widget(form.lastname, { 'attr': {'class': 'form-control lastname', 'placeholder':'Nom'} }) }}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="date_of_birth" class="col-lg-4 control-label">{{ form_label(form.date_of_birth, "Date de naissance") }}</label>
-                        <div class="col-lg-8">
-                            <div class="col-lg-4">
-                                {{ form_widget(form.date_of_birth.month, {'attr':{'class':'form-control month'}}) }}
-                            </div>
-                            <div class="col-lg-4">
-                                {{ form_widget(form.date_of_birth.day, {'attr':{'class':'form-control day'}}) }}
-                            </div>
-                            <div class="col-lg-4">
-                                {{ form_widget(form.date_of_birth.year, {'attr':{'class':'form-control year'}}) }}
+                        <label for="date_of_birth" class="col-lg-4 control-label">{{ form_label(form.date_of_birth, "Date de naissance ") }}<span class="bad"> *</span></label>
+                        <div class="col-lg-7">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    {{ form_widget(form.date_of_birth.month, {'attr':{'class':'form-control month'}}) }}
+                                </div>
+                                <div class="col-lg-4">
+                                    {{ form_widget(form.date_of_birth.day, {'attr':{'class':'form-control day'}}) }}
+                                </div>
+                                <div class="col-lg-4">
+                                    {{ form_widget(form.date_of_birth.year, {'attr':{'class':'form-control yearSelect'}}) }}
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="gender" class="col-lg-4 control-label">{{ form_label(form.gender, "Genre") }}</label>
-                        <div class="col-lg-8">
+                        <label for="gender" class="col-lg-4 control-label">{{ form_label(form.gender, "Genre") }}<span class="bad"> *</span></label>
+                        <div class="col-lg-7">
                             {{ form_widget(form.gender , {'attr':{'class':'form-control gender'}}) }}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="country" class="col-lg-4 control-label">{{ form_label(form.country, "Nationalité") }}</label>
-                        <div class="col-lg-8">
+                        <label for="country" class="col-lg-4 control-label">{{ form_label(form.country, "Nationalité ") }}<span class="bad"> *</span></label>
+                        <div class="col-lg-7">
                             {{ form_widget(form.country , {'attr':{'class':'form-control country'}}) }}
+                            {{ form_widget(form.hidefieldCountry , {'attr':{'type':'hidden'}}) }}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone" class="col-lg-4 control-label">{{ form_label(form.phone, "Téléphone") }}</label>
-                        <div class="col-lg-8">
+                        <label for="phone" class="col-lg-4 control-label">{{ form_label(form.phone, "Téléphone") }}<span class="bad"> *</span></label>
+                        <div class="col-lg-3 ">
+                            {{ form_widget(form.indicatifCountry , {'attr':{'class':'form-control indicatifInput', 'placeholder':'Indicatif' , 'disabled':'true'}}) }}
+                            <select class="form-control indicatifSelect"></select>
+                        </div>
+                        <div class="col-lg-4">
                             {{ form_widget(form.phone, { 'attr': {'class': 'form-control phone', 'placeholder':'Numéro de téléphone'} }) }}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="email" class="col-lg-4 control-label">{{ form_label(form.email, "Email") }}</label>
-                        <div class="col-lg-8">
-                            <div class="col-lg-11">
-                                {{ form_widget(form.email, { 'attr': {'class': 'form-control email', 'placeholder':'example@avm.cm'} }) }}
+                        <label for="email" class="col-lg-4 control-label">{{ form_label(form.hidefield, "Email ") }} <span class="bad"> *</span></label>
+                        <div class="col-lg-4">
+                            {{ form_widget(form.hidefield, { 'attr': {'class': 'form-control email', 'placeholder':'example'} }) }}
+                        </div>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control" disabled value="@avm.com">
+                        </div>
+                        <div class="col-lg-1 infoemail">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="col-lg-4 control-label">{{ form_label(form.emailRecuperation, "Email externe ") }} <span class="bad"> *</span></label>
+                        <div class="col-lg-7">
+                            <div>
+                                {{ form_widget(form.emailRecuperation, 
+                                    { 'attr': {'class': 'form-control emailRecup', 'placeholder':'example@email.teg'} }) 
+                                }}
                             </div>
-                            <div class="col-lg-1 infoemail">
+                            <div class="text-info">
+                                <i class="fa fa-info-circle"></i> 
+                                Email en cas de perte de mot de passe de votre compte.
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="password" class="col-lg-4 control-label">{{ form_label(form.password, "Mot de passe") }}</label>
-                        <div class="col-lg-8">
-                            <div class="col-lg-11">
-                                {{ form_widget(form.password, { 'attr': {'class': 'form-control mdp', 'placeholder':'Mot de passe'} }) }}
-                            </div>
-                            <div class="col-lg-1 infomdp">
-                            </div>
+                        <label for="password" class="col-lg-4 control-label">{{ form_label(form.password, "Mot de passe") }}<span class="bad"> *</span></label>
+                        <div class="col-lg-7">
+                            {{ form_widget(form.password, { 'attr': {'class': 'form-control mdp', 'placeholder':'Mot de passe'} }) }}
+                        </div>
+                        <div class="col-lg-1 infomdp">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="confirmeMotDePasse" class="col-lg-4 control-label">
-                            Repéter le mot de passe
+                            Repéter le mot de passe <span class="bad"> *</span>
                         </label>
-                        <div class="col-lg-8">
-                            <div class="col-lg-11">
-                                <input type="password" placeholder="Repéter le mot de passe" class="form-control rmdp">
-                            </div>
-                            <div class="col-lg-1 informdp">
-                            </div>
+                        <div class="col-lg-7">
+                            <input type="password" placeholder="Repéter le mot de passe" class="form-control rmdp">
+                        </div>
+                        <div class="col-lg-1 informdp">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-lg-offset-4 col-lg-8">
-                            <button type="submit" class="btn btn-purple btn-sm submit">
+                            <button type="submit" class="btn btn-primary btn-sm submit">
                                 S'inscrire
                             </button>
                         </div>
@@ -112,8 +145,13 @@
 
 {% block javascripts %}
     {{ parent() }}
+    <script src="{{ asset('res/js/indicatifs.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('res/js/years.js') }}" type="text/javascript"></script>
     <script>
         $(function () {
+            var country, gender;
+
+            $(".hidefieldCountry").hide();
             $("input").focus(function () {
                 $(this).css("background-color", "#f3e5f5");
             });
@@ -127,43 +165,87 @@
                 $(this).css("background-color", "#fff");
             });
 
-            $(".submit").hide();
+            //Search and Check IsoCode country
+            $(".indicatifSelect").hide();
+            function searchIndicatifCountry(val) {
+                var indice, indicat;
+                for (var i = 0; i < indicatifs[1].length; i++) {
+                    if (val === indicatifs[1][i]) {
+                        indice = i;
+                    }
+                }
+                indicat = val;
+                for (var j = 0; j < indicatifs[0].length; j++) {
+                    if (indice === j) {
+                        indicat = indicatifs[0][j];
+                    }
+                }
+                $(".indicatifSelect").empty();
+                if (indicat instanceof Array) {
+                    for (var k = 0; k < indicat.length; k++) {
+                        $(".indicatifSelect").show();
+                        $(".indicatifInput").hide();
+                        $(".indicatifSelect").append(new Option("+" + indicat[k], "+" + indicat[k]));
+                    }
+                } else {
+                    $(".indicatifSelect").hide();
+                    $(".indicatifInput").show();
+                    $(".indicatifInput").val("+" + indicat);
+                    console.log($(".indicatifInput").val());
+                }
+            }
+
+            $(".country").change(function () {
+                searchIndicatifCountry($(this).val());
+            });
+
+            $(".indicatifSelect").click(function () {
+                $(".indicatifInput").val($(".indicatifSelect").val());
+                console.log($(".indicatifInput").val());
+            });
+            $(".indicatifSelect").change(function () {
+                $(".indicatifInput").val($(".indicatifSelect").val());
+                console.log($(".indicatifInput").val());
+            });
+
+            //Checking the repeatPassword
+            $(".submit").attr("disabled", "true");
             $(".rmdp").keyup(function () {
                 if ($(".mdp").val().length >= 8 && $(".rmdp").val().length !== 0) {
                     if ($(".rmdp").val() !== $(".mdp").val()) {
-                        $(".submit").hide();
+                        $(".submit").attr("disabled", "true");
                         $(".badrmdp").remove();
                         $(".informdp").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad badrmdp"></i>');
                         $(".goodrmdp").remove();
                     } else {
-                        $(".submit").show();
+                        $(".submit").removeAttr("disabled");
                         $(".goodrmdp").remove();
                         $(".informdp").parent().append('<i class="fa fa-thumbs-o-up fa-2x good goodrmdp"></i>');
                         $(".badrmdp").remove();
                     }
                 } else {
-                    $(".submit").hide();
+                    $(".submit").attr("disabled", "true");
                     $(".goodrmdp").remove();
                     $(".badrmdp").remove();
                 }
             });
 
+            //Checking password
             $(".mdp").keyup(function () {
                 if ($(".mdp").val().length >= 8 && $(".rmdp").val().length !== 0) {
                     if ($(".rmdp").val() !== $(".mdp").val()) {
-                        $(".submit").hide();
+                        $(".submit").attr("disabled", "true");
                         $(".badrmdp").remove();
                         $(".informdp").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad badrmdp"></i>');
                         $(".goodrmdp").remove();
                     } else {
-                        $(".submit").show();
+                        $(".submit").removeAttr("disabled");
                         $(".goodrmdp").remove();
-                        ;
                         $(".informdp").parent().append('<i class="fa fa-thumbs-o-up fa-2x good goodrmdp"></i>');
                         $(".badrmdp").remove();
                     }
                 } else {
-                    $(".submit").hide();
+                    $(".submit").attr("disabled", "true");
                     $(".goodrmdp").remove();
                     $(".badrmdp").remove();
                 }
@@ -175,42 +257,90 @@
                 } else if ($(".mdp").val().length > 0) {
                     $(".badmdp").remove();
                     $(".goodmdp").remove();
+                    $(".submit").attr("disabled", "true");
                     $(".infomdp").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad badmdp"></i>');
                 } else {
+                    $(".submit").attr("disabled", "true");
                     $(".goodmdp").remove();
                     $(".badmdp").remove();
                 }
             });
 
-            $(".email").change(function () {
-                var eml = $(".email").val();
-                $.ajax({
-                    type: 'get',
-                    url: 'http://localhost/asn/web/app_dev.php/user/byemail/' + eml,
-                    beforeSend: function () {
+            //Checking username@Email
+            var regex = [];
+            regex[0] = /^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+            regex[1] = /^[a-z0-9._-]+@$/;
+            regex[3] = /^[a-z0-9._-]+@[a-z0-9._-]{1,}$/;
+
+            function testEmail(val) {
+                $(".submit").attr("disabled", "true");
+                $(".bademail").remove();
+                $(".goodemail").remove();
+                $(".loading").remove();
+                if (val.length > 0) {
+                    if (regex[0].test(val) || regex[1].test(val) || regex[3].test(val)) {
+                        console.log("correspond!");
+                        $(".submit").attr("disabled", "true");
                         $(".bademail").remove();
                         $(".goodemail").remove();
                         $(".loading").remove();
-                        $(".infoemail").parent().append('<img src="{{ asset('res/img/loading.gif') }}" class="loading">');
-                    },
-                    success: function (data) {
-                        $(".bademail").remove();
-                        $(".goodemail").remove();
-                        $(".loading").remove();
-                        console.log(data.response);
-                        if (data.response) {
-                            $(".submit").hide();
-                            $(".infoemail").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad bademail"></i>');
-                        } else {
-                            $(".submit").show();
-                            $(".infoemail").parent().append('<i class="fa fa-thumbs-o-up fa-2x good goodemail"></i>');
-                        }
+                        $(".infoemail").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad bademail"></i>');
+                    } else {
+                        console.log("ne correspond pas!");
+                        $.ajax({
+                            type: 'get',
+                            url: 'http://localhost/asn/web/app_dev.php/user/byemail/' + val + "@avm.com",
+                            beforeSend: function () {
+                                $(".submit").attr("disabled", "true");
+                                $(".bademail").remove();
+                                $(".goodemail").remove();
+                                $(".loading").remove();
+                                $(".infoemail").parent().append('<img src="{{ asset('res/img/loading.gif') }}" class="loading">');
+                            },
+                            success: function (data) {
+                                $(".loading").remove();
+                                $(".bademail").remove();
+                                $(".goodemail").remove();
+                                if (data.response) {
+                                    $(".submit").attr("disabled", "true");
+                                    $(".bademail").remove();
+                                    $(".infoemail").parent().append('<i class="fa fa-thumbs-o-down fa-2x bad bademail"></i>');
+                                } else {
+                                    $(".submit").removeAttr("disabled");
+                                    $(".goodemail").remove();
+                                    $(".infoemail").parent().append('<i class="fa fa-thumbs-o-up fa-2x good goodemail"></i>');
+                                }
+                            }
+                        });
                     }
-                });
+                } else {
+                    $(".submit").attr("disabled", "true");
+                    $(".bademail").remove();
+                    $(".goodemail").remove();
+                    $(".loading").remove();
+                }
+            }
+
+            $(".email").blur(function () {
+                testEmail($(this).val());
             });
 
-            $(".phone").keyup(function () {
+            //Checking the last config before Submitting!
+            /*$(".submit").click(function () {
+             $(".country").val(country);
+             $(".indicatifInput").removeAttr("disabled");
+             });*/
 
+
+            $(".submit").click(function () {
+                $.ajax({
+                    beforeSend: function () {
+                        country = $(".country option:selected").text();
+                        $(".hidefieldCountry").val(country);
+                        
+                        $(".indicatifInput").removeAttr("disabled");
+                    }
+                });
             });
         });
     </script>

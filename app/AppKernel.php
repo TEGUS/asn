@@ -32,8 +32,10 @@ class AppKernel extends Kernel
 				
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            
             new ASN\MainBundle\ASNMainBundle(),
             new ASN\UserBundle\ASNUserBundle(),
+            new ASN\CalendarBundle\ASNCalendarBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -5,6 +5,10 @@ asn_user:
 asn_main:
     resource: "@ASNMainBundle/Resources/config/routing.yml"
     prefix:   /
+    
+asn_calendarbundle:
+    resource: "@ASNCalendarBundle/Resources/config/routing.yml"
+    prefix:   /
 
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'

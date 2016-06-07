@@ -26,7 +26,7 @@ class SecurityController extends Controller {
 
             $em = $this->getDoctrine()->getManager();
             $tamponUser = $em->getRepository("ApplicationSonataUserBundle:User")->findBy(
-                array('email' => $user->getEmail())
+                    array('email' => $user->getEmail())
             );
             if ($tamponUser != null) {
                 $factory = $this->get('security.encoder_factory');
@@ -35,7 +35,7 @@ class SecurityController extends Controller {
             }
 
             $currentUser = $em->getRepository("ApplicationSonataUserBundle:User")->findBy(
-                array('email' => $user->getEmail(), 'password' => $user->getPassword())
+                    array('email' => $user->getEmail(), 'password' => $user->getPassword())
             );
 
             if ($currentUser != null) {
@@ -51,15 +51,15 @@ class SecurityController extends Controller {
             } else {
                 $error = "Bad credantials !";
                 return $this->render('ASNUserBundle:Security:login.html.twig', array(
-                    'form' => $form->createView(),
-                    'error' => $error
+                            'form' => $form->createView(),
+                            'error' => $error
                 ));
             }
         }
 
         return $this->render('ASNUserBundle:Security:login.html.twig', array(
-            'form' => $form->createView(),
-            'error' => ""
+                    'form' => $form->createView(),
+                    'error' => ""
         ));
     }
 
@@ -75,8 +75,18 @@ class SecurityController extends Controller {
         $request = $this->getRequest();
         if ($request->getMethod() == 'POST') {
             $form->bind($request);
-
-            $username = trim($user->getFirstname()."-".$user->getEmail());
+            
+            $user->setEmail($user->getHidefield()."@avm.com");
+            
+            if($user->getFirstname() === null){
+                $user->setFirstname($user->getLastname());
+                $username = trim($user->getLastname()."-" .$user->getEmail());
+            } else {
+                $username = trim($user->getFirstname().$user->getLastname()."-" .$user->getEmail());
+            }
+            
+            $user->setCountry($user->getHidefieldCountry());
+            $user->setPhone($user->getIndicatifCountry().$user->getPhone());
             $user->setUsername($username);
             $user->setUsernameCanonical($username);
             $user->setEmailCanonical(trim($user->getEmail()));
@@ -89,15 +99,16 @@ class SecurityController extends Controller {
             $user->setCredentialsExpired(false);
             $user->setCreatedAt(new \DateTime);
             $user->setUpdatedAt(new \DateTime);
+            
 
-            var_dump($user);
+            //var_dump($user);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
 
             $currentUser = $em->getRepository("ApplicationSonataUserBundle:User")->findByEmail($user->getEmail());
-            var_dump($currentUser[0]);
+            //var_dump($currentUser[0]);
 
             $token = new UsernamePasswordToken($currentUser[0], $currentUser[0]->getPassword(), "secured_page", $currentUser[0]->getRoles());
             $this->container->get("security.context")->setToken($token);
@@ -126,4 +137,5 @@ class SecurityController extends Controller {
         $response = new JsonResponse();
         return $response->setData(array("response" => $res));
     }
+
 }
