@@ -40,7 +40,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("images/logo_asn.png"), "html", null, true);
         echo "\" />
     </head>
-    <body class=\"bg-grey\" style=\"padding-top: 10px;\">
+    <body class=\"bg-grey\" style=\"padding-top: 0;\">
 
         ";
         // line 17
@@ -50,17 +50,17 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
         ";
         // line 20
         $this->displayBlock('body', $context, $blocks);
-        // line 48
+        // line 44
         echo "
         ";
-        // line 49
+        // line 45
         $this->displayBlock('footer', $context, $blocks);
-        // line 100
+        // line 96
         echo "
         ";
-        // line 101
+        // line 97
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 106
+        // line 103
         echo "    </body>
 </html>
 ";
@@ -69,7 +69,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
     // line 6
     public function block_title($context, array $blocks = array())
     {
-        echo "asn";
+        echo "ASN";
     }
 
     // line 7
@@ -111,39 +111,35 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
                 </div>
                 <div class=\"row text-center\">
                     <div class=\"col-lg-12\">
-                        <h1 class=\"text-primary\">
+                        <h1 class=\"text-primary\" style=\"margin: 0;\">
                             <i class=\"fa fa-comments fa-2x\"></i>
                             <br>
                             <small class=\"text-orange\">AVM Social Network</small>
                         </h1>
-                        <br>
-                        <p>
-                            Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous 
-                            trouvez et quoi que vous faites.
-                        </p>
                     </div>
                 </div>
+                <br>
 
                 ";
-        // line 43
+        // line 39
         $this->displayBlock('loginRegister', $context, $blocks);
-        // line 45
+        // line 41
         echo "
             </div>
         ";
     }
 
-    // line 43
+    // line 39
     public function block_loginRegister($context, array $blocks = array())
     {
-        // line 44
+        // line 40
         echo "                ";
     }
 
-    // line 49
+    // line 45
     public function block_footer($context, array $blocks = array())
     {
-        // line 50
+        // line 46
         echo "            <footer class=\"text-center text-muted\">
                 <div class=\"container-fluid bg-primary\" style=\"margin-top: 100px\">
                     <div class=\"row\">
@@ -196,20 +192,24 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
         ";
     }
 
-    // line 101
+    // line 97
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 102
+        // line 98
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery-2.2.3.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 103
+        // line 99
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.transit.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 104
+        // line 100
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/bootstrap/js/bootstrap.min.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 101
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/js/app.js"), "html", null, true);
         echo "\"></script>
         ";
     }
@@ -226,7 +226,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 
     public function getDebugInfo()
     {
-        return array (  212 => 104,  208 => 103,  203 => 102,  200 => 101,  147 => 50,  144 => 49,  140 => 44,  137 => 43,  131 => 45,  129 => 43,  102 => 20,  98 => 18,  95 => 17,  89 => 11,  84 => 9,  79 => 8,  76 => 7,  70 => 6,  64 => 106,  62 => 101,  59 => 100,  57 => 49,  54 => 48,  52 => 20,  49 => 19,  47 => 17,  39 => 13,  37 => 7,  33 => 6,  26 => 1,);
+        return array (  212 => 101,  208 => 100,  204 => 99,  199 => 98,  196 => 97,  143 => 46,  140 => 45,  136 => 40,  133 => 39,  127 => 41,  125 => 39,  102 => 20,  98 => 18,  95 => 17,  89 => 11,  84 => 9,  79 => 8,  76 => 7,  70 => 6,  64 => 103,  62 => 97,  59 => 96,  57 => 45,  54 => 44,  52 => 20,  49 => 19,  47 => 17,  39 => 13,  37 => 7,  33 => 6,  26 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -234,7 +234,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*     <head>*/
 /*         <meta charset="UTF-8" />*/
 /*         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>*/
-/*         <title>{% block title %}asn{% endblock %}</title>*/
+/*         <title>{% block title %}ASN{% endblock %}</title>*/
 /*         {% block stylesheets %}*/
 /*             <link href="{{ asset('res/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">*/
 /*             <link href="{{ asset('res/lib/font-awesome-4.4.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>*/
@@ -243,7 +243,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*         {% endblock %}*/
 /*         <link rel="icon" type="image/x-icon" href="{{ asset('images/logo_asn.png') }}" />*/
 /*     </head>*/
-/*     <body class="bg-grey" style="padding-top: 10px;">*/
+/*     <body class="bg-grey" style="padding-top: 0;">*/
 /* */
 /*         {% block header %}*/
 /*         {% endblock %}*/
@@ -258,18 +258,14 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*                 </div>*/
 /*                 <div class="row text-center">*/
 /*                     <div class="col-lg-12">*/
-/*                         <h1 class="text-primary">*/
+/*                         <h1 class="text-primary" style="margin: 0;">*/
 /*                             <i class="fa fa-comments fa-2x"></i>*/
 /*                             <br>*/
 /*                             <small class="text-orange">AVM Social Network</small>*/
 /*                         </h1>*/
-/*                         <br>*/
-/*                         <p>*/
-/*                             Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous */
-/*                             trouvez et quoi que vous faites.*/
-/*                         </p>*/
 /*                     </div>*/
 /*                 </div>*/
+/*                 <br>*/
 /* */
 /*                 {% block loginRegister %}*/
 /*                 {% endblock %}*/
@@ -333,6 +329,7 @@ class __TwigTemplate_384da3dd259d00757e71b4f5336c514d247cc8cc3de774fccf8ea65e5a2
 /*             <script src="{{ asset('res/lib/jquery-js/jquery-2.2.3.min.js') }}"></script>*/
 /*             <script src="{{ asset('res/lib/jquery-js/jquery.transit.min.js') }}"></script>*/
 /*             <script src="{{ asset('res/lib/bootstrap/js/bootstrap.min.js') }}"></script>*/
+/*             <script src="{{ asset('res/js/app.js') }}"></script>*/
 /*         {% endblock %}*/
 /*     </body>*/
 /* </html>*/

@@ -16,11 +16,8 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
             'body' => array($this, 'block_body'),
             'section' => array($this, 'block_section'),
             'pub' => array($this, 'block_pub'),
-            'actualite' => array($this, 'block_actualite'),
+            'actualites' => array($this, 'block_actualites'),
             'aside' => array($this, 'block_aside'),
-            'group' => array($this, 'block_group'),
-            'organisation_peso' => array($this, 'block_organisation_peso'),
-            'forum' => array($this, 'block_forum'),
             'footer' => array($this, 'block_footer'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -51,26 +48,27 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
         // line 18
         $this->displayBlock('header', $context, $blocks);
-        // line 107
+        // line 106
         echo "
-
-        <div class=\"container\" id=\"main-container\">
-            ";
-        // line 110
+        <div class=\"container\" id=\"main\">
+            <div class=\"row\">
+                ";
+        // line 109
         $this->displayBlock('body', $context, $blocks);
-        // line 147
-        echo "        </div> <!-- /container -->
+        // line 133
+        echo "            </div> <!-- /row -->
+        </div> <!-- /container -->
 
         ";
-        // line 149
+        // line 136
         $this->displayBlock('footer', $context, $blocks);
-        // line 200
+        // line 187
         echo "
 
         ";
-        // line 202
+        // line 189
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 209
+        // line 196
         echo "    </body>
 </html>
 ";
@@ -79,7 +77,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
     // line 6
     public function block_title($context, array $blocks = array())
     {
-        echo "asn";
+        echo "ASN";
     }
 
     // line 7
@@ -157,10 +155,10 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" id=\"img-user\" class=\"img-circle\">
-                                    
+
                                     ";
         // line 62
-        echo "                                    
+        echo "
                                     ";
         // line 66
         echo "                                    ";
@@ -169,7 +167,10 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                                     <span class=\"caret\"></span>
                                 </a>
                                 <ul class=\"dropdown-menu\" role=\"menu\">
-                                    <li><a href=\"#\">Profil</a></li>
+                                    <li><a href=\"";
+        // line 70
+        echo $this->env->getExtension('routing')->getPath("asn_profile");
+        echo "\">Profile</a></li>
                                     <li><a href=\"#\">Paramètres</a></li>
                                     <li class=\"divider\"></li>
                                     <li><a href=\"#\">Langue</a></li>
@@ -197,130 +198,92 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-2\">
                         <ul class=\"nav navbar-nav\">
-                            <li class=\"active\"><a href=\"#\">Accueil</a></li>
+                            <li class=\"active\"><a href=\"";
+        // line 95
+        echo $this->env->getExtension('routing')->getPath("asn_home");
+        echo "\">Accueil</a></li>
                             <li><a href=\"#\">Forum</a></li>
                             <li><a href=\"#\">Mes groupes</a></li>
                             <li><a href=\"#\">Meeting</a></li>
                             <li><a href=\"#\">Organisation personnelle</a></li>
-                            <li><a href=\"#\">AVM</a></li>
                             <li><a href=\"#\">Mes contacts</a></li>
                         </ul>
                     </div>
                 </div> ";
-        // line 105
+        // line 104
         echo "            </nav>
         ";
     }
 
-    // line 110
+    // line 109
     public function block_body($context, array $blocks = array())
     {
         echo " 
-                <div class=\"row\">
-                    ";
-        // line 112
+                    <div class=\"col-lg-9 col-md-9 col-sm-9\">
+                        ";
+        // line 111
         $this->displayBlock('section', $context, $blocks);
-        // line 129
-        echo "
-                    ";
-        // line 130
+        // line 126
+        echo "                    </div> <!-- /main -->
+                    <div class=\"col-lg-3 col-md-3 col-sm-3\" id=\"aside\">
+                        ";
+        // line 128
         $this->displayBlock('aside', $context, $blocks);
-        // line 145
-        echo "                </div> <!-- /row -->
-            ";
+        // line 131
+        echo "                    </div> <!-- /aside -->
+                ";
     }
 
-    // line 112
+    // line 111
     public function block_section($context, array $blocks = array())
     {
-        // line 113
-        echo "                        <div class=\"col-lg-9 col-md-9 col-sm-9\" id=\"main\">
-                            <div class=\"row\">
-                                <div class=\"col-lg-4 block-pub text-muted\">
+        // line 112
+        echo "                            <div class=\"row\">
+                                <div class=\"col-lg-4 text-muted\" id=\"pub\">
                                     ";
-        // line 116
+        // line 114
         $this->displayBlock('pub', $context, $blocks);
-        // line 119
+        // line 117
         echo "                                </div> <!-- /block-pub -->
 
-                                <div class=\"col-lg-8 block-actualite\">
+                                <div class=\"col-lg-8\" id=\"actualites\">
                                     ";
-        // line 122
-        $this->displayBlock('actualite', $context, $blocks);
-        // line 125
+        // line 120
+        $this->displayBlock('actualites', $context, $blocks);
+        // line 123
         echo "                                </div> <!-- /block-actualite -->
                             </div>
-                        </div> <!-- /main -->
-                    ";
+                        ";
     }
 
-    // line 116
+    // line 114
     public function block_pub($context, array $blocks = array())
     {
-        // line 117
+        // line 115
         echo "
                                     ";
     }
 
-    // line 122
-    public function block_actualite($context, array $blocks = array())
+    // line 120
+    public function block_actualites($context, array $blocks = array())
     {
-        // line 123
+        // line 121
         echo "
                                     ";
     }
 
-    // line 130
+    // line 128
     public function block_aside($context, array $blocks = array())
     {
-        // line 131
-        echo "                        <div class=\"col-lg-3 col-md-3 col-sm-3\" id=\"aside\">
-                            ";
-        // line 132
-        $this->displayBlock('group', $context, $blocks);
-        // line 135
-        echo "
-                            ";
-        // line 136
-        $this->displayBlock('organisation_peso', $context, $blocks);
-        // line 139
-        echo "
-                            ";
-        // line 140
-        $this->displayBlock('forum', $context, $blocks);
-        // line 143
-        echo "                        </div> <!-- /aside -->
-                    ";
-    }
-
-    // line 132
-    public function block_group($context, array $blocks = array())
-    {
-        // line 133
-        echo "
-                            ";
+        // line 129
+        echo "                            
+                        ";
     }
 
     // line 136
-    public function block_organisation_peso($context, array $blocks = array())
-    {
-        // line 137
-        echo "
-                            ";
-    }
-
-    // line 140
-    public function block_forum($context, array $blocks = array())
-    {
-        // line 141
-        echo "
-                            ";
-    }
-
-    // line 149
     public function block_footer($context, array $blocks = array())
     {
-        // line 150
+        // line 137
         echo "            <footer class=\"text-center text-muted\">
                 <div class=\"container-fluid bg-primary\">
                     <div class=\"row\">
@@ -373,27 +336,27 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
     }
 
-    // line 202
+    // line 189
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 203
+        // line 190
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery-2.2.3.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 204
+        // line 191
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 205
+        // line 192
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.transit.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 206
+        // line 193
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.mCustomScrollbar.concat.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 207
+        // line 194
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/js/app.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -411,7 +374,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 
     public function getDebugInfo()
     {
-        return array (  397 => 207,  393 => 206,  389 => 205,  385 => 204,  380 => 203,  377 => 202,  324 => 150,  321 => 149,  316 => 141,  313 => 140,  308 => 137,  305 => 136,  300 => 133,  297 => 132,  292 => 143,  290 => 140,  287 => 139,  285 => 136,  282 => 135,  280 => 132,  277 => 131,  274 => 130,  269 => 123,  266 => 122,  261 => 117,  258 => 116,  251 => 125,  249 => 122,  244 => 119,  242 => 116,  237 => 113,  234 => 112,  229 => 145,  227 => 130,  224 => 129,  222 => 112,  216 => 110,  211 => 105,  179 => 75,  166 => 66,  163 => 62,  158 => 59,  140 => 43,  125 => 30,  112 => 19,  109 => 18,  103 => 12,  98 => 10,  94 => 9,  89 => 8,  86 => 7,  80 => 6,  74 => 209,  72 => 202,  68 => 200,  66 => 149,  62 => 147,  60 => 110,  55 => 107,  53 => 18,  45 => 14,  43 => 7,  39 => 6,  32 => 1,);
+        return array (  360 => 194,  356 => 193,  352 => 192,  348 => 191,  343 => 190,  340 => 189,  287 => 137,  284 => 136,  279 => 129,  276 => 128,  271 => 121,  268 => 120,  263 => 115,  260 => 114,  254 => 123,  252 => 120,  247 => 117,  245 => 114,  241 => 112,  238 => 111,  233 => 131,  231 => 128,  227 => 126,  225 => 111,  219 => 109,  214 => 104,  203 => 95,  180 => 75,  172 => 70,  164 => 66,  161 => 62,  156 => 59,  138 => 43,  123 => 30,  110 => 19,  107 => 18,  101 => 12,  96 => 10,  92 => 9,  87 => 8,  84 => 7,  78 => 6,  72 => 196,  70 => 189,  66 => 187,  64 => 136,  59 => 133,  57 => 109,  52 => 106,  50 => 18,  42 => 14,  40 => 7,  36 => 6,  29 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -419,7 +382,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*     <head>*/
 /*         <meta charset="UTF-8" />*/
 /*         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>*/
-/*         <title>{% block title %}asn{% endblock %}</title>*/
+/*         <title>{% block title %}ASN{% endblock %}</title>*/
 /*         {% block stylesheets %}*/
 /*             <link href="{{ asset('res/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen" type="text/css">*/
 /*             <link href="{{ asset('res/lib/font-awesome-4.4.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>*/
@@ -473,9 +436,9 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                             <li class="dropdown">*/
 /*                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">*/
 /*                                     <img src="{{ asset('res/img/voiture.jpg') }}" id="img-user" class="img-circle">*/
-/*                                     */
+/* */
 /*                                     {#Lorsque l'utilisateur n'a pas de photo de profil, decommenter la partie suivante#}*/
-/*                                     */
+/* */
 /*                                     {#<span id="img-user" class="img-circle bg-grey text-center">*/
 /*                                         <i class="fa fa-user fa-2x"></i>*/
 /*                                     </span>#}*/
@@ -483,7 +446,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                                     <span class="caret"></span>*/
 /*                                 </a>*/
 /*                                 <ul class="dropdown-menu" role="menu">*/
-/*                                     <li><a href="#">Profil</a></li>*/
+/*                                     <li><a href="{{ path('asn_profile') }}">Profile</a></li>*/
 /*                                     <li><a href="#">Paramètres</a></li>*/
 /*                                     <li class="divider"></li>*/
 /*                                     <li><a href="#">Langue</a></li>*/
@@ -508,12 +471,11 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                     <!-- Collect the nav links, forms, and other content for toggling -->*/
 /*                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">*/
 /*                         <ul class="nav navbar-nav">*/
-/*                             <li class="active"><a href="#">Accueil</a></li>*/
+/*                             <li class="active"><a href="{{ path('asn_home') }}">Accueil</a></li>*/
 /*                             <li><a href="#">Forum</a></li>*/
 /*                             <li><a href="#">Mes groupes</a></li>*/
 /*                             <li><a href="#">Meeting</a></li>*/
 /*                             <li><a href="#">Organisation personnelle</a></li>*/
-/*                             <li><a href="#">AVM</a></li>*/
 /*                             <li><a href="#">Mes contacts</a></li>*/
 /*                         </ul>*/
 /*                     </div>*/
@@ -521,45 +483,33 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*             </nav>*/
 /*         {% endblock %}*/
 /* */
-/* */
-/*         <div class="container" id="main-container">*/
-/*             {% block body %} */
-/*                 <div class="row">*/
-/*                     {% block section %}*/
-/*                         <div class="col-lg-9 col-md-9 col-sm-9" id="main">*/
+/*         <div class="container" id="main">*/
+/*             <div class="row">*/
+/*                 {% block body %} */
+/*                     <div class="col-lg-9 col-md-9 col-sm-9">*/
+/*                         {% block section %}*/
 /*                             <div class="row">*/
-/*                                 <div class="col-lg-4 block-pub text-muted">*/
+/*                                 <div class="col-lg-4 text-muted" id="pub">*/
 /*                                     {% block pub %}*/
 /* */
 /*                                     {% endblock %}*/
 /*                                 </div> <!-- /block-pub -->*/
 /* */
-/*                                 <div class="col-lg-8 block-actualite">*/
-/*                                     {% block actualite %}*/
+/*                                 <div class="col-lg-8" id="actualites">*/
+/*                                     {% block actualites %}*/
 /* */
 /*                                     {% endblock %}*/
 /*                                 </div> <!-- /block-actualite -->*/
 /*                             </div>*/
-/*                         </div> <!-- /main -->*/
-/*                     {% endblock %}*/
-/* */
-/*                     {% block aside %}*/
-/*                         <div class="col-lg-3 col-md-3 col-sm-3" id="aside">*/
-/*                             {% block group %}*/
-/* */
-/*                             {% endblock %}*/
-/* */
-/*                             {% block organisation_peso %}*/
-/* */
-/*                             {% endblock %}*/
-/* */
-/*                             {% block forum %}*/
-/* */
-/*                             {% endblock %}*/
-/*                         </div> <!-- /aside -->*/
-/*                     {% endblock %}*/
-/*                 </div> <!-- /row -->*/
-/*             {% endblock %}*/
+/*                         {% endblock %}*/
+/*                     </div> <!-- /main -->*/
+/*                     <div class="col-lg-3 col-md-3 col-sm-3" id="aside">*/
+/*                         {% block aside %}*/
+/*                             */
+/*                         {% endblock %}*/
+/*                     </div> <!-- /aside -->*/
+/*                 {% endblock %}*/
+/*             </div> <!-- /row -->*/
 /*         </div> <!-- /container -->*/
 /* */
 /*         {% block footer %}*/

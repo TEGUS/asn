@@ -126,4 +126,8 @@ class SecurityController extends Controller {
         $response = new JsonResponse();
         return $response->setData(array("response" => $res));
     }
+    
+    public function profileAction() {
+        return $this->render("ASNUserBundle:Security:profile.html.twig");
+    }
 }

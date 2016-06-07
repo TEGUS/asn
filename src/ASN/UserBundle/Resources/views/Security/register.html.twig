@@ -1,24 +1,42 @@
 {% extends "ASNUserBundle::layout.html.twig" %}
 
+
+{% block title %}
+    Création de compte - {{ parent() }}
+{% endblock %}
+
 {% block loginRegister %}
     <div class="row">
-        <div class="col-lg-4 text-center">
+        <div class="col-lg-12">
+          
+            <h3 class="text-center border-bottom"><b>Inscription</b></h3>
             <br>
-            <br>
-            <br>
-            <h1><i class="fa fa-group fa-3x text-primary"></i></h1>
-            <p class="text-muted text-primary">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-5 col-lg-offset-1">
+            <div class="row">
+                <br><br><br><br><br>
+                <h1 class="col-lg-3">
+                    <br>
+                    <i class="fa fa-user fa-2x text-primary"></i>
+                </h1>
+                <div class="col-lg-9">
+                    <h3>Gérez efficacement</h3>
+                    <ul class="text-muted h4" id="msg-creation-compte">
+                        <li>Vos Discussions</li>
+                        <li>Vos Relations sociale et professionnelle</li>
+                        <li>Votre Compte de messagerie</li>
+                        <li>Vos Agendas</li>
+                        <li>Vos Meetings</li>
+                        <li>Vos Forums</li>
+                        <li>Vos Publications</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="col-lg-6">
             <div class="row">
-                <h4 class="text-center"><b>Inscription</b></h4>
                 <p class="col-lg-offset-4">
                     Vous avez déjà un compte? 
                     <a href="{{ path('asn_login') }}" title="Connexion">
@@ -77,7 +95,9 @@
                             {{ form_widget(form.phone, { 'attr': {'class': 'form-control phone', 'placeholder':'Numéro de téléphone'} }) }}
                         </div>
                     </div>
-
+                    <p class="col-lg-offset-4 text-info">
+                        <em>Adresse de messagerie interne</em>
+                    </p>
                     <div class="form-group">
                         <label for="email" class="col-lg-4 control-label">{{ form_label(form.email, "Email") }}</label>
                         <div class="col-lg-4">

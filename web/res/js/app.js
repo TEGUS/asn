@@ -50,8 +50,15 @@ $(function() {
         html: true
     });
     
-    //Custom scrollerBar
-//    $(".popover-content").mCustomScrollbar({
-//        axis: "y"
-//    });
+    
+    // animation du message de creation de compte
+    
+//    $('#msg-creation-compte li').hide();
+    
+    setInterval(function() {
+        $('#msg-creation-compte li').each(function() {
+            $(this).toggle('bounce');
+        });
+    }, 5000);
+    
 });

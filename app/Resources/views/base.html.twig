@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>{% block title %}asn{% endblock %}</title>
+        <title>{% block title %}ASN{% endblock %}</title>
         {% block stylesheets %}
             <link href="{{ asset('res/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen" type="text/css">
             <link href="{{ asset('res/lib/font-awesome-4.4.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
@@ -57,9 +57,9 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="{{ asset('res/img/voiture.jpg') }}" id="img-user" class="img-circle">
-                                    
+
                                     {#Lorsque l'utilisateur n'a pas de photo de profil, decommenter la partie suivante#}
-                                    
+
                                     {#<span id="img-user" class="img-circle bg-grey text-center">
                                         <i class="fa fa-user fa-2x"></i>
                                     </span>#}
@@ -67,7 +67,7 @@
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="{{ path('asn_profile') }}">Profile</a></li>
                                     <li><a href="#">Paramètres</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">Langue</a></li>
@@ -92,12 +92,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Accueil</a></li>
+                            <li class="active"><a href="{{ path('asn_home') }}">Accueil</a></li>
                             <li><a href="#">Forum</a></li>
                             <li><a href="#">Mes groupes</a></li>
                             <li><a href="#">Meeting</a></li>
                             <li><a href="#">Organisation personnelle</a></li>
-                            <li><a href="#">AVM</a></li>
                             <li><a href="#">Mes contacts</a></li>
                         </ul>
                     </div>
@@ -105,45 +104,33 @@
             </nav>
         {% endblock %}
 
-
-        <div class="container" id="main-container">
-            {% block body %} 
-                <div class="row">
-                    {% block section %}
-                        <div class="col-lg-9 col-md-9 col-sm-9" id="main">
+        <div class="container" id="main">
+            <div class="row">
+                {% block body %} 
+                    <div class="col-lg-9 col-md-9 col-sm-9">
+                        {% block section %}
                             <div class="row">
-                                <div class="col-lg-4 block-pub text-muted">
+                                <div class="col-lg-4 text-muted" id="pub">
                                     {% block pub %}
 
                                     {% endblock %}
                                 </div> <!-- /block-pub -->
 
-                                <div class="col-lg-8 block-actualite">
-                                    {% block actualite %}
+                                <div class="col-lg-8" id="actualites">
+                                    {% block actualites %}
 
                                     {% endblock %}
                                 </div> <!-- /block-actualite -->
                             </div>
-                        </div> <!-- /main -->
-                    {% endblock %}
-
-                    {% block aside %}
-                        <div class="col-lg-3 col-md-3 col-sm-3" id="aside">
-                            {% block group %}
-
-                            {% endblock %}
-
-                            {% block organisation_peso %}
-
-                            {% endblock %}
-
-                            {% block forum %}
-
-                            {% endblock %}
-                        </div> <!-- /aside -->
-                    {% endblock %}
-                </div> <!-- /row -->
-            {% endblock %}
+                        {% endblock %}
+                    </div> <!-- /main -->
+                    <div class="col-lg-3 col-md-3 col-sm-3" id="aside">
+                        {% block aside %}
+                            
+                        {% endblock %}
+                    </div> <!-- /aside -->
+                {% endblock %}
+            </div> <!-- /row -->
         </div> <!-- /container -->
 
         {% block footer %}

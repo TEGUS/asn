@@ -152,6 +152,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_asn_register:
 
+        // asn_profile
+        if ($pathinfo === '/profile') {
+            return array (  '_controller' => 'ASN\\UserBundle\\Controller\\SecurityController::profileAction',  '_route' => 'asn_profile',);
+        }
+
         // find_user_by_email
         if (0 === strpos($pathinfo, '/user/byemail') && preg_match('#^/user/byemail/(?P<email>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'find_user_by_email')), array (  '_controller' => 'ASN\\UserBundle\\Controller\\SecurityController::user_by_emailAction',));

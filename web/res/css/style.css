@@ -2,7 +2,7 @@
 /* @date : Mai 2016 */
 
 /*------------------------------------------*/
-/*  =    BASE                             */
+/*  =    BASE                               */
 /*------------------------------------------*/
 
 body {
@@ -48,6 +48,10 @@ body {
 }
 
 /* Customs */
+.btn {
+    text-transform: uppercase;
+}
+
 .btn.btn-primary {
     background-color: #3a8eba;
     border-bottom: 4px solid #286090;
@@ -55,6 +59,12 @@ body {
 
 .btn.btn-danger {
     border-bottom: 4px solid #ac2925;
+}
+
+.btn.btn-orange {
+    background-color: #ed7f10;
+    border-bottom: 4px solid #bf360c;
+    color: #fff;
 }
 
 .custom-badge {
@@ -140,24 +150,26 @@ body {
 /*  =    SECTION                            */
 /*------------------------------------------*/
 
-.panel {
+#main .panel {
     border: none;
     border-radius: 0;
 }
 
-#main .block-pub .panel {
+#main .panel {
     border-top: 4px solid #ed7f10;
-}
-
-.panel.panel-primary .panel-heading {
-    background-color: #ed7f10;
-    border: 0;
 }
 
 .carousel a:hover {
     color: #ed7f10;
 }
 
+#actualites {
+    
+}
+
+#pub {
+
+}
 
 /*------------------------------------------*/
 /*  =    ASIDE                              */
@@ -181,10 +193,6 @@ body {
 #aside .panel .disabled {
     font-weight: bolder;
     color: #ed7f10;
-}
-
-.popover-title {
-    /*color: #000;*/
 }
 
 
