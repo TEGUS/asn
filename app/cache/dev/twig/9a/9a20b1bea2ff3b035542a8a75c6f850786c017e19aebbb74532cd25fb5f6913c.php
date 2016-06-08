@@ -306,7 +306,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                         <div class=\"col-lg-4\">
                             <br>
                             <h4>Suivez nous</h4>
-                            <div class=\"panel\">
+                            <div class=\"\">
                                 <ul class=\"list-unstyled list-inline\">
                                     <li>
                                         <a href=\"#\" style=\"color: #1a237e\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
@@ -535,7 +535,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                         <div class="col-lg-4">*/
 /*                             <br>*/
 /*                             <h4>Suivez nous</h4>*/
-/*                             <div class="panel">*/
+/*                             <div class="">*/
 /*                                 <ul class="list-unstyled list-inline">*/
 /*                                     <li>*/
 /*                                         <a href="#" style="color: #1a237e"><i class="fa fa-facebook-square fa-4x"></i></a>*/
