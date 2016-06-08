@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Collector:logger.html.twig */
+/* @WebProfiler/Collector/logger.html.twig */
 class __TwigTemplate_2ec8a0824adc05c94eaf13b07b0aa0267ace654304e8eca88b9012de97e21a3f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_2ec8a0824adc05c94eaf13b07b0aa0267ace654304e8eca88b9012de97e
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("@WebProfiler/Profiler/layout.html.twig", "WebProfilerBundle:Collector:logger.html.twig", 1);
+        $this->parent = $this->loadTemplate("@WebProfiler/Profiler/layout.html.twig", "@WebProfiler/Collector/logger.html.twig", 1);
         $this->blocks = array(
             'toolbar' => array($this, 'block_toolbar'),
             'menu' => array($this, 'block_menu'),
@@ -116,7 +116,7 @@ class __TwigTemplate_2ec8a0824adc05c94eaf13b07b0aa0267ace654304e8eca88b9012de97e
             $context["text"] = ('' === $tmp = ob_get_clean()) ? '' : new Twig_Markup($tmp, $this->env->getCharset());
             // line 37
             echo "        ";
-            $this->loadTemplate("@WebProfiler/Profiler/toolbar_item.html.twig", "WebProfilerBundle:Collector:logger.html.twig", 37)->display(array_merge($context, array("link" => (isset($context["profiler_url"]) ? $context["profiler_url"] : $this->getContext($context, "profiler_url")))));
+            $this->loadTemplate("@WebProfiler/Profiler/toolbar_item.html.twig", "@WebProfiler/Collector/logger.html.twig", 37)->display(array_merge($context, array("link" => (isset($context["profiler_url"]) ? $context["profiler_url"] : $this->getContext($context, "profiler_url")))));
             // line 38
             echo "    ";
         }
@@ -291,12 +291,12 @@ class __TwigTemplate_2ec8a0824adc05c94eaf13b07b0aa0267ace654304e8eca88b9012de97e
     }
 
     // line 107
-    public function getdisplay_message($__log_index__ = null, $__log__ = null)
+    public function getdisplay_message($__log_index__ = null, $__log__ = null, ...$__varargs__)
     {
         $context = $this->env->mergeGlobals(array(
             "log_index" => $__log_index__,
             "log" => $__log__,
-            "varargs" => func_num_args() > 2 ? array_slice(func_get_args(), 2) : array(),
+            "varargs" => $__varargs__,
         ));
 
         $blocks = array();
@@ -429,7 +429,7 @@ class __TwigTemplate_2ec8a0824adc05c94eaf13b07b0aa0267ace654304e8eca88b9012de97e
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Collector:logger.html.twig";
+        return "@WebProfiler/Collector/logger.html.twig";
     }
 
     public function isTraitable()
