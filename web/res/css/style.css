@@ -14,15 +14,15 @@ body {
 /* Bordures */
 
 .border-right {
-    border-right: 1px inset #000;
+    border-right: 1px inset #fff;
 }
 
 .border-bottom {
-    border-bottom: 1px inset #000;
+    border-bottom: 1px inset #fff;
 }
 
 .border-top {
-    border-top: 1px inset #eee;
+    border-top: 1px inset #fff;
 }
 
 /* Background */
@@ -155,7 +155,8 @@ body {
     border-radius: 0;
 }
 
-#main .panel {
+#aside .panel,
+#pub .panel {
     border-top: 4px solid #ed7f10;
 }
 
@@ -202,10 +203,6 @@ body {
 
 footer {
     margin-top: 20px;
-}
-
-footer .row + .row .col-lg-12 {
-    border-top: 1px inset #fff;
 }
 
 footer a {

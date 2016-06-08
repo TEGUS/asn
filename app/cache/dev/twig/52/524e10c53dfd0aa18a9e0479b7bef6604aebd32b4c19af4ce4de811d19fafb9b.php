@@ -42,35 +42,39 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
     {
         // line 8
         echo "    <div class=\"col-lg-3\" >
-        <div class=\"panel padding\">
-            <a href=\"#\">
-                <img src=\"";
-        // line 11
+        <div class=\"panel\">
+            <div class=\"panel-heading\">
+                <a href=\"#\">
+                    <img src=\"";
+        // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive img-rounded\">
-            </a>
-            <h5><b>Nom & prénoms</b></h5>
-            <p>";
-        // line 14
+        echo "\" class=\"img-responsive\">
+                </a>
+            </div>
+            <div class=\"panel-body\">
+                <h5><b>Nom & prénoms</b></h5>
+                <p>";
+        // line 17
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "firstname", array()), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "lastname", array()), "html", null, true);
         echo "</p>
-            <h5><b>Date de naissance</b></h5>
-            <p>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "dateofbirth", array()), "d/M/yy"), "html", null, true);
+                <h5><b>Date de naissance</b></h5>
+                <p>";
+        // line 19
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "dateofbirth", array()), "d/m/Y"), "html", null, true);
         echo "</p>
-            <h5><b>Email</b></h5>
-            <p>";
-        // line 18
+                <h5><b>Email</b></h5>
+                <p>";
+        // line 21
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "email", array()), "html", null, true);
         echo "</p>
-            <h5><b>Nationnalité</b></h5>
-            <p>";
-        // line 20
+                <h5><b>Nationnalité</b></h5>
+                <p>";
+        // line 23
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "country", array()), "html", null, true);
         echo "</p>
+            </div>
         </div>
     </div> 
 
@@ -120,15 +124,19 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                         <h6><a href=\"#\" class=\"text-danger\">Supprimer <i class=\"fa fa-remove\"></i></a></h6>
                     </div>
                     <div class=\"col-lg-8 panel\">
-                        <h3>Vente aux enchères</h3>
-                        <h4><img src=\"";
-        // line 71
+                        <div class=\"panel-heading\">
+                            <h3>Vente aux enchères</h3>
+                            <h4><img src=\"";
+        // line 76
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\"></h4>
-                        <p>
-                            Achetez cette dernière Limousine de marque Chinoise à seulement 15millions de FCFA
-                        </p>
-                        <p><a href=\"#\">Voir les détails sur APM &raquo;</a></p>
+                        </div>
+                        <div class=\"panel-body\">
+                            <p>
+                                Achetez cette dernière Limousine de marque Chinoise à seulement 15millions de FCFA
+                            </p>
+                            <p><a href=\"#\">Voir les détails sur APM &raquo;</a></p>
+                        </div>
                     </div>
                     <div class=\"col-lg-2 text-center\">
                         <p>
@@ -163,7 +171,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                     <div class=\"col-lg-3\">
                         <a href=\"#\" class=\"panel text-center\">
                             <img src=\"";
-        // line 109
+        // line 117
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                             <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -172,7 +180,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                     <div class=\"col-lg-3\">
                         <a href=\"#\" class=\"panel text-center\">
                             <img src=\"";
-        // line 115
+        // line 123
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                             <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -181,7 +189,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                     <div class=\"col-lg-3\">
                         <a href=\"#\" class=\"panel text-center\">
                             <img src=\"";
-        // line 121
+        // line 129
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                             <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -190,7 +198,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                     <div class=\"col-lg-3\">
                         <a href=\"#\" class=\"panel text-center\">
                             <img src=\"";
-        // line 127
+        // line 135
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/house.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                             <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -199,7 +207,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                     <div class=\"col-lg-3\">
                         <a href=\"#\" class=\"panel text-center\">
                             <img src=\"";
-        // line 133
+        // line 141
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                             <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -208,7 +216,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                     <div class=\"col-lg-3\">
                         <a href=\"#\" class=\"panel text-center\">
                             <img src=\"";
-        // line 139
+        // line 147
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                             <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -217,7 +225,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                     <div class=\"col-lg-3\">
                         <a href=\"#\" class=\"panel text-center\">
                             <img src=\"";
-        // line 145
+        // line 153
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                             <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -226,7 +234,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                     <div class=\"col-lg-3\">
                         <a href=\"#\" class=\"panel text-center\">
                             <img src=\"";
-        // line 151
+        // line 159
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/house.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                             <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -239,45 +247,81 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
             </div>
             <div class=\"tab-pane fade\" id=\"meetings\">
                 <div class=\"row\">
-                    <div class=\"col-lg-3\">
-                        <br>
-                        <a href=\"#\" class=\"h1 text-orange\">Moi</a>
-                        <h6>Le 27/05/2016</h6>
-                        <br>
-                        <p><a href=\"#\">Modifier <i class=\"fa fa-pencil\"></i></a></p>
-                        <p><a href=\"#\" class=\"text-danger\">Supprimer <i class=\"fa fa-remove\"></i></a></p>
+                    <div class=\"col-lg-6\">
+                        <div class=\"panel\">
+                            <div class=\"panel-heading\">
+                                <h3>TD Calcul parallele</h3>
+                                <h5>Début: 01/06/2016 15h:09</h5>
+                                <h5>Fin: 01/06/2016 22h:09</h5>
+                                <h5>Fréquence de rappel: 3jours</h5>
+                                <h5><a href=\"#\">Détails &raquo;</a></h5>
+                            </div>
+                            <div class=\"panel-body hidden\">
+                                <h5><b>Participants</b> <i class=\"fa fa-group\"></i></h5>
+                                <p>
+                                    Organisateur: <a href=\"#\">Moi</a>
+                                </p>
+                                <p>
+                                    Modérateur: <a href=\"#\">Aurelien TEGUS</a>
+                                </p>
+                                <p>
+                                    Rapporteur: <a href=\"#\">Shang Mokai</a>
+                                </p>
+                                <p>
+                                    Membres: <a href=\"#\">Sophony,</a> <a href=\"#\">Darius,</a> 
+                                    <a href=\"#\">Balam,</a> <a href=\"#\">Patrice,</a> 
+                                    <a href=\"#\" class=\"h6\">voir tous les membres&raquo;</a>
+                                </p>
+                                <p>
+                                    Lieu: <a href=\"#\">En ligne</a>
+                                    ";
+        // line 198
+        echo "                                </p>
+                                <br>
+                                <h5><b>Pièces jointes</b> <i class=\"fa fa-paperclip\"></i></h5>
+                                <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
+                                <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
+                                <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class=\"col-lg-9 panel\">
-                        <h1>TD Calcul parallele</h1>
-                        <h5>Début: 01/06/2016 15h:09</h5>
-                        <h5>Fin: 01/06/2016 22h:09</h5>
-                        <h5>Fréquence de rappel: 3jours</h5>
-                        <br>
-                        <h5><b>Participants</b> <i class=\"fa fa-group\"></i></h5>
-                        <p>
-                            Organisateur: <a href=\"#\">Moi</a>
-                        </p>
-                        <p>
-                            Modérateur: <a href=\"#\">Aurelien TEGUS</a>
-                        </p>
-                        <p>
-                            Rapporteur: <a href=\"#\">Shang Mokai</a>
-                        </p>
-                        <p>
-                            Membres: <a href=\"#\">Sophony,</a> <a href=\"#\">Darius,</a> 
-                            <a href=\"#\">Balam,</a> <a href=\"#\">Patrice,</a> 
-                            <a href=\"#\" class=\"h6\">voir tous les membres&raquo;</a>
-                        </p>
-                        <p>
-                            Lieu: <a href=\"#\">En ligne</a>
-                            ";
-        // line 194
-        echo "                        </p>
-                        <br>
-                        <h5><b>Pièces jointes</b> <i class=\"fa fa-paperclip\"></i></h5>
-                        <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
-                        <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
-                        <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
+                    <div class=\"col-lg-6\">
+                        <div class=\"panel\">
+                            <div class=\"panel-heading\">
+                                <h3>TD Calcul parallele</h3>
+                                <h5>Début: 01/06/2016 15h:09</h5>
+                                <h5>Fin: 01/06/2016 22h:09</h5>
+                                <h5>Fréquence de rappel: 3jours</h5>
+                                <h5><a href=\"#\">Détails &raquo;</a></h5>
+                            </div>
+                            <div class=\"panel-body hidden\">
+                                <h5><b>Participants</b> <i class=\"fa fa-group\"></i></h5>
+                                <p>
+                                    Organisateur: <a href=\"#\">Moi</a>
+                                </p>
+                                <p>
+                                    Modérateur: <a href=\"#\">Aurelien TEGUS</a>
+                                </p>
+                                <p>
+                                    Rapporteur: <a href=\"#\">Shang Mokai</a>
+                                </p>
+                                <p>
+                                    Membres: <a href=\"#\">Sophony,</a> <a href=\"#\">Darius,</a> 
+                                    <a href=\"#\">Balam,</a> <a href=\"#\">Patrice,</a> 
+                                    <a href=\"#\" class=\"h6\">voir tous les membres&raquo;</a>
+                                </p>
+                                <p>
+                                    Lieu: <a href=\"#\">En ligne</a>
+                                    ";
+        // line 235
+        echo "                                </p>
+                                <br>
+                                <h5><b>Pièces jointes</b> <i class=\"fa fa-paperclip\"></i></h5>
+                                <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
+                                <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
+                                <p><a href=\"#\">Epreuve CC 2015 <i class=\"fa fa-download\"></i></a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -341,10 +385,86 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                 </div>
             </div>
             <div class=\"tab-pane fade\" id=\"forums\">
-                Forums
+                <div class=\"row\">
+                    <div class=\"col-lg-3\">
+                        <a class=\"panel\" href=\"#\">
+                            <h2 class=\"text-center\">
+                                <i class=\"fa fa-commenting fa-2x\"></i>
+                                <br>
+                                Buy & Sallam
+                            </h2>
+                        </a>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a class=\"panel\" href=\"#\">
+                            <h2 class=\"text-center\">
+                                <i class=\"fa fa-commenting fa-2x\"></i>
+                                <br>
+                                Buy & Sallam
+                            </h2>
+                        </a>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a class=\"panel\" href=\"#\">
+                            <h2 class=\"text-center\">
+                                <i class=\"fa fa-commenting fa-2x\"></i>
+                                <br>
+                                Buy & Sallam
+                            </h2>
+                        </a>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a class=\"panel\" href=\"#\">
+                            <h2 class=\"text-center\">
+                                <i class=\"fa fa-commenting fa-2x\"></i>
+                                <br>
+                                Buy & Sallam
+                            </h2>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class=\"tab-pane fade\" id=\"agendas\">
-                Agendas
+                <div class=\"row\">
+                    <div class=\"col-lg-12\">
+                        <p class=\"text-muted\">12/06/2016</p>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a href=\"#\">
+                            <h2>Meeting sur AVM</h2>
+                        </a>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a href=\"#\">
+                            <h2>Meeting sur AVM</h2>
+                        </a>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a href=\"#\">
+                            <h2>Meeting sur AVM</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class=\"row\">
+                    <div class=\"col-lg-12\">
+                        <p class=\"text-muted\">12/06/2016</p>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a href=\"#\">
+                            <h2>Meeting sur AVM</h2>
+                        </a>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a href=\"#\">
+                            <h2>Meeting sur AVM</h2>
+                        </a>
+                    </div>
+                    <div class=\"col-lg-3\">
+                        <a href=\"#\">
+                            <h2>Meeting sur AVM</h2>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -420,7 +540,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
 
     public function getDebugInfo()
     {
-        return array (  275 => 194,  230 => 151,  221 => 145,  212 => 139,  203 => 133,  194 => 127,  185 => 121,  176 => 115,  167 => 109,  126 => 71,  72 => 20,  67 => 18,  62 => 16,  55 => 14,  49 => 11,  44 => 8,  41 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  317 => 235,  279 => 198,  238 => 159,  229 => 153,  220 => 147,  211 => 141,  202 => 135,  193 => 129,  184 => 123,  175 => 117,  131 => 76,  75 => 23,  70 => 21,  65 => 19,  58 => 17,  50 => 12,  44 => 8,  41 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends "::base.html.twig" %}*/
@@ -431,18 +551,22 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
 /* */
 /* {% block body %}*/
 /*     <div class="col-lg-3" >*/
-/*         <div class="panel padding">*/
-/*             <a href="#">*/
-/*                 <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive img-rounded">*/
-/*             </a>*/
-/*             <h5><b>Nom & prénoms</b></h5>*/
-/*             <p>{{ app.user.firstname }} {{ app.user.lastname }}</p>*/
-/*             <h5><b>Date de naissance</b></h5>*/
-/*             <p>{{ app.user.dateofbirth | date('d/M/yy') }}</p>*/
-/*             <h5><b>Email</b></h5>*/
-/*             <p>{{ app.user.email }}</p>*/
-/*             <h5><b>Nationnalité</b></h5>*/
-/*             <p>{{ app.user.country }}</p>*/
+/*         <div class="panel">*/
+/*             <div class="panel-heading">*/
+/*                 <a href="#">*/
+/*                     <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive">*/
+/*                 </a>*/
+/*             </div>*/
+/*             <div class="panel-body">*/
+/*                 <h5><b>Nom & prénoms</b></h5>*/
+/*                 <p>{{ app.user.firstname }} {{ app.user.lastname }}</p>*/
+/*                 <h5><b>Date de naissance</b></h5>*/
+/*                 <p>{{ app.user.dateofbirth | date('d/m/Y') }}</p>*/
+/*                 <h5><b>Email</b></h5>*/
+/*                 <p>{{ app.user.email }}</p>*/
+/*                 <h5><b>Nationnalité</b></h5>*/
+/*                 <p>{{ app.user.country }}</p>*/
+/*             </div>*/
 /*         </div>*/
 /*     </div> */
 /* */
@@ -492,12 +616,16 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
 /*                         <h6><a href="#" class="text-danger">Supprimer <i class="fa fa-remove"></i></a></h6>*/
 /*                     </div>*/
 /*                     <div class="col-lg-8 panel">*/
-/*                         <h3>Vente aux enchères</h3>*/
-/*                         <h4><img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive"></h4>*/
-/*                         <p>*/
-/*                             Achetez cette dernière Limousine de marque Chinoise à seulement 15millions de FCFA*/
-/*                         </p>*/
-/*                         <p><a href="#">Voir les détails sur APM &raquo;</a></p>*/
+/*                         <div class="panel-heading">*/
+/*                             <h3>Vente aux enchères</h3>*/
+/*                             <h4><img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive"></h4>*/
+/*                         </div>*/
+/*                         <div class="panel-body">*/
+/*                             <p>*/
+/*                                 Achetez cette dernière Limousine de marque Chinoise à seulement 15millions de FCFA*/
+/*                             </p>*/
+/*                             <p><a href="#">Voir les détails sur APM &raquo;</a></p>*/
+/*                         </div>*/
 /*                     </div>*/
 /*                     <div class="col-lg-2 text-center">*/
 /*                         <p>*/
@@ -584,44 +712,79 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
 /*             </div>*/
 /*             <div class="tab-pane fade" id="meetings">*/
 /*                 <div class="row">*/
-/*                     <div class="col-lg-3">*/
-/*                         <br>*/
-/*                         <a href="#" class="h1 text-orange">Moi</a>*/
-/*                         <h6>Le 27/05/2016</h6>*/
-/*                         <br>*/
-/*                         <p><a href="#">Modifier <i class="fa fa-pencil"></i></a></p>*/
-/*                         <p><a href="#" class="text-danger">Supprimer <i class="fa fa-remove"></i></a></p>*/
+/*                     <div class="col-lg-6">*/
+/*                         <div class="panel">*/
+/*                             <div class="panel-heading">*/
+/*                                 <h3>TD Calcul parallele</h3>*/
+/*                                 <h5>Début: 01/06/2016 15h:09</h5>*/
+/*                                 <h5>Fin: 01/06/2016 22h:09</h5>*/
+/*                                 <h5>Fréquence de rappel: 3jours</h5>*/
+/*                                 <h5><a href="#">Détails &raquo;</a></h5>*/
+/*                             </div>*/
+/*                             <div class="panel-body hidden">*/
+/*                                 <h5><b>Participants</b> <i class="fa fa-group"></i></h5>*/
+/*                                 <p>*/
+/*                                     Organisateur: <a href="#">Moi</a>*/
+/*                                 </p>*/
+/*                                 <p>*/
+/*                                     Modérateur: <a href="#">Aurelien TEGUS</a>*/
+/*                                 </p>*/
+/*                                 <p>*/
+/*                                     Rapporteur: <a href="#">Shang Mokai</a>*/
+/*                                 </p>*/
+/*                                 <p>*/
+/*                                     Membres: <a href="#">Sophony,</a> <a href="#">Darius,</a> */
+/*                                     <a href="#">Balam,</a> <a href="#">Patrice,</a> */
+/*                                     <a href="#" class="h6">voir tous les membres&raquo;</a>*/
+/*                                 </p>*/
+/*                                 <p>*/
+/*                                     Lieu: <a href="#">En ligne</a>*/
+/*                                     {#Preciser un lieu sur la mappe google#}*/
+/*                                 </p>*/
+/*                                 <br>*/
+/*                                 <h5><b>Pièces jointes</b> <i class="fa fa-paperclip"></i></h5>*/
+/*                                 <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
+/*                                 <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
+/*                                 <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
+/*                             </div>*/
+/*                         </div>*/
 /*                     </div>*/
-/*                     <div class="col-lg-9 panel">*/
-/*                         <h1>TD Calcul parallele</h1>*/
-/*                         <h5>Début: 01/06/2016 15h:09</h5>*/
-/*                         <h5>Fin: 01/06/2016 22h:09</h5>*/
-/*                         <h5>Fréquence de rappel: 3jours</h5>*/
-/*                         <br>*/
-/*                         <h5><b>Participants</b> <i class="fa fa-group"></i></h5>*/
-/*                         <p>*/
-/*                             Organisateur: <a href="#">Moi</a>*/
-/*                         </p>*/
-/*                         <p>*/
-/*                             Modérateur: <a href="#">Aurelien TEGUS</a>*/
-/*                         </p>*/
-/*                         <p>*/
-/*                             Rapporteur: <a href="#">Shang Mokai</a>*/
-/*                         </p>*/
-/*                         <p>*/
-/*                             Membres: <a href="#">Sophony,</a> <a href="#">Darius,</a> */
-/*                             <a href="#">Balam,</a> <a href="#">Patrice,</a> */
-/*                             <a href="#" class="h6">voir tous les membres&raquo;</a>*/
-/*                         </p>*/
-/*                         <p>*/
-/*                             Lieu: <a href="#">En ligne</a>*/
-/*                             {#Preciser un lieu sur la mappe google#}*/
-/*                         </p>*/
-/*                         <br>*/
-/*                         <h5><b>Pièces jointes</b> <i class="fa fa-paperclip"></i></h5>*/
-/*                         <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
-/*                         <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
-/*                         <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
+/*                     <div class="col-lg-6">*/
+/*                         <div class="panel">*/
+/*                             <div class="panel-heading">*/
+/*                                 <h3>TD Calcul parallele</h3>*/
+/*                                 <h5>Début: 01/06/2016 15h:09</h5>*/
+/*                                 <h5>Fin: 01/06/2016 22h:09</h5>*/
+/*                                 <h5>Fréquence de rappel: 3jours</h5>*/
+/*                                 <h5><a href="#">Détails &raquo;</a></h5>*/
+/*                             </div>*/
+/*                             <div class="panel-body hidden">*/
+/*                                 <h5><b>Participants</b> <i class="fa fa-group"></i></h5>*/
+/*                                 <p>*/
+/*                                     Organisateur: <a href="#">Moi</a>*/
+/*                                 </p>*/
+/*                                 <p>*/
+/*                                     Modérateur: <a href="#">Aurelien TEGUS</a>*/
+/*                                 </p>*/
+/*                                 <p>*/
+/*                                     Rapporteur: <a href="#">Shang Mokai</a>*/
+/*                                 </p>*/
+/*                                 <p>*/
+/*                                     Membres: <a href="#">Sophony,</a> <a href="#">Darius,</a> */
+/*                                     <a href="#">Balam,</a> <a href="#">Patrice,</a> */
+/*                                     <a href="#" class="h6">voir tous les membres&raquo;</a>*/
+/*                                 </p>*/
+/*                                 <p>*/
+/*                                     Lieu: <a href="#">En ligne</a>*/
+/*                                     {#Preciser un lieu sur la mappe google#}*/
+/*                                 </p>*/
+/*                                 <br>*/
+/*                                 <h5><b>Pièces jointes</b> <i class="fa fa-paperclip"></i></h5>*/
+/*                                 <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
+/*                                 <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
+/*                                 <p><a href="#">Epreuve CC 2015 <i class="fa fa-download"></i></a></p>*/
+/*                             </div>*/
+/*                         </div>*/
 /*                     </div>*/
 /*                 </div>*/
 /*             </div>*/
@@ -685,10 +848,86 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
 /*                 </div>*/
 /*             </div>*/
 /*             <div class="tab-pane fade" id="forums">*/
-/*                 Forums*/
+/*                 <div class="row">*/
+/*                     <div class="col-lg-3">*/
+/*                         <a class="panel" href="#">*/
+/*                             <h2 class="text-center">*/
+/*                                 <i class="fa fa-commenting fa-2x"></i>*/
+/*                                 <br>*/
+/*                                 Buy & Sallam*/
+/*                             </h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a class="panel" href="#">*/
+/*                             <h2 class="text-center">*/
+/*                                 <i class="fa fa-commenting fa-2x"></i>*/
+/*                                 <br>*/
+/*                                 Buy & Sallam*/
+/*                             </h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a class="panel" href="#">*/
+/*                             <h2 class="text-center">*/
+/*                                 <i class="fa fa-commenting fa-2x"></i>*/
+/*                                 <br>*/
+/*                                 Buy & Sallam*/
+/*                             </h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a class="panel" href="#">*/
+/*                             <h2 class="text-center">*/
+/*                                 <i class="fa fa-commenting fa-2x"></i>*/
+/*                                 <br>*/
+/*                                 Buy & Sallam*/
+/*                             </h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                 </div>*/
 /*             </div>*/
 /*             <div class="tab-pane fade" id="agendas">*/
-/*                 Agendas*/
+/*                 <div class="row">*/
+/*                     <div class="col-lg-12">*/
+/*                         <p class="text-muted">12/06/2016</p>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a href="#">*/
+/*                             <h2>Meeting sur AVM</h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a href="#">*/
+/*                             <h2>Meeting sur AVM</h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a href="#">*/
+/*                             <h2>Meeting sur AVM</h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                 </div>*/
+/*                 <div class="row">*/
+/*                     <div class="col-lg-12">*/
+/*                         <p class="text-muted">12/06/2016</p>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a href="#">*/
+/*                             <h2>Meeting sur AVM</h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a href="#">*/
+/*                             <h2>Meeting sur AVM</h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                     <div class="col-lg-3">*/
+/*                         <a href="#">*/
+/*                             <h2>Meeting sur AVM</h2>*/
+/*                         </a>*/
+/*                     </div>*/
+/*                 </div>*/
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/

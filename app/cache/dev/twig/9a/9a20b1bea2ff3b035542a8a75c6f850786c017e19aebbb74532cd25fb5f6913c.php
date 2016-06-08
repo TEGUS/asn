@@ -62,13 +62,13 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
         // line 136
         $this->displayBlock('footer', $context, $blocks);
-        // line 187
+        // line 189
         echo "
 
         ";
-        // line 189
+        // line 191
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 196
+        // line 198
         echo "    </body>
 </html>
 ";
@@ -139,7 +139,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                         <ul class=\"nav navbar-nav navbar-right\">
                             <li>
                                 <a href=\"#\">
-                                    <i class=\"fa fa-suitcase fa-lg\"></i>
+                                    <i class=\"fa fa-group fa-lg\"></i>
                                     <span class=\"custom-badge\">123</span>
                                 </a>
                             </li>
@@ -202,7 +202,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         // line 95
         echo $this->env->getExtension('routing')->getPath("asn_home");
         echo "\">Accueil</a></li>
-                            <li><a href=\"#\">Forum</a></li>
+                            <li><a href=\"#\">Forums</a></li>
                             <li><a href=\"#\">Mes groupes</a></li>
                             <li><a href=\"#\">Meeting</a></li>
                             <li><a href=\"#\">Organisation personnelle</a></li>
@@ -287,7 +287,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         echo "            <footer class=\"text-center text-muted\">
                 <div class=\"container-fluid bg-primary\">
                     <div class=\"row\">
-                        <div class=\"col-lg-4\">
+                        <div class=\"col-lg-4 border-right\">
                             <h1><i class=\"fa fa-location-arrow\"></i></h1>
                             <ul class=\"list-unstyled\">
                                 <li>Cameroun</li>
@@ -296,17 +296,19 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
                                 <li>Tchad</li>
                             </ul>
                         </div>
-                        <div class=\"col-lg-4\">
+                        <div class=\"col-lg-4 border-right\">
                             <h1><i class=\"fa fa-flag\"></i></h1>
                             <ul class=\"list-unstyled\">
                                 <li>Français</li>
                                 <li>Anglais</li>
+                                <br>
+                                <br>
                             </ul>
                         </div>
                         <div class=\"col-lg-4\">
                             <br>
                             <h4>Suivez nous</h4>
-                            <div class=\"panel\">
+                            <div class=\"\">
                                 <ul class=\"list-unstyled list-inline\">
                                     <li>
                                         <a href=\"#\" style=\"color: #1a237e\"><i class=\"fa fa-facebook-square fa-4x\"></i></a>
@@ -336,27 +338,27 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
         ";
     }
 
-    // line 189
+    // line 191
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 190
+        // line 192
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery-2.2.3.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 191
+        // line 193
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 192
+        // line 194
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.transit.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 193
+        // line 195
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/lib/jquery-js/jquery.mCustomScrollbar.concat.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 194
+        // line 196
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/js/app.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -374,7 +376,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 
     public function getDebugInfo()
     {
-        return array (  360 => 194,  356 => 193,  352 => 192,  348 => 191,  343 => 190,  340 => 189,  287 => 137,  284 => 136,  279 => 129,  276 => 128,  271 => 121,  268 => 120,  263 => 115,  260 => 114,  254 => 123,  252 => 120,  247 => 117,  245 => 114,  241 => 112,  238 => 111,  233 => 131,  231 => 128,  227 => 126,  225 => 111,  219 => 109,  214 => 104,  203 => 95,  180 => 75,  172 => 70,  164 => 66,  161 => 62,  156 => 59,  138 => 43,  123 => 30,  110 => 19,  107 => 18,  101 => 12,  96 => 10,  92 => 9,  87 => 8,  84 => 7,  78 => 6,  72 => 196,  70 => 189,  66 => 187,  64 => 136,  59 => 133,  57 => 109,  52 => 106,  50 => 18,  42 => 14,  40 => 7,  36 => 6,  29 => 1,);
+        return array (  362 => 196,  358 => 195,  354 => 194,  350 => 193,  345 => 192,  342 => 191,  287 => 137,  284 => 136,  279 => 129,  276 => 128,  271 => 121,  268 => 120,  263 => 115,  260 => 114,  254 => 123,  252 => 120,  247 => 117,  245 => 114,  241 => 112,  238 => 111,  233 => 131,  231 => 128,  227 => 126,  225 => 111,  219 => 109,  214 => 104,  203 => 95,  180 => 75,  172 => 70,  164 => 66,  161 => 62,  156 => 59,  138 => 43,  123 => 30,  110 => 19,  107 => 18,  101 => 12,  96 => 10,  92 => 9,  87 => 8,  84 => 7,  78 => 6,  72 => 198,  70 => 191,  66 => 189,  64 => 136,  59 => 133,  57 => 109,  52 => 106,  50 => 18,  42 => 14,  40 => 7,  36 => 6,  29 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -423,7 +425,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                         <ul class="nav navbar-nav navbar-right">*/
 /*                             <li>*/
 /*                                 <a href="#">*/
-/*                                     <i class="fa fa-suitcase fa-lg"></i>*/
+/*                                     <i class="fa fa-group fa-lg"></i>*/
 /*                                     <span class="custom-badge">123</span>*/
 /*                                 </a>*/
 /*                             </li>*/
@@ -472,7 +474,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">*/
 /*                         <ul class="nav navbar-nav">*/
 /*                             <li class="active"><a href="{{ path('asn_home') }}">Accueil</a></li>*/
-/*                             <li><a href="#">Forum</a></li>*/
+/*                             <li><a href="#">Forums</a></li>*/
 /*                             <li><a href="#">Mes groupes</a></li>*/
 /*                             <li><a href="#">Meeting</a></li>*/
 /*                             <li><a href="#">Organisation personnelle</a></li>*/
@@ -516,7 +518,7 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*             <footer class="text-center text-muted">*/
 /*                 <div class="container-fluid bg-primary">*/
 /*                     <div class="row">*/
-/*                         <div class="col-lg-4">*/
+/*                         <div class="col-lg-4 border-right">*/
 /*                             <h1><i class="fa fa-location-arrow"></i></h1>*/
 /*                             <ul class="list-unstyled">*/
 /*                                 <li>Cameroun</li>*/
@@ -525,17 +527,19 @@ class __TwigTemplate_1c2f1329d4d70a56faa8d591fa965aaf4d00b0c803dfca8e03a8f3d2d5f
 /*                                 <li>Tchad</li>*/
 /*                             </ul>*/
 /*                         </div>*/
-/*                         <div class="col-lg-4">*/
+/*                         <div class="col-lg-4 border-right">*/
 /*                             <h1><i class="fa fa-flag"></i></h1>*/
 /*                             <ul class="list-unstyled">*/
 /*                                 <li>Français</li>*/
 /*                                 <li>Anglais</li>*/
+/*                                 <br>*/
+/*                                 <br>*/
 /*                             </ul>*/
 /*                         </div>*/
 /*                         <div class="col-lg-4">*/
 /*                             <br>*/
 /*                             <h4>Suivez nous</h4>*/
-/*                             <div class="panel">*/
+/*                             <div class="">*/
 /*                                 <ul class="list-unstyled list-inline">*/
 /*                                     <li>*/
 /*                                         <a href="#" style="color: #1a237e"><i class="fa fa-facebook-square fa-4x"></i></a>*/

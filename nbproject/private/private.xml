@@ -7,6 +7,7 @@
             <file>file:/opt/lampp/htdocs/asn/app/Resources/views/base.html.twig</file>
             <file>file:/opt/lampp/htdocs/asn/src/ASN/MainBundle/Resources/views/Main/index.html.twig</file>
             <file>file:/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/views/Security/register.html.twig</file>
+            <file>file:/opt/lampp/htdocs/asn/src/ASN/UserBundle/Resources/views/Security/profile.html.twig</file>
             <file>file:/opt/lampp/htdocs/asn/web/res/js/app.js</file>
             <file>file:/opt/lampp/htdocs/asn/web/res/css/style.css</file>
         </group>
