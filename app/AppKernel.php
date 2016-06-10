@@ -34,6 +34,9 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new ASN\MainBundle\ASNMainBundle(),
             new ASN\UserBundle\ASNUserBundle(),
+            new ASN\MeetingBundle\ASNMeetingBundle(),
+            new ASN\ForumBundle\ASNForumBundle(),
+            new ASN\ContactsBundle\ASNContactsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

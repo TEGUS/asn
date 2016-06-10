@@ -122,6 +122,33 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // asn_contacts_homepage
+        if (rtrim($pathinfo, '/') === '/contacts') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'asn_contacts_homepage');
+            }
+
+            return array (  '_controller' => 'ASN\\ContactsBundle\\Controller\\ContactsController::indexAction',  '_route' => 'asn_contacts_homepage',);
+        }
+
+        // asn_forum_homepage
+        if (rtrim($pathinfo, '/') === '/forums') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'asn_forum_homepage');
+            }
+
+            return array (  '_controller' => 'ASN\\ForumBundle\\Controller\\ForumController::indexAction',  '_route' => 'asn_forum_homepage',);
+        }
+
+        // asn_meeting_homepage
+        if (rtrim($pathinfo, '/') === '/meeting') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'asn_meeting_homepage');
+            }
+
+            return array (  '_controller' => 'ASN\\MeetingBundle\\Controller\\MeetingController::indexAction',  '_route' => 'asn_meeting_homepage',);
+        }
+
         if (0 === strpos($pathinfo, '/log')) {
             // asn_login
             if ($pathinfo === '/login') {

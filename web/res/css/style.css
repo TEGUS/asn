@@ -54,7 +54,6 @@ body {
 
 .btn.btn-primary {
     background-color: #3a8eba;
-    border-bottom: 4px solid #286090;
 }
 
 .btn.btn-danger {
@@ -63,7 +62,6 @@ body {
 
 .btn.btn-orange {
     background-color: #ed7f10;
-    border-bottom: 4px solid #bf360c;
     color: #fff;
 }
 
@@ -150,14 +148,13 @@ body {
 /*  =    SECTION                            */
 /*------------------------------------------*/
 
-#main .panel {
-    border: none;
+.panel {
+    border: 0;
     border-radius: 0;
 }
 
-#aside .panel,
 #pub .panel {
-    border-top: 4px solid #ed7f10;
+    /*border-top: 4px solid #ed7f10;*/
 }
 
 .carousel a:hover {
@@ -176,22 +173,13 @@ body {
 /*  =    ASIDE                              */
 /*------------------------------------------*/
 
-#aside .panel .list-group-item {
-    padding-bottom: 5px;
-}
+
 
 #aside .panel .list-group a + a {
     color: #555;
 }
 
-#aside .panel .panel-heading {
-    font-size: 1.2em;
-    font-weight: bolder;
-    padding: 0;
-    text-align: center;
-}
-
-#aside .panel .disabled {
+#aside .panel .title {
     font-weight: bolder;
     color: #ed7f10;
 }
@@ -202,7 +190,7 @@ body {
 /*------------------------------------------*/
 
 footer {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 footer a {

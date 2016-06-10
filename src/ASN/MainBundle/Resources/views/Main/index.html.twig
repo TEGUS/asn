@@ -1,94 +1,7 @@
-{% extends "::base.html.twig" %}
+{% extends "ASNMainBundle::layout.html.twig" %}
 
 {% block title %}
     Accueil - {{ parent() }}
-{% endblock %}
-
-{% block pub %}
-    <div data-spy="affix" data-offset-top="10">
-        <div class="panel text-center">
-            <h4>Ne manquez pas cette occasion qui ne se présentera pas 2 fois</h4>
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="9000">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive">
-                        <div class="carousel-caption">
-                            <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive">
-                        <div class="carousel-caption">
-                            <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive">
-                        <div class="carousel-caption">
-                            <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
-        </div>
-        <div class="panel text-center">
-            <h4>Vous voulez mettre votre boutique en ligne mais vous n'avez pas de moyens ?</h4>
-            <div id="carousel-example-generic-2" class="carousel slide" data-ride="carousel" data-interval="7000">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic-2" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic-2" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic-2" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive">
-                        <div class="carousel-caption">
-                            <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive">
-                        <div class="carousel-caption">
-                            <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive">
-                        <div class="carousel-caption">
-                            <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block actualites %}
@@ -114,17 +27,22 @@
 
     <div class="panel">
         <div class="panel-heading border-bottom">
-            <h3 class="text-primary text-uppercase">Forum</h3>
+            <h3 class="text-orange text-uppercase">
+                Forum du Marketiste
+            </h3>
             <p><b>Thème : </b> <em>La voiture la plus vendue au monde</em></p>
         </div>
         <div class="panel-body">
             <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             <p class="text-center text-muted">
                 <i class="fa fa-comments-o"></i> 123 Commentaires
             </p>
@@ -138,34 +56,40 @@
     </div>
     <div class="panel">
         <div class="panel-heading border-bottom">
-            <h3 class="text-primary text-uppercase">Forum</h3>
-            <p><b>Thème : </b><em>Le webmarketing</em></p>
+            <h3 class="text-orange text-uppercase">
+                Forum du Marketiste
+            </h3>
+            <p><b>Thème : </b> <em>La voiture la plus vendue au monde</em></p>
         </div>
         <div class="panel-body">
-            <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive">
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             <p class="text-center text-muted">
-                <i class="fa fa-comments-o"></i> 12k Commentaires
+                <i class="fa fa-comments-o"></i> 123 Commentaires
             </p>
         </div>
         <div class="panel-footer">
             <form action="#">
                 <textarea class="form-control" placeholder="Commentaire"></textarea>
-                <button class="btn btn-primary btn-sm active">Commenter</button>
+                <button class="btn btn-primary btn-sm">Commenter</button>
             </form>
         </div>
     </div>
+    
 {% endblock %}
 
 {% block aside %}
     <div class="panel panel-primary">
         <ul class="list-group">
-            <li class="list-group-item disabled">
+            <li class="list-group-item title">
                 Mes groupes <span class="pull-right" style="font-weight: normal">23</span>
             </li>
             <li class="list-group-item">
@@ -195,7 +119,7 @@
             <a href="#" class="list-group-item"> 
                 Plus de groupes <i class="fa fa-plus-circle pull-right"></i>
             </a>
-            <li class="list-group-item disabled"> 
+            <li class="list-group-item title"> 
                 Organisation personnelle <span class="pull-right" style="font-weight: normal">34</span>
             </li>
             <a href="#" class="list-group-item">
@@ -245,7 +169,7 @@
             <a href="#" class="list-group-item">
                 Plus d'agenda <i class="fa fa-plus-circle pull-right"></i> 
             </a>
-            <li class="list-group-item disabled">
+            <li class="list-group-item title">
                 Forums <span class="pull-right" style="font-weight: normal">44</span>
             </li>
             <a href="#" class="list-group-item">

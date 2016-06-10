@@ -1,104 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>{% block title %}ASN{% endblock %}</title>
-        {% block stylesheets %}
-            <link href="{{ asset('res/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
-            <link href="{{ asset('res/lib/font-awesome-4.4.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
+{% extends '::base.html.twig' %}
 
-            <link href="{{ asset('res/css/style.css') }}" rel="stylesheet" type="text/css"/>
-        {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('images/logo_asn.png') }}" />
-    </head>
-    <body class="bg-grey" style="padding-top: 0;">
-
-        {% block header %}
-        {% endblock %}
-
-        {% block body %} 
-            <div class="container-fluid">
-                <div class="row">
-                    <ul class="list-inline pull-right">
-                        <li><a href="#" title="Français"><em>Français</em></a></li>
-                        <li><a href="#" title="Anglais"><em>Anglais</em></a></li>
-                    </ul>
-                </div>
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <h1 class="text-primary" style="margin: 0;">
-                            <i class="fa fa-comments fa-2x"></i>
-                            <br>
-                            <small class="text-orange">AVM Social Network</small>
-                        </h1>
-                    </div>
-                </div>
-                <br>
-
-                {% block loginRegister %}
-                {% endblock %}
-
+{% block body %} 
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="list-inline pull-right">
+                <li><a href="#" title="Français"><em>Français</em></a></li>
+                <li><a href="#" title="Anglais"><em>Anglais</em></a></li>
+            </ul>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h1 class="text-primary" style="margin: 0;">
+                    <i class="fa fa-comments fa-2x"></i>
+                    <br>
+                    <small class="text-orange">AVM Social Network</small>
+                </h1>
             </div>
+        </div>
+        <br>
+
+        {% block loginRegister %}
         {% endblock %}
 
-        {% block footer %}
-            <footer class="text-center text-muted">
-                <div class="container-fluid bg-primary" style="margin-top: 100px">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h1><i class="fa fa-location-arrow"></i></h1>
-                            <ul class="list-unstyled">
-                                <li>Cameroun</li>
-                                <li>Kenya</li>
-                                <li>Cote d'ivoire</li>
-                                <li>Tchad</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4">
-                            <h1><i class="fa fa-flag"></i></h1>
-                            <ul class="list-unstyled">
-                                <li>Français</li>
-                                <li>Anglais</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4">
-                            <br>
-                            <h4>Suivez nous</h4>
-                            <div class="">
-                                <ul class="list-unstyled list-inline">
-                                    <li>
-                                        <a href="#" style="color: #1a237e"><i class="fa fa-facebook-square fa-4x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: #2196f3;"><i class="fa fa-twitter-square fa-4x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: #1565c0"><i class="fa fa-linkedin-square fa-4x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color: #e53935"><i class="fa fa-google-plus-square fa-4x"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <p>
-                                Copyright &copy; 2016.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer><!-- /footer -->
-        {% endblock %}
-
-        {% block javascripts %}
-            <script src="{{ asset('res/lib/jquery-js/jquery-2.2.3.min.js') }}"></script>
-            <script src="{{ asset('res/lib/jquery-js/jquery.transit.min.js') }}"></script>
-            <script src="{{ asset('res/lib/bootstrap/js/bootstrap.min.js') }}"></script>
-            <script src="{{ asset('res/js/app.js') }}"></script>
-        {% endblock %}
-    </body>
-</html>
+    </div>
+{% endblock %}

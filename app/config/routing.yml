@@ -1,3 +1,15 @@
+asn_contacts:
+    resource: "@ASNContactsBundle/Resources/config/routing.yml"
+    prefix:   /contacts
+
+asn_forum:
+    resource: "@ASNForumBundle/Resources/config/routing.yml"
+    prefix:   /forums
+
+asn_meeting:
+    resource: "@ASNMeetingBundle/Resources/config/routing.yml"
+    prefix:   /meeting
+
 asn_user:
     resource: "@ASNUserBundle/Resources/config/routing.yml"
     prefix:   /
