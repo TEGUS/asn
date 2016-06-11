@@ -1,4 +1,4 @@
-asn_calendar:
+asn_calendar_homepage:
     path:     /calendar
     defaults: { _controller: ASNCalendarBundle:Main:index }
 ##AGENDA

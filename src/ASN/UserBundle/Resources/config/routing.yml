@@ -13,6 +13,10 @@ asn_register:
     defaults: { _controller: ASNUserBundle:Security:register }
     requirements:
         _method: GET|POST
+        
+asn_profile:
+    path:     /profile
+    defaults: { _controller: ASNUserBundle:Security:profile }
 
 find_user_by_email:
     path:     /user/byemail/{email}

@@ -10,6 +10,7 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
         // line 1
         $this->parent = $this->loadTemplate("ASNUserBundle::layout.html.twig", "ASNUserBundle:Security:register.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'loginRegister' => array($this, 'block_loginRegister'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -25,49 +26,74 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 4
+    public function block_title($context, array $blocks = array())
+    {
+        // line 5
+        echo "    Création de compte - ";
+        $this->displayParentBlock("title", $context, $blocks);
+        echo "
+";
+    }
+
+    // line 8
     public function block_loginRegister($context, array $blocks = array())
     {
-        // line 4
+        // line 9
         echo "    <div class=\"row\">
-        <div class=\"col-lg-4 text-center\">
+        <div class=\"col-lg-12\">
+          
+            <h3 class=\"text-center border-bottom\"><b>Inscription</b></h3>
             <br>
-            <br>
-            <br>
-            <h1><i class=\"fa fa-group fa-3x text-primary\"></i></h1>
-            <p class=\"text-muted text-primary\">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+        </div>
+    </div>
+    <div class=\"row\">
+        <div class=\"col-lg-5 col-lg-offset-1\">
+            <div class=\"row\">
+                <br><br><br><br><br>
+                <h1 class=\"col-lg-3\">
+                    <br>
+                    <i class=\"fa fa-user fa-2x text-primary\"></i>
+                </h1>
+                <div class=\"col-lg-9\">
+                    <h3>Gérez efficacement</h3>
+                    <ul class=\"text-muted h4\" id=\"msg-creation-compte\">
+                        <li>Vos Discussions</li>
+                        <li>Vos Relations sociale et professionnelle</li>
+                        <li>Votre Compte de messagerie</li>
+                        <li>Vos Agendas</li>
+                        <li>Vos Meetings</li>
+                        <li>Vos Forums</li>
+                        <li>Vos Publications</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class=\"col-lg-6\">
             <div class=\"row\">
-                <h4 class=\"text-center\"><b>Inscription</b></h4>
                 <p class=\"col-lg-offset-4\">
                     Vous avez déjà un compte? 
                     <a href=\"";
-        // line 24
+        // line 42
         echo $this->env->getExtension('routing')->getPath("asn_login");
         echo "\" title=\"Connexion\">
                         Connectez-vous ici
                     </a>
                 </p>
                 <form id=\"registerForm\" method=\"post\" class=\"form-horizontal\"  ";
-        // line 28
+        // line 46
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
-        echo ">
+        echo " action=\"";
+        echo $this->env->getExtension('routing')->getPath("asn_register");
+        echo "\">
                     <div class=\"form-group\">
                         <label for=\"firstname\" class=\"col-lg-4 control-label\">";
-        // line 30
+        // line 48
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "firstname", array()), 'label', array("label" => "Prénom "));
         echo "</label>
                         <div class=\"col-lg-7\">
                             ";
-        // line 32
+        // line 50
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "firstname", array()), 'widget', array("attr" => array("class" => "form-control firstname", "placeholder" => "Prénom")));
         echo "
                         </div>
@@ -75,12 +101,12 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 
                     <div class=\"form-group\">
                         <label for=\"lastname\" class=\"col-lg-4 control-label\">";
-        // line 37
+        // line 55
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lastname", array()), 'label', array("label" => "Nom "));
         echo "<span class=\"bad\"> *</span></label>
                         <div class=\"col-lg-7\">
                             ";
-        // line 39
+        // line 57
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lastname", array()), 'widget', array("attr" => array("class" => "form-control lastname", "placeholder" => "Nom")));
         echo "
                         </div>
@@ -88,26 +114,26 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 
                     <div class=\"form-group\">
                         <label for=\"date_of_birth\" class=\"col-lg-4 control-label\">";
-        // line 44
+        // line 62
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "date_of_birth", array()), 'label', array("label" => "Date de naissance "));
         echo "<span class=\"bad\"> *</span></label>
                         <div class=\"col-lg-7\">
                             <div class=\"row\">
                                 <div class=\"col-lg-4\">
                                     ";
-        // line 48
+        // line 66
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "date_of_birth", array()), "month", array()), 'widget', array("attr" => array("class" => "form-control month")));
         echo "
                                 </div>
                                 <div class=\"col-lg-4\">
                                     ";
-        // line 51
+        // line 69
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "date_of_birth", array()), "day", array()), 'widget', array("attr" => array("class" => "form-control day")));
         echo "
                                 </div>
                                 <div class=\"col-lg-4\">
                                     ";
-        // line 54
+        // line 72
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "date_of_birth", array()), "year", array()), 'widget', array("attr" => array("class" => "form-control yearSelect")));
         echo "
                                 </div>
@@ -117,12 +143,12 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 
                     <div class=\"form-group\">
                         <label for=\"gender\" class=\"col-lg-4 control-label\">";
-        // line 61
+        // line 79
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender", array()), 'label', array("label" => "Genre"));
         echo "<span class=\"bad\"> *</span></label>
                         <div class=\"col-lg-7\">
                             ";
-        // line 63
+        // line 81
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender", array()), 'widget', array("attr" => array("class" => "form-control gender")));
         echo "
                         </div>
@@ -130,16 +156,16 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 
                     <div class=\"form-group\">
                         <label for=\"country\" class=\"col-lg-4 control-label\">";
-        // line 68
+        // line 86
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "country", array()), 'label', array("label" => "Nationalité "));
         echo "<span class=\"bad\"> *</span></label>
                         <div class=\"col-lg-7\">
                             ";
-        // line 70
+        // line 88
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "country", array()), 'widget', array("attr" => array("class" => "form-control country")));
         echo "
                             ";
-        // line 71
+        // line 89
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "hidefieldCountry", array()), 'widget', array("attr" => array("type" => "hidden")));
         echo "
                         </div>
@@ -147,32 +173,34 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 
                     <div class=\"form-group\">
                         <label for=\"phone\" class=\"col-lg-4 control-label\">";
-        // line 76
+        // line 94
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phone", array()), 'label', array("label" => "Téléphone"));
         echo "<span class=\"bad\"> *</span></label>
                         <div class=\"col-lg-3 \">
                             ";
-        // line 78
+        // line 96
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "indicatifCountry", array()), 'widget', array("attr" => array("class" => "form-control indicatifInput", "placeholder" => "Indicatif", "disabled" => "true")));
         echo "
                             <select class=\"form-control indicatifSelect\"></select>
                         </div>
                         <div class=\"col-lg-4 \">
                             ";
-        // line 82
+        // line 100
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phone", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Numéro de téléphone")));
         echo "
                         </div>
                     </div>
-
+                    <p class=\"col-lg-offset-4 text-info\">
+                        <em>Adresse de messagerie interne</em>
+                    </p>
                     <div class=\"form-group\">
                         <label for=\"email\" class=\"col-lg-4 control-label\">";
-        // line 87
+        // line 107
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "hidefield", array()), 'label', array("label" => "Email "));
         echo " <span class=\"bad\"> *</span></label>
                         <div class=\"col-lg-4\">
                             ";
-        // line 89
+        // line 109
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "hidefield", array()), 'widget', array("attr" => array("class" => "form-control email", "placeholder" => "example")));
         echo "
                         </div>
@@ -185,15 +213,15 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 
                     <div class=\"form-group\">
                         <label for=\"password\" class=\"col-lg-4 control-label\">";
-        // line 99
+        // line 119
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "emailRecuperation", array()), 'label', array("label" => "Email externe "));
         echo " <span class=\"bad\"> *</span></label>
                         <div class=\"col-lg-7\">
                             <div>
                                 ";
-        // line 102
+        // line 122
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "emailRecuperation", array()), 'widget', array("attr" => array("class" => "form-control emailRecup", "placeholder" => "example@email.teg")));
-        // line 104
+        // line 124
         echo "
                             </div>
                             <div class=\"text-info\">
@@ -205,12 +233,12 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 
                     <div class=\"form-group\">
                         <label for=\"password\" class=\"col-lg-4 control-label\">";
-        // line 114
+        // line 134
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'label', array("label" => "Mot de passe"));
         echo "<span class=\"bad\"> *</span></label>
                         <div class=\"col-lg-7\">
                             ";
-        // line 116
+        // line 136
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'widget', array("attr" => array("class" => "form-control mdp", "placeholder" => "Mot de passe")));
         echo "
                         </div>
@@ -240,7 +268,7 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
                 <p class=\"col-lg-offset-4\">
                     Vous avez déjà un compte? 
                     <a href=\"";
-        // line 143
+        // line 163
         echo $this->env->getExtension('routing')->getPath("asn_login");
         echo "\" title=\"Connexion\">
                         Connectez-vous ici
@@ -254,19 +282,19 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 ";
     }
 
-    // line 154
+    // line 174
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 155
+        // line 175
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 156
+        // line 176
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/js/indicatifs.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 157
+        // line 177
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/js/years.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script>
@@ -418,7 +446,7 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
                                 \$(\".goodemail\").remove();
                                 \$(\".loading\").remove();
                                 \$(\".infoemail\").parent().append('<img src=\"";
-        // line 306
+        // line 326
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/loading.gif"), "html", null, true);
         echo "\" class=\"loading\">');
                             },
@@ -462,7 +490,6 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
                     beforeSend: function () {
                         country = \$(\".country option:selected\").text();
                         \$(\".hidefieldCountry\").val(country);
-
                         \$(\".indicatifInput\").removeAttr(\"disabled\");
                     }
                 });
@@ -484,37 +511,55 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 
     public function getDebugInfo()
     {
-        return array (  422 => 306,  270 => 157,  266 => 156,  261 => 155,  258 => 154,  244 => 143,  214 => 116,  209 => 114,  197 => 104,  195 => 102,  189 => 99,  176 => 89,  171 => 87,  163 => 82,  156 => 78,  151 => 76,  143 => 71,  139 => 70,  134 => 68,  126 => 63,  121 => 61,  111 => 54,  105 => 51,  99 => 48,  92 => 44,  84 => 39,  79 => 37,  71 => 32,  66 => 30,  61 => 28,  54 => 24,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  450 => 326,  298 => 177,  294 => 176,  289 => 175,  286 => 174,  272 => 163,  242 => 136,  237 => 134,  225 => 124,  223 => 122,  217 => 119,  204 => 109,  199 => 107,  189 => 100,  182 => 96,  177 => 94,  169 => 89,  165 => 88,  160 => 86,  152 => 81,  147 => 79,  137 => 72,  131 => 69,  125 => 66,  118 => 62,  110 => 57,  105 => 55,  97 => 50,  92 => 48,  85 => 46,  78 => 42,  43 => 9,  40 => 8,  33 => 5,  30 => 4,  11 => 1,);
     }
 }
 /* {% extends "ASNUserBundle::layout.html.twig" %}*/
 /* */
+/* */
+/* {% block title %}*/
+/*     Création de compte - {{ parent() }}*/
+/* {% endblock %}*/
+/* */
 /* {% block loginRegister %}*/
 /*     <div class="row">*/
-/*         <div class="col-lg-4 text-center">*/
+/*         <div class="col-lg-12">*/
+/*           */
+/*             <h3 class="text-center border-bottom"><b>Inscription</b></h3>*/
 /*             <br>*/
-/*             <br>*/
-/*             <br>*/
-/*             <h1><i class="fa fa-group fa-3x text-primary"></i></h1>*/
-/*             <p class="text-muted text-primary">*/
-/*                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod*/
-/*                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,*/
-/*                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo*/
-/*                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse*/
-/*                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non*/
-/*                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*/
-/*             </p>*/
+/*         </div>*/
+/*     </div>*/
+/*     <div class="row">*/
+/*         <div class="col-lg-5 col-lg-offset-1">*/
+/*             <div class="row">*/
+/*                 <br><br><br><br><br>*/
+/*                 <h1 class="col-lg-3">*/
+/*                     <br>*/
+/*                     <i class="fa fa-user fa-2x text-primary"></i>*/
+/*                 </h1>*/
+/*                 <div class="col-lg-9">*/
+/*                     <h3>Gérez efficacement</h3>*/
+/*                     <ul class="text-muted h4" id="msg-creation-compte">*/
+/*                         <li>Vos Discussions</li>*/
+/*                         <li>Vos Relations sociale et professionnelle</li>*/
+/*                         <li>Votre Compte de messagerie</li>*/
+/*                         <li>Vos Agendas</li>*/
+/*                         <li>Vos Meetings</li>*/
+/*                         <li>Vos Forums</li>*/
+/*                         <li>Vos Publications</li>*/
+/*                     </ul>*/
+/*                 </div>*/
+/*             </div>*/
 /*         </div>*/
 /*         <div class="col-lg-6">*/
 /*             <div class="row">*/
-/*                 <h4 class="text-center"><b>Inscription</b></h4>*/
 /*                 <p class="col-lg-offset-4">*/
 /*                     Vous avez déjà un compte? */
 /*                     <a href="{{ path('asn_login') }}" title="Connexion">*/
 /*                         Connectez-vous ici*/
 /*                     </a>*/
 /*                 </p>*/
-/*                 <form id="registerForm" method="post" class="form-horizontal"  {{ form_enctype(form) }}>*/
+/*                 <form id="registerForm" method="post" class="form-horizontal"  {{ form_enctype(form) }} action="{{ path('asn_register') }}">*/
 /*                     <div class="form-group">*/
 /*                         <label for="firstname" class="col-lg-4 control-label">{{ form_label(form.firstname, "Prénom ") }}</label>*/
 /*                         <div class="col-lg-7">*/
@@ -571,7 +616,9 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 /*                             {{ form_widget(form.phone , {'attr':{'class':'form-control' , 'placeholder':'Numéro de téléphone' }}) }}*/
 /*                         </div>*/
 /*                     </div>*/
-/* */
+/*                     <p class="col-lg-offset-4 text-info">*/
+/*                         <em>Adresse de messagerie interne</em>*/
+/*                     </p>*/
 /*                     <div class="form-group">*/
 /*                         <label for="email" class="col-lg-4 control-label">{{ form_label(form.hidefield, "Email ") }} <span class="bad"> *</span></label>*/
 /*                         <div class="col-lg-4">*/
@@ -834,7 +881,6 @@ class __TwigTemplate_dc79c12ca82d2271bfe83780db1427c49d3103f801109063239ef09f997
 /*                     beforeSend: function () {*/
 /*                         country = $(".country option:selected").text();*/
 /*                         $(".hidefieldCountry").val(country);*/
-/* */
 /*                         $(".indicatifInput").removeAttr("disabled");*/
 /*                     }*/
 /*                 });*/

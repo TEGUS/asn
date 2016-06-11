@@ -1,0 +1,223 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid bg-primary" id="header-bar">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="{{ asset('res/img/logo_asn.png') }}" id="logo">
+                </a>
+                <a class="navbar-brand" href="#" title="ASN">AVM Social Network</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group form-group-sm">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Recherche..." size="40">
+                    </div>
+                    {# <button type="submit" class="btn btn-warning btn-sm active">Rechercher</button>#}
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{ path('asn_meeting_homepage') }}">
+                            <i class="fa fa-group fa-lg"></i>
+                            <span class="custom-badge">123</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-envelope fa-lg"></i>
+                            <span class="custom-badge">17</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="{{ asset('res/img/voiture.jpg') }}" id="img-user" class="img-circle">
+
+                            {#Lorsque l'utilisateur n'a pas de photo de profil, decommenter la partie suivante#}
+
+                            {#<span id="img-user" class="img-circle bg-grey text-center">
+                                <i class="fa fa-user fa-2x"></i>
+                            </span>#}
+                            {{ app.user.firstname }}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ path('asn_profile') }}">Profile</a></li>
+                            <li><a href="#">Paramètres</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Langue</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{{ path('asn_logout') }}">Déconnexion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        <div class="container" id="sub-header-bar">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li class="{% if app.session.get('module_actif') == 'accueil'%} active {% endif %}">
+                        <a href="{{ path('asn_home') }}">Accueil</a>
+                    </li>
+                    <li class="{% if app.session.get('module_actif') == 'forums'%} active {% endif %}">
+                        <a href="{{ path('asn_forum_homepage') }}">Forums</a>
+                    </li>
+                    <li class="{% if app.session.get('module_actif') == 'groupes'%} active {% endif %}">
+                        <a href="#">Mes groupes</a>
+                    </li>
+                    <li class="{% if app.session.get('module_actif') == 'meeting'%} active {% endif %}">
+                        <a href="{{ path('asn_meeting_homepage') }}">Meeting</a>
+                    </li>
+                    <li class="{% if app.session.get('module_actif') == 'agenda'%} active {% endif %}">
+                        <a href="{{ path('asn_calendar_homepage') }}">Organisation personnelle</a>
+                    </li>
+                    <li class="{% if app.session.get('module_actif') == 'contacts'%} active {% endif %}">
+                        <a href="{{ path('asn_contacts_homepage') }}">Mes contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div> {# /.container #}
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-lg-3" id="pub">
+                {% block pub %}
+                    <div data-spy="affix" data-offset-top="10">
+                        <div class="panel text-center">
+                            <div class="panel-heading">
+                                <h4>Ne manquez pas cette occasion qui ne se présentera pas 2 fois</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="9000">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive">
+                                            <div class="carousel-caption">
+                                                <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive">
+                                            <div class="carousel-caption">
+                                                <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive">
+                                            <div class="carousel-caption">
+                                                <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel text-center">
+                            <div class="panel-heading">
+                                <h4>Vous voulez mettre votre boutique en ligne mais vous n'avez pas de moyens ?</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div id="carousel-example-generic-2" class="carousel slide" data-ride="carousel" data-interval="7000">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic-2" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic-2" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic-2" data-slide-to="2"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive">
+                                            <div class="carousel-caption">
+                                                <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="{{ asset('res/img/paysage.jpg') }}" class="img-responsive">
+                                            <div class="carousel-caption">
+                                                <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="{{ asset('res/img/house.jpg') }}" class="img-responsive">
+                                            <div class="carousel-caption">
+                                                <a href="#" class="h3">Creez votre boutique en ligne avec APM</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            </div> <!-- /block-pub -->
+
+            <div class="col-lg-9">
+                {% block section %}
+                    <div class="row">
+                        <div class="col-lg-8" id="actualites">
+                            {% block actualites %}
+
+                            {% endblock %}
+                        </div> <!-- /block-actualite -->
+
+                        <div class="col-lg-4 col-md-3 col-sm-3" id="aside">
+                            {% block aside %}
+
+                            {% endblock %}
+                        </div> <!-- /aside -->
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    </div> <!-- /container -->
+{% endblock %}

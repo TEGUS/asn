@@ -1,0 +1,3 @@
+asn_meeting_homepage:
+    path:     /
+    defaults: { _controller: ASNMeetingBundle:Meeting:index }

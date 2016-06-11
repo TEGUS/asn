@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>{% block title %}asn{% endblock %}</title>
+        <title>{% block title %}ASN{% endblock %}</title>
         {% block stylesheets %}
             <link href="{{ asset('res/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen" type="text/css">
             <link href="{{ asset('res/lib/bootstrap/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css"/>
@@ -17,132 +17,13 @@
     <body class="bg-grey">
 
         {% block header %}
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="container-fluid bg-primary" id="header-bar">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">
-                            <img src="{{ asset('res/img/logo_asn.png') }}" id="logo">
-                        </a>
-                        <a class="navbar-brand" href="#" title="ASN">AVM Social Network</a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <form class="navbar-form navbar-left" role="search">
-                            <div class="input-group form-group-sm">
-                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                <input type="text" class="form-control" placeholder="Recherche..." size="40">
-                            </div>
-                            {# <button type="submit" class="btn btn-warning btn-sm active">Rechercher</button>#}
-                        </form>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-suitcase fa-2x"></i>
-                                    <span class="custom-badge">123</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-envelope fa-2x"></i>
-                                    <span class="custom-badge">17</span>
-                                </a>
-                            </li>
-                            <li class="bg-grey img-circle text-center" id="img-user">
-                                <a href="#"><span><i class="fa fa-user fa-3x"></i></span></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    {{ app.user.firstname }}
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Profil</a></li>
-                                    <li><a href="#">Paramètres</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Langue</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="{{ path('asn_logout') }}">Déconnexion</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-                <div class="container" id="sub-header-bar">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="{{ path('asn_home') }}">Accueil</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Mes groupes</a></li>
-                            <li><a href="#">Meeting</a></li>
-                            <li><a href="{{ path('asn_calendar') }}">Organisation personnelle</a></li>
-                            <li><a href="#">AVM</a></li>
-                            <li><a href="#">Mes contacts</a></li>
-                        </ul>
-                    </div>
-                </div> {# /.container #}
-            </nav>
+ 
         {% endblock %}
 
-
-        <div class="container" id="main-container">
-            {% block body %} 
-                <div class="row" ng-controller="AgendaController">
-                    {% block section %}
-                        <div class="col-lg-9 col-md-9 col-sm-9" id="main">
-                            <div class="row">
-                                <div class="col-lg-4 block-pub text-muted">
-                                    {% block pub %}
-
-                                    {% endblock %}
-                                </div> <!-- /block-pub -->
-
-                                <div class="col-lg-8 block-actualite">
-                                    {% block actualite %}
-
-                                    {% endblock %}
-                                </div> <!-- /block-actualite -->
-                            </div>
-                        </div> <!-- /main -->
-                    {% endblock %}
-
-                    {% block aside %}
-                        <div class="col-lg-3 col-md-3 col-sm-3" id="aside">
-                            {% block group %}
-
-                            {% endblock %}
-
-                            {% block organisation_peso %}
-
-                            {% endblock %}
-
-                            {% block forum %}
-
-                            {% endblock %}
-                        </div> <!-- /aside -->
-                    {% endblock %}
-                </div> <!-- /row -->
-            {% endblock %}
-        </div> <!-- /container -->
-
+        {% block body %}
+            
+        {% endblock %}
+        
         {% block footer %}
             <footer class="text-center text-muted">
                 <div class="container-fluid bg-primary">
@@ -166,19 +47,19 @@
                         <div class="col-lg-4">
                             <br>
                             <h4>Suivez nous</h4>
-                            <div class="panel bg-orange">
+                            <div class="">
                                 <ul class="list-unstyled list-inline">
                                     <li>
-                                        <a href="#"><i class="fa fa-facebook-square fa-4x"></i></a>
+                                        <a href="#" style="color: #1a237e"><i class="fa fa-facebook-square fa-3x"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-twitter-square fa-4x"></i></a>
+                                        <a href="#" style="color: #2196f3;"><i class="fa fa-twitter-square fa-3x"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-linkedin-square fa-4x"></i></a>
+                                        <a href="#" style="color: #1565c0"><i class="fa fa-linkedin-square fa-3x"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-vimeo-square fa-4x"></i></a>
+                                        <a href="#" style="color: #e53935"><i class="fa fa-google-plus-square fa-3x"></i></a>
                                     </li>
                                 </ul>
                             </div>

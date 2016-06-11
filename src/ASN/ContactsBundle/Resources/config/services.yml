@@ -1,0 +1,4 @@
+services:
+#    asn_contacts.example:
+#        class: ASN\ContactsBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

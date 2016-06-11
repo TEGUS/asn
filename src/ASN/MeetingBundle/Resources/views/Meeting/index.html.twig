@@ -1,0 +1,104 @@
+{% extends 'ASNMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Meeting - {{ parent() }}
+{% endblock %}
+
+{% block actualites %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <p>
+                        <span class="h3">Jean Pierre Dubois</span> 
+                        <em class="label label-danger pull-right">Terminé</em>
+                    </p>
+                    <p><b>Thème :</b> Point technique</p>
+                    <p><b>Date :</b> 11/06/2016 à 16h46min</p>
+                    <p><b>Lieu :</b> En ligne</p>
+                    <p><a href="#">Voir les détails &raquo;</a></p>
+                    <p class="text-center">
+                        <button class="btn btn-primary btn-sm">Accepter</button>
+                        <button class="btn btn-orange btn-sm">Rejeter</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <p>
+                        <span class="h3">Ramirez Stephane Bamo</span> 
+                        <em class="label label-danger pull-right">Terminé</em>
+                    </p>
+                    <p><b>Thème :</b> Bien vendre en ligne avec moins de depenses</p>
+                    <p><b>Date :</b> 11/06/2016 à 16h46min</p>
+                    <p><b>Lieu :</b> En ligne</p>
+                    <p>
+                        <a href="#">Voir les détails &raquo;</a> 
+                    </p>
+                    <p class="text-center">
+                        <button class="btn btn-primary btn-sm">Accepter</button>
+                        <button class="btn btn-orange btn-sm">Rejeter</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <p><span class="h3">YANNICK Sade</span> <em class="label label-success pull-right">En cours</em></p>
+                    <p><b>Thème :</b> Point technique</p>
+                    <p><b>Date :</b> 11/06/2016 à 16h46min</p>
+                    <p><b>Lieu :</b> En ligne</p>
+                    <p>
+                        <a href="#">Voir les détails &raquo;</a>
+                        <a href="#" class="pull-right">Configurer <i class="fa fa-gears fa-lg"></i></a>
+                    </p>
+                    <p class="text-center">
+                        <button class="btn btn-primary btn-sm">Rejoindre</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block aside %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel">
+                <div class="list-group">
+                    <a class="list-group-item" href="#">
+                        La vangeance du Tigr... 
+                        <em class="pull-right label label-success">En cours</em>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        La vangeance du Tigr... 
+                        <em class="pull-right label label-success">En cours</em>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        La vangeance du Tigr... 
+                        <em class="pull-right label label-success">En cours</em>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        Le retour de Chang M... 
+                        <em class="pull-right label label-danger">Terminé</em>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        Le retour de Chang M... 
+                        <em class="pull-right label label-danger">Terminé</em>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        Le retour de Chang M... 
+                        <em class="pull-right label label-danger">Terminé</em>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        Le retour de Chang M... 
+                        <em class="pull-right label label-danger">Terminé</em>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -10,6 +10,7 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
         // line 1
         $this->parent = $this->loadTemplate("ASNUserBundle::layout.html.twig", "ASNUserBundle:Security:login.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'loginRegister' => array($this, 'block_loginRegister'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -25,10 +26,20 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 4
+    public function block_title($context, array $blocks = array())
+    {
+        // line 5
+        echo "    Connexion - ";
+        $this->displayParentBlock("title", $context, $blocks);
+        echo "
+";
+    }
+
+    // line 8
     public function block_loginRegister($context, array $blocks = array())
     {
-        // line 4
+        // line 9
         echo "    <div class=\"row\">
         <div class=\"col-lg-4 col-lg-offset-4\">
             <div class=\"row\">
@@ -37,27 +48,29 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
                     <h4 class=\"text-center\"><b>Connexion</b></h4>
                     <!-- formulaire connexion -->
                     ";
-        // line 11
+        // line 16
         if ((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error"))) {
-            // line 12
+            // line 17
             echo "                        <div class=\"col-lg-12 alert alert-danger alert-dismissible\" id=\"alert\">
                             <strong>";
-            // line 13
+            // line 18
             echo twig_escape_filter($this->env, (isset($context["error"]) ? $context["error"] : $this->getContext($context, "error")), "html", null, true);
             echo "</strong>
                         </div>
                     ";
         }
-        // line 16
+        // line 21
         echo "                    <form id=\"loginForm\" method=\"post\" ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
-        echo ">
+        echo " action=\"";
+        echo $this->env->getExtension('routing')->getPath("asn_login");
+        echo "\">
                         <div class=\"input-group form-group form-group-lg\">
                             <label for=\"login\" class=\"input-group-addon\">
                                 <i class=\"fa fa-user\"></i>
                             </label>
                             ";
-        // line 21
+        // line 26
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'widget', array("attr" => array("class" => "form-control email", "placeholder" => "example@avm.com")));
         echo "
                         </div>
@@ -66,7 +79,7 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
                                 <i class=\"fa fa-lock\"></i>
                             </label>
                             ";
-        // line 27
+        // line 32
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'widget', array("attr" => array("class" => "form-control pwd", "placeholder" => "Mot de passe")));
         echo "
                         </div>
@@ -106,7 +119,7 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
                     <p>
                         Pas de compte? 
                         <a href=\"";
-        // line 64
+        // line 69
         echo $this->env->getExtension('routing')->getPath("asn_register");
         echo "\" title=\"Créer ici\">
                             S'inscrire ici
@@ -120,10 +133,10 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
 ";
     }
 
-    // line 75
+    // line 80
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 76
+        // line 81
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -142,22 +155,23 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
                 \$(this).css(\"background-color\", \"#fff\");
             });
 
-            /*\$(\"#loginForm\").submit(function () {
-             \$.ajax({
-             type: 'POST',
-             url: url,
-             data: {
-             email: \$(\".email\").val(),
-             pwd: \$(\".pwd\").val()
-             },
-             beforeSend: function () {
-             
-             },
-             success: function (data) {
-             
-             }
-             });
-             });*/
+            \$(\"#loginForm\").submit(function () {
+                /*\$.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: {
+                        email: \$(\".email\").val(),
+                        pwd: \$(\".pwd\").val()
+                    },
+                    beforeSend: function () {
+
+                    },
+                    success: function (data) {
+
+                    }
+                });*/
+                console.log(\"ok!\");
+            });
         });
     </script>
 ";
@@ -175,10 +189,15 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
 
     public function getDebugInfo()
     {
-        return array (  127 => 76,  124 => 75,  110 => 64,  70 => 27,  61 => 21,  52 => 16,  46 => 13,  43 => 12,  41 => 11,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  140 => 81,  137 => 80,  123 => 69,  83 => 32,  74 => 26,  63 => 21,  57 => 18,  54 => 17,  52 => 16,  43 => 9,  40 => 8,  33 => 5,  30 => 4,  11 => 1,);
     }
 }
 /* {% extends "ASNUserBundle::layout.html.twig" %}*/
+/* */
+/* */
+/* {% block title %}*/
+/*     Connexion - {{ parent() }}*/
+/* {% endblock %}*/
 /* */
 /* {% block loginRegister %}*/
 /*     <div class="row">*/
@@ -193,7 +212,7 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
 /*                             <strong>{{ error }}</strong>*/
 /*                         </div>*/
 /*                     {% endif %}*/
-/*                     <form id="loginForm" method="post" {{ form_enctype(form) }}>*/
+/*                     <form id="loginForm" method="post" {{ form_enctype(form) }} action="{{ path('asn_login') }}">*/
 /*                         <div class="input-group form-group form-group-lg">*/
 /*                             <label for="login" class="input-group-addon">*/
 /*                                 <i class="fa fa-user"></i>*/
@@ -269,22 +288,23 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
 /*                 $(this).css("background-color", "#fff");*/
 /*             });*/
 /* */
-/*             /*$("#loginForm").submit(function () {*/
-/*              $.ajax({*/
-/*              type: 'POST',*/
-/*              url: url,*/
-/*              data: {*/
-/*              email: $(".email").val(),*/
-/*              pwd: $(".pwd").val()*/
-/*              },*/
-/*              beforeSend: function () {*/
-/*              */
-/*              },*/
-/*              success: function (data) {*/
-/*              */
-/*              }*/
-/*              });*/
-/*              });*//* */
+/*             $("#loginForm").submit(function () {*/
+/*                 /*$.ajax({*/
+/*                     type: 'POST',*/
+/*                     url: url,*/
+/*                     data: {*/
+/*                         email: $(".email").val(),*/
+/*                         pwd: $(".pwd").val()*/
+/*                     },*/
+/*                     beforeSend: function () {*/
+/* */
+/*                     },*/
+/*                     success: function (data) {*/
+/* */
+/*                     }*/
+/*                 });*//* */
+/*                 console.log("ok!");*/
+/*             });*/
 /*         });*/
 /*     </script>*/
 /* {% endblock %}*/

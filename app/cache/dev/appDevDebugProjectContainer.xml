@@ -33,6 +33,9 @@
       <parameter key="ASNMainBundle">ASN\MainBundle\ASNMainBundle</parameter>
       <parameter key="ASNUserBundle">ASN\UserBundle\ASNUserBundle</parameter>
       <parameter key="ASNCalendarBundle">ASN\CalendarBundle\ASNCalendarBundle</parameter>
+      <parameter key="ASNMeetingBundle">ASN\MeetingBundle\ASNMeetingBundle</parameter>
+      <parameter key="ASNForumBundle">ASN\ForumBundle\ASNForumBundle</parameter>
+      <parameter key="ASNContactsBundle">ASN\ContactsBundle\ASNContactsBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
@@ -2887,6 +2890,24 @@
         <argument>fr</argument>
         <argument>messages</argument>
       </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>C:\wamp\www\asn\src\ASN\MeetingBundle/Resources/translations\messages.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>C:\wamp\www\asn\src\ASN\ForumBundle/Resources/translations\messages.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>C:\wamp\www\asn\src\ASN\ContactsBundle/Resources/translations\messages.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>messages</argument>
+      </call>
     </service>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
@@ -3949,7 +3970,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>575c06fc36c87</argument>
+            <argument>575c1da20ba64</argument>
           </service>
         </argument>
         <argument type="service">
@@ -3970,7 +3991,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>575c06fc36c87</argument>
+            <argument>575c1da20ba64</argument>
           </service>
         </argument>
         <argument type="service">
@@ -3991,7 +4012,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>575c06fc36c87</argument>
+            <argument>575c1da20ba64</argument>
           </service>
         </argument>
       </argument>
@@ -4419,7 +4440,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>575c06fc36c87</argument>
+            <argument>575c1da20ba64</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -4595,7 +4616,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>575c06fc36c87</argument>
+            <argument>575c1da20ba64</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -4771,7 +4792,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>575c06fc36c87</argument>
+            <argument>575c1da20ba64</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -6846,6 +6867,9 @@
         <argument key="ASNMainBundle">ASN\MainBundle\ASNMainBundle</argument>
         <argument key="ASNUserBundle">ASN\UserBundle\ASNUserBundle</argument>
         <argument key="ASNCalendarBundle">ASN\CalendarBundle\ASNCalendarBundle</argument>
+        <argument key="ASNMeetingBundle">ASN\MeetingBundle\ASNMeetingBundle</argument>
+        <argument key="ASNForumBundle">ASN\ForumBundle\ASNForumBundle</argument>
+        <argument key="ASNContactsBundle">ASN\ContactsBundle\ASNContactsBundle</argument>
         <argument key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</argument>
         <argument key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</argument>
         <argument key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</argument>
@@ -7664,6 +7688,18 @@
         <argument>ASNCalendar</argument>
       </call>
       <call method="addPath">
+        <argument>C:\wamp\www\asn\src\ASN\MeetingBundle/Resources/views</argument>
+        <argument>ASNMeeting</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\asn\src\ASN\ForumBundle/Resources/views</argument>
+        <argument>ASNForum</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\asn\src\ASN\ContactsBundle/Resources/views</argument>
+        <argument>ASNContacts</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\wamp\www\asn\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
@@ -7873,6 +7909,9 @@
                       <argument key="ASN\MainBundle">C:\wamp\www\asn\src\ASN\MainBundle/Resources/config/serializer</argument>
                       <argument key="ASN\UserBundle">C:\wamp\www\asn\src\ASN\UserBundle/Resources/config/serializer</argument>
                       <argument key="ASN\CalendarBundle">C:\wamp\www\asn\src\ASN\CalendarBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\MeetingBundle">C:\wamp\www\asn\src\ASN\MeetingBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\ForumBundle">C:\wamp\www\asn\src\ASN\ForumBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\ContactsBundle">C:\wamp\www\asn\src\ASN\ContactsBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">C:\wamp\www\asn\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">C:\wamp\www\asn\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">C:\wamp\www\asn\vendor\sensio\generator-bundle\Sensio\Bundle\GeneratorBundle/Resources/config/serializer</argument>
@@ -7913,6 +7952,9 @@
                       <argument key="ASN\MainBundle">C:\wamp\www\asn\src\ASN\MainBundle/Resources/config/serializer</argument>
                       <argument key="ASN\UserBundle">C:\wamp\www\asn\src\ASN\UserBundle/Resources/config/serializer</argument>
                       <argument key="ASN\CalendarBundle">C:\wamp\www\asn\src\ASN\CalendarBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\MeetingBundle">C:\wamp\www\asn\src\ASN\MeetingBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\ForumBundle">C:\wamp\www\asn\src\ASN\ForumBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\ContactsBundle">C:\wamp\www\asn\src\ASN\ContactsBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">C:\wamp\www\asn\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">C:\wamp\www\asn\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">C:\wamp\www\asn\vendor\sensio\generator-bundle\Sensio\Bundle\GeneratorBundle/Resources/config/serializer</argument>
@@ -7953,6 +7995,9 @@
                       <argument key="ASN\MainBundle">C:\wamp\www\asn\src\ASN\MainBundle/Resources/config/serializer</argument>
                       <argument key="ASN\UserBundle">C:\wamp\www\asn\src\ASN\UserBundle/Resources/config/serializer</argument>
                       <argument key="ASN\CalendarBundle">C:\wamp\www\asn\src\ASN\CalendarBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\MeetingBundle">C:\wamp\www\asn\src\ASN\MeetingBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\ForumBundle">C:\wamp\www\asn\src\ASN\ForumBundle/Resources/config/serializer</argument>
+                      <argument key="ASN\ContactsBundle">C:\wamp\www\asn\src\ASN\ContactsBundle/Resources/config/serializer</argument>
                       <argument key="Symfony\Bundle\WebProfilerBundle">C:\wamp\www\asn\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\DistributionBundle">C:\wamp\www\asn\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle/Resources/config/serializer</argument>
                       <argument key="Sensio\Bundle\GeneratorBundle">C:\wamp\www\asn\vendor\sensio\generator-bundle\Sensio\Bundle\GeneratorBundle/Resources/config/serializer</argument>

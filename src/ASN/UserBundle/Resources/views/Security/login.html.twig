@@ -1,5 +1,10 @@
 {% extends "ASNUserBundle::layout.html.twig" %}
 
+
+{% block title %}
+    Connexion - {{ parent() }}
+{% endblock %}
+
 {% block loginRegister %}
     <div class="row">
         <div class="col-lg-4 col-lg-offset-4">
@@ -13,7 +18,7 @@
                             <strong>{{ error }}</strong>
                         </div>
                     {% endif %}
-                    <form id="loginForm" method="post" {{ form_enctype(form) }}>
+                    <form id="loginForm" method="post" {{ form_enctype(form) }} action="{{ path('asn_login') }}">
                         <div class="input-group form-group form-group-lg">
                             <label for="login" class="input-group-addon">
                                 <i class="fa fa-user"></i>
@@ -89,22 +94,23 @@
                 $(this).css("background-color", "#fff");
             });
 
-            /*$("#loginForm").submit(function () {
-             $.ajax({
-             type: 'POST',
-             url: url,
-             data: {
-             email: $(".email").val(),
-             pwd: $(".pwd").val()
-             },
-             beforeSend: function () {
-             
-             },
-             success: function (data) {
-             
-             }
-             });
-             });*/
+            $("#loginForm").submit(function () {
+                /*$.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: {
+                        email: $(".email").val(),
+                        pwd: $(".pwd").val()
+                    },
+                    beforeSend: function () {
+
+                    },
+                    success: function (data) {
+
+                    }
+                });*/
+                console.log("ok!");
+            });
         });
     </script>
 {% endblock %}

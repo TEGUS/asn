@@ -37,6 +37,9 @@ class AppKernel extends Kernel
             new ASN\MainBundle\ASNMainBundle(),
             new ASN\UserBundle\ASNUserBundle(),
             new ASN\CalendarBundle\ASNCalendarBundle(),
+            new ASN\MeetingBundle\ASNMeetingBundle(),
+            new ASN\ForumBundle\ASNForumBundle(),
+            new ASN\ContactsBundle\ASNContactsBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

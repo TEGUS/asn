@@ -2,7 +2,7 @@
 /* @date : Mai 2016 */
 
 /*------------------------------------------*/
-/*  =    BASE                             */
+/*  =    BASE                               */
 /*------------------------------------------*/
 
 body {
@@ -14,15 +14,15 @@ body {
 /* Bordures */
 
 .border-right {
-    border-right: 1px inset #000;
+    border-right: 1px inset #fff;
 }
 
 .border-bottom {
-    border-bottom: 1px inset #000;
+    border-bottom: 1px inset #fff;
 }
 
 .border-top {
-    border-top: 1px inset #eee;
+    border-top: 1px inset #fff;
 }
 
 /* Background */
@@ -48,13 +48,21 @@ body {
 }
 
 /* Customs */
+.btn {
+    text-transform: uppercase;
+}
+
 .btn.btn-primary {
     background-color: #3a8eba;
-    border-bottom: 4px solid #286090;
 }
 
 .btn.btn-danger {
     border-bottom: 4px solid #ac2925;
+}
+
+.btn.btn-orange {
+    background-color: #ed7f10;
+    color: #fff;
 }
 
 .custom-badge {
@@ -106,16 +114,11 @@ body {
 }
 
 #header-bar #img-user {
-    height: 40px;
+    display: inline-block;
+    margin-top: -10px;
+    margin-bottom: -10px;
     width: 40px;
-    overflow: hidden;
-    margin-top: 5px;
-    margin-left: 20px;
-}
-
-#header-bar #img-user a {
-    margin-top: -15px;
-    margin-left: -11px;
+    height: 40px;
 }
 
 #sub-header-bar .navbar-nav > li > a {
@@ -146,50 +149,39 @@ body {
 /*------------------------------------------*/
 
 .panel {
-    border: none;
+    border: 0;
     border-radius: 0;
 }
 
-#main .block-pub .panel {
-    border-top: 4px solid #ed7f10;
-}
-
-.panel.panel-primary .panel-heading {
-    background-color: #ed7f10;
-    border: 0;
+#pub .panel {
+    /*border-top: 4px solid #ed7f10;*/
 }
 
 .carousel a:hover {
     color: #ed7f10;
 }
 
+#actualites {
+    
+}
+
+#pub {
+
+}
 
 /*------------------------------------------*/
 /*  =    ASIDE                              */
 /*------------------------------------------*/
 
-#aside .panel .list-group-item {
-    padding-bottom: 5px;
-}
+
 
 #aside .panel .list-group a + a {
     color: #555;
 }
 
-#aside .panel .panel-heading {
-    font-size: 1.2em;
-    font-weight: bolder;
-    padding: 0;
-    text-align: center;
-}
-
-#aside .panel .disabled {
+#aside .panel .title {
     font-weight: bolder;
     color: #ed7f10;
-}
-
-.popover-title {
-    /*color: #000;*/
 }
 
 
@@ -198,11 +190,7 @@ body {
 /*------------------------------------------*/
 
 footer {
-    margin-top: 20px;
-}
-
-footer .row + .row .col-lg-12 {
-    border-top: 1px inset #fff;
+    margin-top: 30px;
 }
 
 footer a {

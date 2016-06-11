@@ -21,7 +21,7 @@ class SecurityController extends Controller {
         $form = $this->createForm(new UserType(), $user);
 
         $request = $this->getRequest();
-        if ($request->getMethod() == 'POST') {
+        if ($request->getMethod() == "POST") {
             $form->bind($request);
 
             $em = $this->getDoctrine()->getManager();
@@ -75,18 +75,18 @@ class SecurityController extends Controller {
         $request = $this->getRequest();
         if ($request->getMethod() == 'POST') {
             $form->bind($request);
-            
-            $user->setEmail($user->getHidefield()."@avm.com");
-            
-            if($user->getFirstname() === null){
+
+            $user->setEmail($user->getHidefield() . "@avm.com");
+
+            if ($user->getFirstname() === null) {
                 $user->setFirstname($user->getLastname());
-                $username = trim($user->getLastname()."-" .$user->getEmail());
+                $username = trim($user->getLastname() . "-" . $user->getEmail());
             } else {
-                $username = trim($user->getFirstname().$user->getLastname()."-" .$user->getEmail());
+                $username = trim($user->getFirstname() . $user->getLastname() . "-" . $user->getEmail());
             }
-            
+
             $user->setCountry($user->getHidefieldCountry());
-            $user->setPhone($user->getIndicatifCountry().$user->getPhone());
+            $user->setPhone($user->getIndicatifCountry() . $user->getPhone());
             $user->setUsername($username);
             $user->setUsernameCanonical($username);
             $user->setEmailCanonical(trim($user->getEmail()));
@@ -99,7 +99,7 @@ class SecurityController extends Controller {
             $user->setCredentialsExpired(false);
             $user->setCreatedAt(new \DateTime);
             $user->setUpdatedAt(new \DateTime);
-            
+
 
             //var_dump($user);
 
@@ -136,6 +136,10 @@ class SecurityController extends Controller {
 
         $response = new JsonResponse();
         return $response->setData(array("response" => $res));
+    }
+
+    public function profileAction() {
+        return $this->render("ASNUserBundle:Security:profile.html.twig");
     }
 
 }
