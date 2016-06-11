@@ -38,6 +38,7 @@ body {
 
 .bg-orange {
     background-color: #ed7f10;
+    color: #fff;
 }
 
 /* Padding */
@@ -58,7 +59,7 @@ body {
 
 .custom-badge {
     position: absolute;
-    top: 5px;
+    top: 0;
     right: 0;
     font-size: 0.6em;
     background-color: #f44;
@@ -76,14 +77,11 @@ body {
 /* Affix */
 
 .affix {
-    top: 0;
-    width: 100%;
+    top: 95px;
+    width: 263px;
 }
 
-.affix + div {
-    /*padding-top: 100px;*/
-}
-
+/* Alert login */
 .bad {
     color: red;
 }
@@ -118,10 +116,6 @@ body {
 #header-bar #img-user a {
     margin-top: -15px;
     margin-left: -11px;
-}
-
-#header-bar {
-    height: 50px !important;
 }
 
 #sub-header-bar .navbar-nav > li > a {
@@ -174,25 +168,24 @@ body {
 /*  =    ASIDE                              */
 /*------------------------------------------*/
 
-#aside .panel .list-group-item div.row,
-#aside .panel .list-group-item div.row {
-    margin-bottom: -10px;
+#aside .panel .list-group-item {
+    padding-bottom: 5px;
 }
 
-#aside .panel .list-group .row > a {
+#aside .panel .list-group a + a {
     color: #555;
 }
 
-/*------------------------------------------*/
-/*  =    POPOVER                            */
-/*------------------------------------------*/
+#aside .panel .panel-heading {
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding: 0;
+    text-align: center;
+}
 
-.popover-content {
-    width: 280px;
-    height: 400px;
-    overflow: auto;
-    color: #444;
-    /*padding-right: 40px;*/
+#aside .panel .disabled {
+    font-weight: bolder;
+    color: #ed7f10;
 }
 
 .popover-title {

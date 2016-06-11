@@ -22,13 +22,20 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @author <yourname> <youremail>
  */
-class User extends BaseUser
-{
+
+/**
+ * @ORM\Table(name="fos_user_user")
+ * @ORM\Entity
+ */
+class User extends BaseUser {
+
     /**
-     * @var integer $id
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
+    
     /**
      * Get id
      *
@@ -38,11 +45,126 @@ class User extends BaseUser
     {
         return $this->id;
     }
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="country", type="string", length=255, nullable=true)
+     */
+    private $country;
+    /**
+     * Set country
+     *
+     * @param string $country
+     *
+     * @return User
+     */
+    public function setCountry($country) {
+        $this->country = $country;
+    }
+    /**
+     * Get country
+     *
+     * @return string
+     */
+    public function getCountry() {
+        return $this->country;
+    }
     
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=255)
+     * @ORM\Column(name="emailRecuperation", type="string", length=255, nullable=true)
      */
-    private $country;
+    private $emailRecuperation;
+
+    /**
+     * Set emailRecuperation
+     *
+     * @param string $emailRecuperation
+     *
+     * @return User
+     */
+    public function setEmailRecuperation($emailRecuperation) {
+        $this->emailRecuperation = $emailRecuperation;
+    }
+    /**
+     * Get emailRecuperation
+     *
+     * @return string
+     */
+    public function getEmailRecuperation() {
+        return $this->emailRecuperation;
+    }
+    
+    
+    /**
+     * @ORM\OneToMany(targetEntity="ASN\CalendarBundle\Entity\Agenda", mappedBy="user")
+     */
+    private $agendas;
+    
+    
+    private $hidefield;
+    public function setHidefield($hidefield) {
+        $this->hidefield = $hidefield;
+    }
+    public function getHidefield() {
+        return $this->hidefield;
+    }
+    
+    private $hidefieldCountry;
+    public function setHidefieldCountry($hidefieldCountry) {
+        $this->hidefieldCountry = $hidefieldCountry;
+    }
+    public function getHidefieldCountry() {
+        return $this->hidefieldCountry;
+    }
+    
+    private $indicatifCountry;
+    public function setIndicatifCountry($indicatifCountry) {
+        $this->indicatifCountry = $indicatifCountry;
+    }
+    public function getIndicatifCountry() {
+        return $this->indicatifCountry;
+    }
+
+    /**
+     * Add agendas
+     *
+     * @param \ASN\CalendarBundle\Entity\Agenda $agendas
+     * @return User
+     */
+    public function addAgenda(\ASN\CalendarBundle\Entity\Agenda $agendas)
+    {
+        $this->agendas[] = $agendas;
+    
+        return $this;
+    }
+
+    /**
+     * Remove agendas
+     *
+     * @param \ASN\CalendarBundle\Entity\Agenda $agendas
+     */
+    public function removeAgenda(\ASN\CalendarBundle\Entity\Agenda $agendas)
+    {
+        $this->agendas->removeElement($agendas);
+    }
+
+    /**
+     * Get agendas
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAgendas()
+    {
+        return $this->agendas;
+    }
+    
+    
+    public function __construct()
+    {
+        parent::__construct();
+        $this->agendas = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 }

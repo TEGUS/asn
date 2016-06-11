@@ -10,6 +10,12 @@ asn_calendarbundle:
     resource: "@ASNCalendarBundle/Resources/config/routing.yml"
     prefix:   /
 
+# REST
+rest:
+    type: rest
+    resource: "routing_rest.yml"
+    prefix: /api
+
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
     prefix: /admin
@@ -41,3 +47,6 @@ sonata_user_change_password:
 sonata_user:
     resource: "@SonataUserBundle/Resources/config/routing/admin_security.xml"
     prefix: /admin
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

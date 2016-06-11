@@ -12,7 +12,7 @@
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('res/img/logo_asn.png') }}" />
     </head>
-    <body class="bg-grey" style="padding-top: 0;">
+    <body class="bg-grey" style="padding-top: 10px;">
 
         {% block header %}
         {% endblock %}
@@ -21,20 +21,21 @@
             <div class="container-fluid">
                 <div class="row">
                     <ul class="list-inline pull-right">
-                        <li><a href="#" title="Français">Français</a></li>
-                        <li><a href="#" title="Anglais">Anglais</a></li>
+                        <li><a href="#" title="Français"><em>Français</em></a></li>
+                        <li><a href="#" title="Anglais"><em>Anglais</em></a></li>
                     </ul>
                 </div>
                 <div class="row text-center">
-                    <div class="col-lg-12 text-muted">
+                    <div class="col-lg-12">
                         <h1 class="text-primary">
                             <i class="fa fa-comments fa-2x"></i>
                             <br>
                             <small class="text-orange">AVM Social Network</small>
                         </h1>
                         <br>
-                        <p class="text-orange">
-                            Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous trouvez et quoi que vous faites.
+                        <p>
+                            Gardez la communication avec votre famille, vos amis et vos collègues où que vous vous 
+                            trouvez et quoi que vous faites.
                         </p>
                     </div>
                 </div>
@@ -47,7 +48,7 @@
 
         {% block footer %}
             <footer class="text-center text-muted">
-                <div class="container-fluid bg-primary">
+                <div class="container-fluid bg-primary" style="margin-top: 100px">
                     <div class="row">
                         <div class="col-lg-4">
                             <h1><i class="fa fa-location-arrow"></i></h1>
@@ -68,19 +69,19 @@
                         <div class="col-lg-4">
                             <br>
                             <h4>Suivez nous</h4>
-                            <div class="panel bg-orange">
+                            <div class="panel">
                                 <ul class="list-unstyled list-inline">
                                     <li>
-                                        <a href="#"><i class="fa fa-facebook-square fa-4x"></i></a>
+                                        <a href="#" style="color: #1a237e"><i class="fa fa-facebook-square fa-4x"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-twitter-square fa-4x"></i></a>
+                                        <a href="#" style="color: #2196f3;"><i class="fa fa-twitter-square fa-4x"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-linkedin-square fa-4x"></i></a>
+                                        <a href="#" style="color: #1565c0"><i class="fa fa-linkedin-square fa-4x"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-vimeo-square fa-4x"></i></a>
+                                        <a href="#" style="color: #e53935"><i class="fa fa-google-plus-square fa-4x"></i></a>
                                     </li>
                                 </ul>
                             </div>

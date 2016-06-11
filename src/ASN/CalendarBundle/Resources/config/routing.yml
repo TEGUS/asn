@@ -1,3 +1,28 @@
 asn_calendar:
     path:     /calendar
     defaults: { _controller: ASNCalendarBundle:Main:index }
+##AGENDA
+create_agenda:
+    path:     /agenda/create/{libelle}/{description}
+    defaults: { _controller: ASNCalendarBundle:Agenda:create_agenda}
+    options:
+        expose: true
+
+delete_agenda:
+    path:     /agenda/delete/{id}
+    defaults: { _controller: ASNCalendarBundle:Agenda:delete_agenda}
+    options:
+        expose: true
+        
+update_agenda:
+    path:     /agenda/update/{id}/{libelle}/{description}
+    defaults: { _controller: ASNCalendarBundle:Agenda:update_agenda}
+    options:
+        expose: true
+        
+##EVENEMENT
+create_evenement:
+    path:     /evenement/create/{agenda_id}/{libelle}/{description}/{lieu}/{date}
+    defaults: { _controller: ASNCalendarBundle:Evenement:create_evenement}
+    options:
+        expose: true

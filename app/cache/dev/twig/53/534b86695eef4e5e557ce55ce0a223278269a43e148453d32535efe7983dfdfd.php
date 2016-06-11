@@ -96,7 +96,7 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
                             </a>
                         </div>
                         <div class=\"col-lg-6\">
-                            <a href=\"#\" class=\"btn btn-danger col-lg-12 active\">
+                            <a href=\"#\" class=\"btn btn-danger col-lg-12\">
                                 <i class=\"fa fa-google fa-1x\"></i>
                                 Google
                             </a>
@@ -104,10 +104,13 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
                     </div>
                     </p>
                     <p>
-                        Pas de compte? <a href=\"";
-        // line 63
+                        Pas de compte? 
+                        <a href=\"";
+        // line 64
         echo $this->env->getExtension('routing')->getPath("asn_register");
-        echo "\" title=\"Créer ici\">S'inscrire ici</a>
+        echo "\" title=\"Créer ici\">
+                            S'inscrire ici
+                        </a>
                     </p>
                 </div>
 
@@ -117,10 +120,10 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
 ";
     }
 
-    // line 72
+    // line 75
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 73
+        // line 76
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -172,7 +175,7 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
 
     public function getDebugInfo()
     {
-        return array (  124 => 73,  121 => 72,  109 => 63,  70 => 27,  61 => 21,  52 => 16,  46 => 13,  43 => 12,  41 => 11,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  127 => 76,  124 => 75,  110 => 64,  70 => 27,  61 => 21,  52 => 16,  46 => 13,  43 => 12,  41 => 11,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends "ASNUserBundle::layout.html.twig" %}*/
@@ -229,7 +232,7 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
 /*                             </a>*/
 /*                         </div>*/
 /*                         <div class="col-lg-6">*/
-/*                             <a href="#" class="btn btn-danger col-lg-12 active">*/
+/*                             <a href="#" class="btn btn-danger col-lg-12">*/
 /*                                 <i class="fa fa-google fa-1x"></i>*/
 /*                                 Google*/
 /*                             </a>*/
@@ -237,7 +240,10 @@ class __TwigTemplate_84cceac7424f706c853072668e5a602f40fe97e518829611636aff079fb
 /*                     </div>*/
 /*                     </p>*/
 /*                     <p>*/
-/*                         Pas de compte? <a href="{{ path('asn_register') }}" title="Créer ici">S'inscrire ici</a>*/
+/*                         Pas de compte? */
+/*                         <a href="{{ path('asn_register') }}" title="Créer ici">*/
+/*                             S'inscrire ici*/
+/*                         </a>*/
 /*                     </p>*/
 /*                 </div>*/
 /* */

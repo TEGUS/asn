@@ -97,6 +97,13 @@ class User extends BaseUser {
         return $this->emailRecuperation;
     }
     
+    
+    /**
+     * @ORM\OneToMany(targetEntity="ASN\CalendarBundle\Entity\Agenda", mappedBy="user")
+     */
+    private $agendas;
+    
+    
     private $hidefield;
     public function setHidefield($hidefield) {
         $this->hidefield = $hidefield;
@@ -119,5 +126,45 @@ class User extends BaseUser {
     }
     public function getIndicatifCountry() {
         return $this->indicatifCountry;
+    }
+
+    /**
+     * Add agendas
+     *
+     * @param \ASN\CalendarBundle\Entity\Agenda $agendas
+     * @return User
+     */
+    public function addAgenda(\ASN\CalendarBundle\Entity\Agenda $agendas)
+    {
+        $this->agendas[] = $agendas;
+    
+        return $this;
+    }
+
+    /**
+     * Remove agendas
+     *
+     * @param \ASN\CalendarBundle\Entity\Agenda $agendas
+     */
+    public function removeAgenda(\ASN\CalendarBundle\Entity\Agenda $agendas)
+    {
+        $this->agendas->removeElement($agendas);
+    }
+
+    /**
+     * Get agendas
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAgendas()
+    {
+        return $this->agendas;
+    }
+    
+    
+    public function __construct()
+    {
+        parent::__construct();
+        $this->agendas = new \Doctrine\Common\Collections\ArrayCollection();
     }
 }

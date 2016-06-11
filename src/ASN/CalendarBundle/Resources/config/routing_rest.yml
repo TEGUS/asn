@@ -1,0 +1,10 @@
+## YAML Template.
+---
+all_agenda:
+    type: rest
+    defaults: { _controller: ASNCalendarBundle:Agenda:getAgendas}
+    path: /agenda/all
+    options:
+        expose: true
+    requirements:
+        _method: GET
