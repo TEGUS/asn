@@ -43,36 +43,41 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
         // line 8
         echo "    <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-lg-3\" >
-                <div class=\"panel padding\">
-                    <a href=\"#\">
-                        <img src=\"";
-        // line 13
+            <div class=\"col-lg-3\">
+                <div class=\"panel\">
+                    <div class=\"padding\">
+                        <a href=\"#\">
+                            <img src=\"";
+        // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
-                    </a>
-                    <h5><b>Nom & prénoms</b></h5>
-                    <p>";
-        // line 16
+                        </a>
+
+                    </div>
+                    <div class=\"panel-body\">
+                        <h5><b>Nom & prénoms</b></h5>
+                        <p>";
+        // line 20
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "firstname", array()), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "lastname", array()), "html", null, true);
         echo "</p>
-                    <h5><b>Date de naissance</b></h5>
-                    <p>";
-        // line 18
+                        <h5><b>Date de naissance</b></h5>
+                        <p>";
+        // line 22
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "dateofbirth", array()), "d/M/yy"), "html", null, true);
         echo "</p>
-                    <h5><b>Email</b></h5>
-                    <p>";
-        // line 20
+                        <h5><b>Email</b></h5>
+                        <p>";
+        // line 24
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "email", array()), "html", null, true);
         echo "</p>
-                    <h5><b>Nationnalité</b></h5>
-                    <p>";
-        // line 22
+                        <h5><b>Nationnalité</b></h5>
+                        <p>";
+        // line 26
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "country", array()), "html", null, true);
         echo "</p>
+                    </div>
                 </div>
             </div> 
 
@@ -124,7 +129,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-8 panel\">
                                 <h3>Vente aux enchères</h3>
                                 <h4><img src=\"";
-        // line 73
+        // line 78
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\"></h4>
                                 <p>
@@ -165,7 +170,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-3\">
                                 <a href=\"#\" class=\"panel text-center\">
                                     <img src=\"";
-        // line 111
+        // line 116
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -174,7 +179,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-3\">
                                 <a href=\"#\" class=\"panel text-center\">
                                     <img src=\"";
-        // line 117
+        // line 122
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -183,7 +188,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-3\">
                                 <a href=\"#\" class=\"panel text-center\">
                                     <img src=\"";
-        // line 123
+        // line 128
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -192,7 +197,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-3\">
                                 <a href=\"#\" class=\"panel text-center\">
                                     <img src=\"";
-        // line 129
+        // line 134
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/house.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -201,7 +206,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-3\">
                                 <a href=\"#\" class=\"panel text-center\">
                                     <img src=\"";
-        // line 135
+        // line 140
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -210,7 +215,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-3\">
                                 <a href=\"#\" class=\"panel text-center\">
                                     <img src=\"";
-        // line 141
+        // line 146
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/voiture.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -219,7 +224,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-3\">
                                 <a href=\"#\" class=\"panel text-center\">
                                     <img src=\"";
-        // line 147
+        // line 152
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/paysage.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -228,7 +233,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                             <div class=\"col-lg-3\">
                                 <a href=\"#\" class=\"panel text-center\">
                                     <img src=\"";
-        // line 153
+        // line 158
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("res/img/house.jpg"), "html", null, true);
         echo "\" class=\"img-responsive img-rounded\">
                                     <h6 class=\"text-orange\"><b>Album</b></h6>
@@ -259,7 +264,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
                                 </div>
                             </div>
                             ";
-        // line 211
+        // line 216
         echo "                        </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"groupes\">
@@ -365,28 +370,34 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
             </div>
             <div class=\"col-lg-2\">
                 <div class=\"panel\">
-                    <ul class=\"nav nav-pills nav-stacked\">
-                        <li>
+                    <ul class=\"list-group\">
+                        <li class=\"list-group-item\">
                             <a href=\"#\">
                                 Modifier la photo de profile 
                                 <i class=\"fa fa-pencil pull-right\"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class=\"list-group-item\">
                             <a href=\"#\">
                                 Modifier le mot de passe 
                                 <i class=\"fa fa-pencil pull-right\"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class=\"list-group-item\">
                             <a href=\"#\">
                                 Modifier les informations personnelles 
                                 <i class=\"fa fa-pencil pull-right\"></i>
                             </a>
                         </li>
-                        <li><a href=\"#\">Option 1</a></li>
-                        <li><a href=\"#\">Option 1</a></li>
-                        <li><a href=\"#\">Option 1</a></li>
+                        <li class=\"list-group-item\">
+                            <a href=\"#\">Option 1</a>
+                        </li>
+                        <li class=\"list-group-item\">
+                            <a href=\"#\">Option 1</a>
+                        </li>
+                        <li class=\"list-group-item\">
+                            <a href=\"#\">Option 1</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -437,7 +448,7 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
 
     public function getDebugInfo()
     {
-        return array (  263 => 211,  232 => 153,  223 => 147,  214 => 141,  205 => 135,  196 => 129,  187 => 123,  178 => 117,  169 => 111,  128 => 73,  74 => 22,  69 => 20,  64 => 18,  57 => 16,  51 => 13,  44 => 8,  41 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  268 => 216,  237 => 158,  228 => 152,  219 => 146,  210 => 140,  201 => 134,  192 => 128,  183 => 122,  174 => 116,  133 => 78,  78 => 26,  73 => 24,  68 => 22,  61 => 20,  52 => 14,  44 => 8,  41 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends "ASNMainBundle::layout.html.twig" %}*/
@@ -449,19 +460,24 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
 /* {% block body %}*/
 /*     <div class="container">*/
 /*         <div class="row">*/
-/*             <div class="col-lg-3" >*/
-/*                 <div class="panel padding">*/
-/*                     <a href="#">*/
-/*                         <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive img-rounded">*/
-/*                     </a>*/
-/*                     <h5><b>Nom & prénoms</b></h5>*/
-/*                     <p>{{ app.user.firstname }} {{ app.user.lastname }}</p>*/
-/*                     <h5><b>Date de naissance</b></h5>*/
-/*                     <p>{{ app.user.dateofbirth | date('d/M/yy') }}</p>*/
-/*                     <h5><b>Email</b></h5>*/
-/*                     <p>{{ app.user.email }}</p>*/
-/*                     <h5><b>Nationnalité</b></h5>*/
-/*                     <p>{{ app.user.country }}</p>*/
+/*             <div class="col-lg-3">*/
+/*                 <div class="panel">*/
+/*                     <div class="padding">*/
+/*                         <a href="#">*/
+/*                             <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive img-rounded">*/
+/*                         </a>*/
+/* */
+/*                     </div>*/
+/*                     <div class="panel-body">*/
+/*                         <h5><b>Nom & prénoms</b></h5>*/
+/*                         <p>{{ app.user.firstname }} {{ app.user.lastname }}</p>*/
+/*                         <h5><b>Date de naissance</b></h5>*/
+/*                         <p>{{ app.user.dateofbirth | date('d/M/yy') }}</p>*/
+/*                         <h5><b>Email</b></h5>*/
+/*                         <p>{{ app.user.email }}</p>*/
+/*                         <h5><b>Nationnalité</b></h5>*/
+/*                         <p>{{ app.user.country }}</p>*/
+/*                     </div>*/
 /*                 </div>*/
 /*             </div> */
 /* */
@@ -755,28 +771,34 @@ class __TwigTemplate_d7c126b0567f399beabd92a85734ff5b21775d738c2653a40f56d786ddb
 /*             </div>*/
 /*             <div class="col-lg-2">*/
 /*                 <div class="panel">*/
-/*                     <ul class="nav nav-pills nav-stacked">*/
-/*                         <li>*/
+/*                     <ul class="list-group">*/
+/*                         <li class="list-group-item">*/
 /*                             <a href="#">*/
 /*                                 Modifier la photo de profile */
 /*                                 <i class="fa fa-pencil pull-right"></i>*/
 /*                             </a>*/
 /*                         </li>*/
-/*                         <li>*/
+/*                         <li class="list-group-item">*/
 /*                             <a href="#">*/
 /*                                 Modifier le mot de passe */
 /*                                 <i class="fa fa-pencil pull-right"></i>*/
 /*                             </a>*/
 /*                         </li>*/
-/*                         <li>*/
+/*                         <li class="list-group-item">*/
 /*                             <a href="#">*/
 /*                                 Modifier les informations personnelles */
 /*                                 <i class="fa fa-pencil pull-right"></i>*/
 /*                             </a>*/
 /*                         </li>*/
-/*                         <li><a href="#">Option 1</a></li>*/
-/*                         <li><a href="#">Option 1</a></li>*/
-/*                         <li><a href="#">Option 1</a></li>*/
+/*                         <li class="list-group-item">*/
+/*                             <a href="#">Option 1</a>*/
+/*                         </li>*/
+/*                         <li class="list-group-item">*/
+/*                             <a href="#">Option 1</a>*/
+/*                         </li>*/
+/*                         <li class="list-group-item">*/
+/*                             <a href="#">Option 1</a>*/
+/*                         </li>*/
 /*                     </ul>*/
 /*                 </div>*/
 /*             </div>*/

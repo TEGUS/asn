@@ -7,19 +7,24 @@
 {% block body %}
     <div class="container">
         <div class="row">
-            <div class="col-lg-3" >
-                <div class="panel padding">
-                    <a href="#">
-                        <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive img-rounded">
-                    </a>
-                    <h5><b>Nom & prénoms</b></h5>
-                    <p>{{ app.user.firstname }} {{ app.user.lastname }}</p>
-                    <h5><b>Date de naissance</b></h5>
-                    <p>{{ app.user.dateofbirth | date('d/M/yy') }}</p>
-                    <h5><b>Email</b></h5>
-                    <p>{{ app.user.email }}</p>
-                    <h5><b>Nationnalité</b></h5>
-                    <p>{{ app.user.country }}</p>
+            <div class="col-lg-3">
+                <div class="panel">
+                    <div class="padding">
+                        <a href="#">
+                            <img src="{{ asset('res/img/voiture.jpg') }}" class="img-responsive img-rounded">
+                        </a>
+
+                    </div>
+                    <div class="panel-body">
+                        <h5><b>Nom & prénoms</b></h5>
+                        <p>{{ app.user.firstname }} {{ app.user.lastname }}</p>
+                        <h5><b>Date de naissance</b></h5>
+                        <p>{{ app.user.dateofbirth | date('d/M/yy') }}</p>
+                        <h5><b>Email</b></h5>
+                        <p>{{ app.user.email }}</p>
+                        <h5><b>Nationnalité</b></h5>
+                        <p>{{ app.user.country }}</p>
+                    </div>
                 </div>
             </div> 
 
@@ -313,28 +318,34 @@
             </div>
             <div class="col-lg-2">
                 <div class="panel">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li>
+                    <ul class="list-group">
+                        <li class="list-group-item">
                             <a href="#">
                                 Modifier la photo de profile 
                                 <i class="fa fa-pencil pull-right"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="list-group-item">
                             <a href="#">
                                 Modifier le mot de passe 
                                 <i class="fa fa-pencil pull-right"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="list-group-item">
                             <a href="#">
                                 Modifier les informations personnelles 
                                 <i class="fa fa-pencil pull-right"></i>
                             </a>
                         </li>
-                        <li><a href="#">Option 1</a></li>
-                        <li><a href="#">Option 1</a></li>
-                        <li><a href="#">Option 1</a></li>
+                        <li class="list-group-item">
+                            <a href="#">Option 1</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Option 1</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Option 1</a>
+                        </li>
                     </ul>
                 </div>
             </div>
